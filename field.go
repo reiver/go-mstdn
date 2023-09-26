@@ -3,12 +3,18 @@ package mstdn
 import (
 	"encoding/json"
 
+	"sourcecode.social/reiver/go-erorr"
 	"sourcecode.social/reiver/go-opt"
 	"sourcecode.social/reiver/go-nul"
 )
 
 var _ json.Marshaler = Field{}
 var _ json.Unmarshaler = &Field{}
+
+const (
+	errCannotMashalFieldAsJSONNoName  = erorr.Error("cannot marshal mstdn.Field to JSON — no ‘name’ set")
+	errCannotMashalFieldAsJSONNoValue = erorr.Error("cannot marshal mstdn.Field to JSON — no ‘value’ set")
+)
 
 // Field represents a Mastodon API "Field".
 //
@@ -37,13 +43,34 @@ func FieldVerifiedNameValue(when string, name string, value string) Field {
 
 func (receiver Field) MarshalJSON() ([]byte, error) {
 
-	duplicate := receiver
+	var data = map[string]interface{}{}
 
-	duplicate.VerifiedAt.WhenNothing(func(){
-		duplicate.VerifiedAt = nul.Null[string]()
-	})
+	{
+		val, found := receiver.Name.Get()
+		if !found {
+				return nil, errCannotMashalFieldAsJSONNoName
+		}
 
-	return json.Marshal(duplicate)
+		data["name"] = val
+	}
+	{
+		val, found := receiver.Value.Get()
+		if !found {
+			return nil, errCannotMashalFieldAsJSONNoValue
+		}
+
+		data["value"] = val
+	}
+	{
+		val, found := receiver.VerifiedAt.Get()
+		if !found {
+			data["verified_at"] = nil
+		} else {
+			data["verified_at"] = val
+		}
+	}
+
+	return json.Marshal(data)
 }
 
 func (receiver *Field) UnmarshalJSON(data []byte) error {
