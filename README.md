@@ -32,3 +32,7 @@ To install package **mstdn** do the following:
 ```
 GOPROXY=direc https://sourcecode.social/reiver/go-mstdn
 ```
+
+## Author
+
+Package **mstdn** was written by [Charles Iliya Krempeaux](http://changelog.ca)
