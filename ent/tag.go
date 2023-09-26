@@ -4,6 +4,8 @@ import (
 	"sourcecode.social/reiver/go-opt"
 )
 
+// Tag represents a Mastodon API "Tag".
+//
 // See:
 // https://docs.joinmastodon.org/entities/Status/#Tag
 type Tag struct {
