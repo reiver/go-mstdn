@@ -21,6 +21,12 @@ const (
 // See:
 // https://docs.joinmastodon.org/entities/Field/
 type Field struct {
+	Name         opt.Optional[string]
+	Value        opt.Optional[string]
+	VerifiedAt   nul.Nullable[string]
+}
+
+type field struct {
 	Name         opt.Optional[string] `json:"name"`
 	Value        opt.Optional[string] `json:"value"`
 	VerifiedAt   nul.Nullable[string] `json:"verified_at"`
@@ -78,13 +84,21 @@ func (receiver *Field) UnmarshalJSON(data []byte) error {
 		return errNilReceiver
 	}
 
-	err := json.Unmarshal(data, receiver)
+	var f field
+
+	err := json.Unmarshal(data, &f)
 	if nil != err {
 		return err
 	}
 
-	if nul.Null[string]() == receiver.VerifiedAt {
-		receiver.VerifiedAt = nul.Nothing[string]()
+	if nul.Null[string]() == f.VerifiedAt {
+		f.VerifiedAt = nul.Nothing[string]()
+	}
+
+	*receiver = Field{
+		Name: f.Name,
+		Value: f.Value,
+		VerifiedAt: f.VerifiedAt,
 	}
 
 	return nil
