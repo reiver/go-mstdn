@@ -6,7 +6,7 @@ import (
 	"bytes"
 	"encoding/json"
 
-	"sourcecode.social/reiver/go-masto"
+	"sourcecode.social/reiver/go-mstdn"
 )
 
 func TestField_MarshalJSON(t *testing.T) {
