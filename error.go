@@ -95,3 +95,107 @@ func Error(resp http.ResponseWriter, statusCode int, msg ...interface{}) {
 
 	errorJSON(resp, statusCode, msg...)
 }
+
+// BadRequest replies to the request with an HTTP 400 Bad Request.
+// The response will be in JSON (application/json; charset=utf-8).
+func BadRequest(resp http.ResponseWriter, msg ...interface{}) {
+	const statusCode int = http.StatusBadRequest
+
+	Error(resp, statusCode, msg...)
+}
+
+// Unauthorized replies to the request with an HTTP 401 Unauthorized.
+// The response will be in JSON (application/json; charset=utf-8).
+func Unauthorized(resp http.ResponseWriter, msg ...interface{}) {
+	const statusCode int = http.StatusUnauthorized
+
+	Error(resp, statusCode, msg...)
+}
+
+// PaymentRequired replies to the request with an HTTP 402 Payment Required
+// The response will be in JSON (application/json; charset=utf-8).
+func PaymentRequired(resp http.ResponseWriter, msg ...interface{}) {
+	const statusCode int = http.StatusPaymentRequired
+
+	Error(resp, statusCode, msg...)
+}
+
+// Forbidden replies to the request with an HTTP 403 Forbidden.
+// The response will be in JSON (application/json; charset=utf-8).
+func Forbidden(resp http.ResponseWriter, msg ...interface{}) {
+	const statusCode int = http.StatusForbidden
+
+	Error(resp, statusCode, msg...)
+}
+
+// NotFound replies to the request with an HTTP 404 Not Found.
+// The response will be in JSON (application/json; charset=utf-8).
+func NotFound(resp http.ResponseWriter, msg ...interface{}) {
+	const statusCode int = http.StatusNotFound
+
+	Error(resp, statusCode, msg...)
+}
+
+// MethodNotAllowed replies to the request with an HTTP 405 Method Not Allowed.
+// The response will be in JSON (application/json; charset=utf-8).
+func MethodNotAllowed(resp http.ResponseWriter, msg ...interface{}) {
+	const statusCode int = http.StatusMethodNotAllowed
+
+	Error(resp, statusCode, msg...)
+}
+
+// RequestTimeout replies to the request with an HTTP 408 Request Timeout.
+// The response will be in JSON (application/json; charset=utf-8).
+func RequestTimeout(resp http.ResponseWriter, msg ...interface{}) {
+	const statusCode int = http.StatusRequestTimeout
+
+	Error(resp, statusCode, msg...)
+}
+
+// UnprocessableEntity replies to the request with an HTTP 422 Unprocessable Entity.
+// The response will be in JSON (application/json; charset=utf-8).
+func UnprocessableEntity(resp http.ResponseWriter, msg ...interface{}) {
+	const statusCode int = http.StatusUnprocessableEntity
+
+	Error(resp, statusCode, msg...)
+}
+
+// TooManyRequests replies to the request with an HTTP 429 Too Many Requests.
+// The response will be in JSON (application/json; charset=utf-8).
+func TooManyRequests (resp http.ResponseWriter, msg ...interface{}) {
+	const statusCode int = http.StatusTooManyRequests 
+
+	Error(resp, statusCode, msg...)
+}
+
+// InternalServerError replies to the request with an HTTP 500 Internal Server Error.
+// The response will be in JSON (application/json; charset=utf-8).
+func InternalServerError(resp http.ResponseWriter, msg ...interface{}) {
+	const statusCode int = http.StatusInternalServerError
+
+	Error(resp, statusCode, msg...)
+}
+
+// BadGateway replies to the request with an HTTP 502 Bad Gateway.
+// The response will be in JSON (application/json; charset=utf-8).
+func BadGateway(resp http.ResponseWriter, msg ...interface{}) {
+	const statusCode int = http.StatusBadGateway
+
+	Error(resp, statusCode, msg...)
+}
+
+// ServiceUnavailable replies to the request with an HTTP 503 Service Unavailable.
+// The response will be in JSON (application/json; charset=utf-8).
+func ServiceUnavailable(resp http.ResponseWriter, msg ...interface{}) {
+	const statusCode int = http.StatusServiceUnavailable
+
+	Error(resp, statusCode, msg...)
+}
+
+// Gateway Timeout replies to the request with an HTTP 504 Gateway Timeout.
+// The response will be in JSON (application/json; charset=utf-8).
+func GatewayTimeout(resp http.ResponseWriter, msg ...interface{}) {
+	const statusCode int = http.StatusGatewayTimeout
+
+	Error(resp, statusCode, msg...)
+}
