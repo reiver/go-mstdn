@@ -8,3 +8,27 @@ Note that the **Mastodon API** is not (yet) officially part of **ActivityPub**.
 Online documentation, which includes examples, can be found at: http://godoc.org/sourcecode.social/reiver/go-mstdn
 
 [![GoDoc](https://godoc.org/sourcecode.social/reiver/go-mstdn?status.svg)](https://godoc.org/sourcecode.social/reiver/go-mstdn)
+
+## Import
+
+To import package **mstdn** use `import` code like the follownig:
+```
+import "sourcecode.social/reiver/go-mstdn"
+```
+
+To import the Mastodon API **entities** use `import` code like the following:
+```
+import "sourcecode.social/reiver/go-mstdn/ent"
+```
+
+To import the Mastodon API **entities** for **administrators** use `import` code like the following:
+```
+import "sourcecode.social/reiver/go-mstdn/ent/admn"
+```
+
+## Installation
+
+To install package **mstdn** do the following:
+```
+GOPROXY=direc https://sourcecode.social/reiver/go-mstdn
+```
