@@ -5,6 +5,8 @@ import (
 	"sourcecode.social/reiver/go-nul"
 )
 
+// See:
+// https://docs.joinmastodon.org/entities/PreviewCard/
 type PreviewCard struct {
 	URL          opt.Optional[string] `json:"url"`
 	Title        opt.Optional[string] `json:"title"`
