@@ -22,5 +22,5 @@ type PreviewCard struct {
 	Image        nul.Nullable[string] `json:"image"`
 	EmbedURL     opt.Optional[string] `json:"embed_url"`
 	BlurHash     nul.Nullable[string] `json:"blurhash"`
-	History    []History              `json:"history"`
+	History    []PreviewCardHistory   `json:"history"`
 }
