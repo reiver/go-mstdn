@@ -1,4 +1,4 @@
-package mstdn
+package ent
 
 import (
 	"encoding/json"
@@ -12,8 +12,8 @@ var _ json.Marshaler = Field{}
 var _ json.Unmarshaler = &Field{}
 
 const (
-	errCannotMashalFieldAsJSONNoName  = erorr.Error("cannot marshal mstdn.Field to JSON — no ‘name’ set")
-	errCannotMashalFieldAsJSONNoValue = erorr.Error("cannot marshal mstdn.Field to JSON — no ‘value’ set")
+	errCannotMashalFieldAsJSONNoName  = erorr.Error("cannot marshal ent.Field to JSON — no ‘name’ set")
+	errCannotMashalFieldAsJSONNoValue = erorr.Error("cannot marshal ent.Field to JSON — no ‘value’ set")
 )
 
 // Field represents a Mastodon API "Field".

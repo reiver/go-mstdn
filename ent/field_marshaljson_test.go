@@ -1,4 +1,4 @@
-package mstdn_test
+package ent_test
 
 import (
 	"testing"
@@ -6,17 +6,17 @@ import (
 	"bytes"
 	"encoding/json"
 
-	"sourcecode.social/reiver/go-mstdn"
+	"sourcecode.social/reiver/go-mstdn/ent"
 )
 
 func TestField_MarshalJSON(t *testing.T) {
 
 	tests := []struct{
-		Value mstdn.Field
+		Value ent.Field
 		Expected string
 	}{
 		{
-			Value: mstdn.FieldNameValue("", ""),
+			Value: ent.FieldNameValue("", ""),
 			Expected:
 				"{"                                   +"\n"+
 				"\t"+  `"name":`        +`""`   +","  +"\n"+
@@ -28,7 +28,7 @@ func TestField_MarshalJSON(t *testing.T) {
 
 
 		{
-			Value: mstdn.FieldNameValue("NAME", ""),
+			Value: ent.FieldNameValue("NAME", ""),
 			Expected:
 				"{"                                     +"\n"+
 				"\t"+  `"name":`        +`"NAME"` +","  +"\n"+
@@ -37,7 +37,7 @@ func TestField_MarshalJSON(t *testing.T) {
 				"}"                                     +"\n",
 		},
 		{
-			Value: mstdn.FieldNameValue("", "VALUE"),
+			Value: ent.FieldNameValue("", "VALUE"),
 			Expected:
 				"{"                                      +"\n"+
 				"\t"+  `"name":`        +`""`      +","  +"\n"+
@@ -46,7 +46,7 @@ func TestField_MarshalJSON(t *testing.T) {
 				"}"                                      +"\n",
 		},
 		{
-			Value: mstdn.FieldNameValue("NAME", "VALUE"),
+			Value: ent.FieldNameValue("NAME", "VALUE"),
 			Expected:
 				"{"                                      +"\n"+
 				"\t"+  `"name":`        +`"NAME"`  +","  +"\n"+
@@ -58,7 +58,7 @@ func TestField_MarshalJSON(t *testing.T) {
 
 
 		{
-			Value: mstdn.FieldNameValue("age", "47"),
+			Value: ent.FieldNameValue("age", "47"),
 			Expected:
 				"{"                                    +"\n"+
 				"\t"+  `"name":`        +`"age"` +","  +"\n"+
@@ -70,7 +70,7 @@ func TestField_MarshalJSON(t *testing.T) {
 
 
 		{
-			Value: mstdn.FieldVerifiedNameValue("2023-09-22T22:45:22Z", "NAME", ""),
+			Value: ent.FieldVerifiedNameValue("2023-09-22T22:45:22Z", "NAME", ""),
 			Expected:
 				"{"                                                     +"\n"+
 				"\t"+  `"name":`        +`"NAME"`                 +","  +"\n"+
@@ -79,7 +79,7 @@ func TestField_MarshalJSON(t *testing.T) {
 				"}"                                                     +"\n",
 		},
 		{
-			Value: mstdn.FieldVerifiedNameValue("2023-09-22T22:45:22Z", "", "VALUE"),
+			Value: ent.FieldVerifiedNameValue("2023-09-22T22:45:22Z", "", "VALUE"),
 			Expected:
 				"{"                                                     +"\n"+
 				"\t"+  `"name":`        +`""`                     +","  +"\n"+
@@ -88,7 +88,7 @@ func TestField_MarshalJSON(t *testing.T) {
 				"}"                                                     +"\n",
 		},
 		{
-			Value: mstdn.FieldVerifiedNameValue("2023-09-22T22:45:22Z", "NAME", "VALUE"),
+			Value: ent.FieldVerifiedNameValue("2023-09-22T22:45:22Z", "NAME", "VALUE"),
 			Expected:
 				"{"                                                     +"\n"+
 				"\t"+  `"name":`        +`"NAME"`                 +","  +"\n"+
@@ -100,7 +100,7 @@ func TestField_MarshalJSON(t *testing.T) {
 
 
 		{
-			Value: mstdn.FieldVerifiedNameValue("2023-09-22T22:45:22Z", "age", "47"),
+			Value: ent.FieldVerifiedNameValue("2023-09-22T22:45:22Z", "age", "47"),
 			Expected:
 				"{"                                                    +"\n"+
 				"\t"+  `"name":`        +`"age"`                  +"," +"\n"+

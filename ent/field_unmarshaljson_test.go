@@ -1,36 +1,36 @@
-package mstdn_test
+package ent_test
 
 import (
 	"testing"
 
 	"encoding/json"
 
-	"sourcecode.social/reiver/go-mstdn"
+	"sourcecode.social/reiver/go-mstdn/ent"
 )
 
 func TestField_UnmarshalJSON(t *testing.T) {
 
 	tests := []struct{
 		JSON string
-		Expected mstdn.Field
+		Expected ent.Field
 	}{
 		{
 			JSON: `{"name":"Location","value":"Metro Vancouver"}`,
-			Expected: mstdn.FieldNameValue("Location", "Metro Vancouver"),
+			Expected: ent.FieldNameValue("Location", "Metro Vancouver"),
 		},
 		{
 			JSON: `{"name":"Location","value":"Metro Vancouver", "verified_at":null}`,
-			Expected: mstdn.FieldNameValue("Location", "Metro Vancouver"),
+			Expected: ent.FieldNameValue("Location", "Metro Vancouver"),
 		},
 		{
 			JSON: `{"name":"Location","value":"Metro Vancouver", "verified_at":"2023-09-22T22:45:22Z"}`,
-			Expected: mstdn.FieldVerifiedNameValue("2023-09-22T22:45:22Z", "Location", "Metro Vancouver"),
+			Expected: ent.FieldVerifiedNameValue("2023-09-22T22:45:22Z", "Location", "Metro Vancouver"),
 		},
 	}
 
 	for testNumber, test := range tests {
 
-		var actual mstdn.Field
+		var actual ent.Field
 
 		err := json.Unmarshal([]byte(test.JSON), &actual)
 		if nil != err {

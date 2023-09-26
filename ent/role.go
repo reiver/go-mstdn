@@ -1,4 +1,4 @@
-package mstdn
+package ent
 
 import (
 	"sourcecode.social/reiver/go-opt"

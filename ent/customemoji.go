@@ -1,4 +1,4 @@
-package mstdn
+package ent
 
 import (
 	"encoding/json"
@@ -10,10 +10,10 @@ import (
 var _ json.Marshaler = CustomEmoji{}
 
 const (
-	errCannotMashalCustomEmojiAsJSONNoShortCode       = erorr.Error("cannot marshal mstdn.CustomEmoji to JSON — no ‘shortcode’ set")
-	errCannotMashalCustomEmojiAsJSONNoURL             = erorr.Error("cannot marshal mstdn.CustomEmoji to JSON — no ‘url’ set")
-	errCannotMashalCustomEmojiAsJSONNoStaticURL       = erorr.Error("cannot marshal mstdn.CustomEmoji to JSON — no ‘static_url’ set")
-	errCannotMashalCustomEmojiAsJSONNoVisibleInPicker = erorr.Error("cannot marshal mstdn.CustomEmoji to JSON — no ‘visible_in_picker’ set")
+	errCannotMashalCustomEmojiAsJSONNoShortCode       = erorr.Error("cannot marshal ent.CustomEmoji to JSON — no ‘shortcode’ set")
+	errCannotMashalCustomEmojiAsJSONNoURL             = erorr.Error("cannot marshal ent.CustomEmoji to JSON — no ‘url’ set")
+	errCannotMashalCustomEmojiAsJSONNoStaticURL       = erorr.Error("cannot marshal ent.CustomEmoji to JSON — no ‘static_url’ set")
+	errCannotMashalCustomEmojiAsJSONNoVisibleInPicker = erorr.Error("cannot marshal ent.CustomEmoji to JSON — no ‘visible_in_picker’ set")
 )
 
 // CustomEmoji represents a Mastodon API "CustomEmoji".
