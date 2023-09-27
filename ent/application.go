@@ -28,7 +28,11 @@ type Application struct {
 }
 
 func (receiver Application) MarshalJSON() ([]byte, error) {
-	var data map[string]interface{} = map[string]interface{}{}
+
+	var array [512]byte
+	var buffer []byte = array[0:0]
+
+	buffer = append(buffer, "{"...)
 
 	{
 		val, found := receiver.Name.Get()
@@ -36,18 +40,38 @@ func (receiver Application) MarshalJSON() ([]byte, error) {
 			return nil, errCannotMashalApplicationAsJSONNoName
 		}
 
-		data["name"] = val
+		buffer = append(buffer, `"name":`...)
+
+		{
+			marshaled, err := json.Marshal(val)
+			if nil != err {
+				return nil, erorr.Errorf("ent: could not marshal ent.Application.Name as JSON: %w", err)
+			}
+
+			buffer = append(buffer, marshaled...)
+		}
 	}
 
-	receiver.WebSite.WhenSomething(func(value string){
-		data["website"] = value
-	})
-	receiver.WebSite.WhenNull(func(){
-		data["website"] = nil
-	})
-	receiver.WebSite.WhenNothing(func(){
-		data["website"] = nil
-	})
+	{
+		buffer = append(buffer, `,"website":`...)
+
+		switch receiver.WebSite {
+		case nul.Nothing[string](), nul.Null[string]():
+			buffer = append(buffer, `null`...)
+		default:
+			website, found := receiver.WebSite.Get()
+			if !found {
+				return nil, erorr.Error("ent: could not marshal ent.Application.WebSite as JSON: internal error")
+			}
+
+			marshaled, err := json.Marshal(website)
+			if nil != err {
+				return nil, erorr.Errorf("ent: could not marshal ent.Application.WebSite as JSON: %w", err)
+			}
+
+			buffer = append(buffer, marshaled...)
+		}
+	}
 
 	{
 		val, found := receiver.VapidKey.Get()
@@ -55,16 +79,62 @@ func (receiver Application) MarshalJSON() ([]byte, error) {
 			return nil, errCannotMashalApplicationAsJSONNoVapidKey
 		}
 
-		data["vapid_key"] = val
+		buffer = append(buffer, `,"vapid_key":`...)
+
+		{
+			marshaled, err := json.Marshal(val)
+			if nil != err {
+				return nil, erorr.Errorf("ent: could not marshal ent.Application.VapidKey as JSON: %w", err)
+			}
+
+			buffer = append(buffer, marshaled...)
+		}
 	}
 
-	receiver.ClientID.WhenSomething(func(value string){
-		data["client_id"] = value
-	})
+	{
+		switch receiver.ClientID {
+		case opt.Nothing[string]():
+			// Nothing here.
+		default:
+			clientID, found := receiver.ClientID.Get()
+			if !found {
+				return nil, erorr.Error("ent: could not marshal ent.Application.ClientID as JSON: internal error")
+			}
 
-	receiver.ClientSecret.WhenSomething(func(value string){
-		data["client_secret"] = value
-	})
+			buffer = append(buffer, `,"client_id":`...)
 
-	return json.Marshal(data)
+			marshaled, err := json.Marshal(clientID)
+			if nil != err {
+				return nil, erorr.Errorf("ent: could not marshal ent.Application.ClientID as JSON: %w", err)
+			}
+
+			buffer = append(buffer, marshaled...)
+		}
+	}
+
+	{
+		switch receiver.ClientSecret {
+		case opt.Nothing[string]():
+			// Nothing here.
+		default:
+			clientSecret, found := receiver.ClientSecret.Get()
+			if !found {
+				return nil, erorr.Error("ent: could not marshal ent.Application.ClientSecret as JSON: internal error")
+			}
+
+			buffer = append(buffer, `,"client_secret":`...)
+
+			marshaled, err := json.Marshal(clientSecret)
+			if nil != err {
+				return nil, erorr.Errorf("ent: could not marshal ent.Application.ClientSecret as JSON: %w", err)
+			}
+
+			buffer = append(buffer, marshaled...)
+		}
+	}
+
+	buffer = append(buffer, "}"...)
+
+
+	return buffer, nil
 }

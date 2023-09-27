@@ -38,14 +38,14 @@ func TestApplication_MarshalJSON(t *testing.T) {
 		{
 			Application: ent.Application{
 				Name:     opt.Something("client fish"),
-				WebSite:  nul.Something("http://example.com/"),
-				VapidKey: opt.Something("BHgNMADAUjgYgM4PZtHkY3yTQRYD-ibS_qrWYg2KPBRidocowKcOc-8YpyItumamkGph2bk8FuryT4-p3Eymwz8"),
+				WebSite:  nul.Something("http://example.fish/"),
+				VapidKey: opt.Something("BLV6IwZiUgNnReINKtfgpt-zNCUF8jXTIsvA7Pa1-TTTLOEkeG-UtWVhKraRGgAcGUnrMBBzQPPFxTEao7L_Oz"),
 			},
 			Expected:
 				`{`+
 					`"name":"client fish"`+
 					`,`+
-					`"website":"http://example.com/"`+
+					`"website":"http://example.fish/"`+
 					`,`+
 					`"vapid_key":"BLV6IwZiUgNnReINKtfgpt-zNCUF8jXTIsvA7Pa1-TTTLOEkeG-UtWVhKraRGgAcGUnrMBBzQPPFxTEao7L_Oz"`+
 				`}`,
@@ -56,8 +56,8 @@ func TestApplication_MarshalJSON(t *testing.T) {
 		{
 			Application: ent.Application{
 				Name:     opt.Something("frontodon"),
-				WebSite:  nul.Something("http://example.com/"),
-				VapidKey: opt.Something("BHgNMADAUjgYgM4PZtHkY3yTQRYD-ibS_qrWYg2KPBRidocowKcOc-8YpyItumamkGph2bk8FuryT4-p3Eymwz8"),
+				WebSite:  nul.Something("http://something.tld/"),
+				VapidKey: opt.Something("BLCtzyFc2xtnAqWYW3m4M0v47Uym9mKd5yQMvY3FLWzdXN2vpjzF3iQ413fKwNOITkhJ6_tlvTZELL876uokpM4"),
 				ClientID: opt.Something("22"),
 			},
 			Expected:
@@ -66,7 +66,7 @@ func TestApplication_MarshalJSON(t *testing.T) {
 					`,`+
 					`"website":"http://something.tld/"`+
 					`,`+
-					`"vapid_key":"BLV6IwZiUgNnReINKtfgpt-zNCUF8jXTIsvA7Pa1-TTTLOEkeG-UtWVhKraRGgAcGUnrMBBzQPPFxTEao7L_Oz"`+
+					`"vapid_key":"BLCtzyFc2xtnAqWYW3m4M0v47Uym9mKd5yQMvY3FLWzdXN2vpjzF3iQ413fKwNOITkhJ6_tlvTZELL876uokpM4"`+
 					`,`+
 					`"client_id":"22"`+
 				`}`,
@@ -77,16 +77,16 @@ func TestApplication_MarshalJSON(t *testing.T) {
 		{
 			Application: ent.Application{
 				Name:         opt.Something("super-gorilla"),
-				WebSite:      nul.Something("http://example.com/"),
-				VapidKey:     opt.Something("BHgNMADAUjgYgM4PZtHkY3yTQRYD-ibS_qrWYg2KPBRidocowKcOc-8YpyItumamkGph2bk8FuryT4-p3Eymwz8"),
+				WebSite:      nul.Something("http://example.gorilla/"),
+				VapidKey:     opt.Something("BNi9UYyWxKVULR-FEaCWt3NuAHrlyyIz7zYRyIyLP0Q46ePHsiLbd8wHG3VXy-wTAgzFsRb5pGxJZDeX3FROwlE"),
 				ClientID:     opt.Something("22"),
-				ClientSecret: opt.Something(""),
+				ClientSecret: opt.Something("NwlOvca6TQjFutgobDM6voupU8kIqzN0h_oa1pEqBD4"),
 			},
 			Expected:
 				`{`+
 					`"name":"super-gorilla"`+
 					`,`+
-					`"website":"http://something.tld/"`+
+					`"website":"http://example.gorilla/"`+
 					`,`+
 					`"vapid_key":"BNi9UYyWxKVULR-FEaCWt3NuAHrlyyIz7zYRyIyLP0Q46ePHsiLbd8wHG3VXy-wTAgzFsRb5pGxJZDeX3FROwlE"`+
 					`,`+
