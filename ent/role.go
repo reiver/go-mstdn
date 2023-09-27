@@ -15,11 +15,11 @@ var _ json.Unmarshaler = new(Role)
 // See:
 // https://docs.joinmastodon.org/entities/Role/
 type Role struct {
-	ID          opt.Optional[jsonint.Int] `json:"id"`
-	Name        opt.Optional[string]      `json:"name"`
-	Color       opt.Optional[string]      `json:"color"`
-	Permissions opt.Optional[jsonint.Int] `json:"permissions"`
-	Highlighted opt.Optional[bool]        `json:"highlighted"`
+	ID          opt.Optional[jsonint.Int]
+	Name        opt.Optional[string]
+	Color       opt.Optional[string]
+	Permissions opt.Optional[jsonint.Int]
+	Highlighted opt.Optional[bool]
 }
 
 type role struct {
@@ -27,7 +27,7 @@ type role struct {
 	Name        opt.Optional[string]      `json:"name"`
 	Color       opt.Optional[string]      `json:"color"`
 	Permissions opt.Optional[jsonint.Int] `json:"permissions"`
-	Highlighted opt.Optional[bool]        `json:"Highlighted"`
+	Highlighted opt.Optional[bool]        `json:"highlighted"`
 }
 
 func (receiver Role) MarshalJSON() ([]byte, error) {
@@ -37,10 +37,10 @@ func (receiver Role) MarshalJSON() ([]byte, error) {
 	src.ID          = receiver.ID
 	src.Name        = receiver.Name
 	src.Permissions = receiver.Permissions
-	src.Highlighted = src.Highlighted
+	src.Highlighted = receiver.Highlighted
 
 	src.Color = receiver.Color
-	receiver.Color.WhenNothing(func(){
+	src.Color.WhenNothing(func(){
 		src.Color = opt.Something("")
 	})
 
