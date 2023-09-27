@@ -42,6 +42,8 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				StatusesCount:  opt.Something(jsonint.Int64(123)),
 				FollowersCount: opt.Something(jsonint.Int64(24789)),
 				FollowingCount: opt.Something(jsonint.Int64(355)),
+				//Roles
+				//MuteExpiresAt
 			},
 
 			Expected: `{`+
