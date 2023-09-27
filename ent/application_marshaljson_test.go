@@ -1,0 +1,127 @@
+package ent_test
+
+import (
+	"testing"
+
+	"encoding/json"
+
+	"sourcecode.social/reiver/go-jsonpp"
+	"sourcecode.social/reiver/go-nul"
+	"sourcecode.social/reiver/go-opt"
+
+	"sourcecode.social/reiver/go-mstdn/ent"
+)
+
+func TestApplication_MarshalJSON(t *testing.T) {
+
+	tests := []struct{
+		Application ent.Application
+		Expected string
+	}{
+		{
+			Application: ent.Application{
+				Name:     opt.Something("acme app"),
+				VapidKey: opt.Something("BHgNMADAUjgYgM4PZtHkY3yTQRYD-ibS_qrWYg2KPBRidocowKcOc-8YpyItumamkGph2bk8FuryT4-p3Eymwz8"),
+			},
+			Expected:
+				`{`+
+					`"name":"acme app"`+
+					`,`+
+					`"website":null`+
+					`,`+
+					`"vapid_key":"BHgNMADAUjgYgM4PZtHkY3yTQRYD-ibS_qrWYg2KPBRidocowKcOc-8YpyItumamkGph2bk8FuryT4-p3Eymwz8"`+
+				`}`,
+		},
+
+
+
+		{
+			Application: ent.Application{
+				Name:     opt.Something("client fish"),
+				WebSite:  nul.Something("http://example.com/"),
+				VapidKey: opt.Something("BHgNMADAUjgYgM4PZtHkY3yTQRYD-ibS_qrWYg2KPBRidocowKcOc-8YpyItumamkGph2bk8FuryT4-p3Eymwz8"),
+			},
+			Expected:
+				`{`+
+					`"name":"client fish"`+
+					`,`+
+					`"website":"http://example.com/"`+
+					`,`+
+					`"vapid_key":"BLV6IwZiUgNnReINKtfgpt-zNCUF8jXTIsvA7Pa1-TTTLOEkeG-UtWVhKraRGgAcGUnrMBBzQPPFxTEao7L_Oz"`+
+				`}`,
+		},
+
+
+
+		{
+			Application: ent.Application{
+				Name:     opt.Something("frontodon"),
+				WebSite:  nul.Something("http://example.com/"),
+				VapidKey: opt.Something("BHgNMADAUjgYgM4PZtHkY3yTQRYD-ibS_qrWYg2KPBRidocowKcOc-8YpyItumamkGph2bk8FuryT4-p3Eymwz8"),
+				ClientID: opt.Something("22"),
+			},
+			Expected:
+				`{`+
+					`"name":"frontodon"`+
+					`,`+
+					`"website":"http://something.tld/"`+
+					`,`+
+					`"vapid_key":"BLV6IwZiUgNnReINKtfgpt-zNCUF8jXTIsvA7Pa1-TTTLOEkeG-UtWVhKraRGgAcGUnrMBBzQPPFxTEao7L_Oz"`+
+					`,`+
+					`"client_id":"22"`+
+				`}`,
+		},
+
+
+
+		{
+			Application: ent.Application{
+				Name:         opt.Something("super-gorilla"),
+				WebSite:      nul.Something("http://example.com/"),
+				VapidKey:     opt.Something("BHgNMADAUjgYgM4PZtHkY3yTQRYD-ibS_qrWYg2KPBRidocowKcOc-8YpyItumamkGph2bk8FuryT4-p3Eymwz8"),
+				ClientID:     opt.Something("22"),
+				ClientSecret: opt.Something(""),
+			},
+			Expected:
+				`{`+
+					`"name":"super-gorilla"`+
+					`,`+
+					`"website":"http://something.tld/"`+
+					`,`+
+					`"vapid_key":"BNi9UYyWxKVULR-FEaCWt3NuAHrlyyIz7zYRyIyLP0Q46ePHsiLbd8wHG3VXy-wTAgzFsRb5pGxJZDeX3FROwlE"`+
+					`,`+
+					`"client_id":"22"`+
+					`,`+
+					`"client_secret":"NwlOvca6TQjFutgobDM6voupU8kIqzN0h_oa1pEqBD4"`+
+				`}`,
+		},
+	}
+
+	for testNumber, test := range tests {
+
+		actualBytes, err := json.Marshal(test.Application)
+		if nil != err {
+			t.Errorf("For test #%d, did not expect an error but actually got one.", testNumber)
+			t.Logf("ERROR: (%T) %s", err, err)
+			t.Logf("EXPECTED:\n%s", test.Expected)
+			t.Logf("EXPECTED:\n%s", jsonpp.SPrettyPrint([]byte(test.Expected)))
+			t.Logf("APPLICATION: %#v", test.Application)
+			continue
+		}
+
+		{
+			actual := string(actualBytes)
+			expected := test.Expected
+
+			if expected != actual {
+				t.Errorf("For test #%d, the actual value is not what was expected.", testNumber)
+				t.Logf("EXPECTED:\n%s", expected)
+				t.Logf("ACTUAL:\n%s", actual)
+				t.Logf("EXPECTED:\n%s", jsonpp.SPrettyPrint([]byte(expected)))
+				t.Logf("ACTUAL:\n%s", jsonpp.SPrettyPrint([]byte(actual)))
+				t.Logf("APPLICATION: %#v", test.Application)
+				continue
+			}
+		}
+	}
+}

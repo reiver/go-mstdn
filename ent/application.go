@@ -21,14 +21,14 @@ const (
 // https://docs.joinmastodon.org/entities/Application/
 type Application struct {
 	Name         opt.Optional[string] `json:"name"`
-	WebSite      nul.Nullable[string] `json:"website"`
+	WebSite      nul.Nullable[string] `json:"website"`       // optional — field has JSON null value in JSON if not set
 	VapidKey     opt.Optional[string] `json:"vapid_key"`
-	ClientID     opt.Optional[string] `json:"client_id"`
-	ClientSecret opt.Optional[string] `json:"client_secret"`
+	ClientID     opt.Optional[string] `json:"client_id"`     // optional — field not included in JSON if not set
+	ClientSecret opt.Optional[string] `json:"client_secret"` // optional — field not included in JSON if not set
 }
 
 func (receiver Application) MarshalJSON() ([]byte, error) {
-	var data map[string]interface{}
+	var data map[string]interface{} = map[string]interface{}{}
 
 	{
 		val, found := receiver.Name.Get()
@@ -43,6 +43,9 @@ func (receiver Application) MarshalJSON() ([]byte, error) {
 		data["website"] = value
 	})
 	receiver.WebSite.WhenNull(func(){
+		data["website"] = nil
+	})
+	receiver.WebSite.WhenNothing(func(){
 		data["website"] = nil
 	})
 
