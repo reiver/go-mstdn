@@ -27,9 +27,9 @@ type Account struct {
 	AvatarStatic   opt.Optional[string]        `json:"avatar_static"`
 	Header         opt.Optional[string]        `json:"header"`
 	HeaderStatic   opt.Optional[string]        `json:"header_static"`
-	Locked         opt.Optional[bool]          `json:"locked"`
 	Fields       []Field                       `json:"fields"`
 	Emojis       []CustomEmoji                 `json:"emojis"`
+	Locked         opt.Optional[bool]          `json:"locked"`
 	Bot            opt.Optional[bool]          `json:"bot"`
 	Group          opt.Optional[bool]          `json:"group"`
 	Discoverable   nul.Nullable[bool]          `json:"discoverable"`
@@ -41,7 +41,7 @@ type Account struct {
 	LastStatusAt   nul.Nullable[string]        `json:"last_status_at"`
 	StatusesCount  opt.Optional[jsonint.Int]   `json:"statuses_count"`
 	FollowersCount opt.Optional[jsonint.Int]   `json:"followers_count"`
-	FollowingCount opt.Optional[jsonint.Int]  `json:"following_count"`
+	FollowingCount opt.Optional[jsonint.Int]   `json:"following_count"`
 	Roles        []Role                        `json:"roles"`
 	MuteExpiresAt  nul.Nullable[string]        `json:"mute_expires_at"`
 }
@@ -174,20 +174,14 @@ func (receiver Account) MarshalJSON() ([]byte, error) {
 	}
 
 	{
-		buffer = append(buffer, `,"locked":`...)
-
-		marshaled, err := json.Marshal(receiver.Locked)
-		if nil != err {
-			return nil, erorr.Errorf("mstdn/ent: could not marshal ent.Account.Locked as JSON: %w", err)
-		}
-
-		buffer = append(buffer, marshaled...)
-	}
-
-	{
 		buffer = append(buffer, `,"fields":`...)
 
-		marshaled, err := json.Marshal(receiver.Fields)
+		var src interface{} = receiver.Fields
+		if nil == receiver.Fields {
+			src = []Field{}
+		}
+
+		marshaled, err := json.Marshal(src)
 		if nil != err {
 			return nil, erorr.Errorf("mstdn/ent: could not marshal ent.Account.Fields as JSON: %w", err)
 		}
@@ -198,9 +192,25 @@ func (receiver Account) MarshalJSON() ([]byte, error) {
 	{
 		buffer = append(buffer, `,"emojis":`...)
 
-		marshaled, err := json.Marshal(receiver.Emojis)
+		var src interface{} = receiver.Emojis
+		if nil == receiver.Emojis {
+			src = []CustomEmoji{}
+		}
+
+		marshaled, err := json.Marshal(src)
 		if nil != err {
 			return nil, erorr.Errorf("mstdn/ent: could not marshal ent.Account.Emojis as JSON: %w", err)
+		}
+
+		buffer = append(buffer, marshaled...)
+	}
+
+	{
+		buffer = append(buffer, `,"locked":`...)
+
+		marshaled, err := json.Marshal(receiver.Locked)
+		if nil != err {
+			return nil, erorr.Errorf("mstdn/ent: could not marshal ent.Account.Locked as JSON: %w", err)
 		}
 
 		buffer = append(buffer, marshaled...)
@@ -240,13 +250,13 @@ func (receiver Account) MarshalJSON() ([]byte, error) {
 	}
 
 	{
-		if nul.Nothing[bool]() != receiver.Discoverable {
+		if nul.Nothing[bool]() != receiver.NoIndex {
 
 			buffer = append(buffer, `,"noindex":`...)
 
-			marshaled, err := json.Marshal(receiver.Discoverable)
+			marshaled, err := json.Marshal(receiver.NoIndex)
 			if nil != err {
-				return nil, erorr.Errorf("mstdn/ent: could not marshal ent.Account.Discoverable as JSON: %w", err)
+				return nil, erorr.Errorf("mstdn/ent: could not marshal ent.Account.NoIndex as JSON: %w", err)
 			}
 
 			buffer = append(buffer, marshaled...)
