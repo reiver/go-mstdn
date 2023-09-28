@@ -9,13 +9,6 @@ import (
 
 var _ json.Marshaler = CustomEmoji{}
 
-const (
-	errCannotMashalCustomEmojiAsJSONNoShortCode       = erorr.Error("cannot marshal ent.CustomEmoji to JSON — no ‘shortcode’ set")
-	errCannotMashalCustomEmojiAsJSONNoURL             = erorr.Error("cannot marshal ent.CustomEmoji to JSON — no ‘url’ set")
-	errCannotMashalCustomEmojiAsJSONNoStaticURL       = erorr.Error("cannot marshal ent.CustomEmoji to JSON — no ‘static_url’ set")
-	errCannotMashalCustomEmojiAsJSONNoVisibleInPicker = erorr.Error("cannot marshal ent.CustomEmoji to JSON — no ‘visible_in_picker’ set")
-)
-
 // CustomEmoji represents a Mastodon API "CustomEmoji".
 //
 // See:
@@ -30,45 +23,69 @@ type CustomEmoji struct {
 
 func (receiver CustomEmoji) MarshalJSON() ([]byte, error) {
 
-	data := map[string]interface{}{}
+	var buffer []byte
+
+	buffer = append(buffer, "{"...)
 
 	{
-		value, found := receiver.ShortCode.Get()
-		if !found {
-			return nil, errCannotMashalCustomEmojiAsJSONNoShortCode
+                buffer = append(buffer, `"shortcode":`...)
+
+                marshaled, err := json.Marshal(receiver.ShortCode)
+                if nil != err {
+                        return nil, erorr.Errorf("mstdn/ent: could not marshal ent.CustomEmoji.ShortCode as JSON: %w", err)
+                }
+
+                buffer = append(buffer, marshaled...)
+	}
+
+	{
+                buffer = append(buffer, `,"url":`...)
+
+                marshaled, err := json.Marshal(receiver.URL)
+                if nil != err {
+                        return nil, erorr.Errorf("mstdn/ent: could not marshal ent.CustomEmoji.URL as JSON: %w", err)
+                }
+
+                buffer = append(buffer, marshaled...)
+	}
+
+	{
+                buffer = append(buffer, `,"static_url":`...)
+
+                marshaled, err := json.Marshal(receiver.StaticURL)
+                if nil != err {
+                        return nil, erorr.Errorf("mstdn/ent: could not marshal ent.CustomEmoji.StaticURL as JSON: %w", err)
+                }
+
+                buffer = append(buffer, marshaled...)
+	}
+
+	{
+                buffer = append(buffer, `,"visible_in_picker":`...)
+
+                marshaled, err := json.Marshal(receiver.VisibleInPicker)
+                if nil != err {
+                        return nil, erorr.Errorf("mstdn/ent: could not marshal ent.CustomEmoji.VisibleInPicker as JSON: %w", err)
+                }
+
+                buffer = append(buffer, marshaled...)
+	}
+
+	{
+		if opt.Nothing[string]() != receiver.Category {
+
+	                buffer = append(buffer, `,"category":`...)
+
+        	        marshaled, err := json.Marshal(receiver.Category)
+                	if nil != err {
+                        	return nil, erorr.Errorf("mstdn/ent: could not marshal ent.CustomEmoji.Category as JSON: %w", err)
+	                }
+
+        	        buffer = append(buffer, marshaled...)
 		}
-
-		data["shortcode"] = value
-	}
-	{
-		value, found := receiver.URL.Get()
-		if !found {
-			return nil, errCannotMashalCustomEmojiAsJSONNoURL
-		}
-
-		data["url"] = value
-	}
-	{
-		value, found := receiver.StaticURL.Get()
-		if !found {
-			return nil, errCannotMashalCustomEmojiAsJSONNoStaticURL
-		}
-
-		data["static_url"] = value
-	}
-	{
-		value, found := receiver.VisibleInPicker.Get()
-		if !found {
-			return nil, errCannotMashalCustomEmojiAsJSONNoVisibleInPicker
-		}
-
-		data["visible_in_picker"] = value
-	}
-	{
-		receiver.Category.WhenSomething(func(value string){
-			data["category"] = value
-		})
 	}
 
-	return json.Marshal(data)
+	buffer = append(buffer, "}"...)
+
+	return buffer, nil
 }

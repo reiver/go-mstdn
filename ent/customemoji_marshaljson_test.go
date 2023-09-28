@@ -25,8 +25,8 @@ func TestCustomEmoji_MarshalJSON(t *testing.T) {
 			Expected:
 				"{"                                            +"\n"+
 				"\t"+  `"shortcode":`         +`""`      +","  +"\n"+
-				"\t"+  `"static_url":`        +`""`      +","  +"\n"+
 				"\t"+  `"url":`               +`""`      +","  +"\n"+
+				"\t"+  `"static_url":`        +`""`      +","  +"\n"+
 				"\t"+  `"visible_in_picker":` +`false`   +""   +"\n"+
 				"}"                                            +"\n",
 		},
@@ -43,8 +43,8 @@ func TestCustomEmoji_MarshalJSON(t *testing.T) {
 			Expected:
 				"{"                                                   +"\n"+
 				"\t"+  `"shortcode":`         +`"bananas"`      +","  +"\n"+
-				"\t"+  `"static_url":`        +`""`             +","  +"\n"+
 				"\t"+  `"url":`               +`""`             +","  +"\n"+
+				"\t"+  `"static_url":`        +`""`             +","  +"\n"+
 				"\t"+  `"visible_in_picker":` +`false`          +""   +"\n"+
 				"}"                                                   +"\n",
 		},
@@ -58,8 +58,8 @@ func TestCustomEmoji_MarshalJSON(t *testing.T) {
 			Expected:
 				"{"                                                                            +"\n"+
 				"\t"+  `"shortcode":`         +`""`                                      +","  +"\n"+
-				"\t"+  `"static_url":`        +`""`                                      +","  +"\n"+
 				"\t"+  `"url":`               +`"https://example.com/emoji/cracra"`      +","  +"\n"+
+				"\t"+  `"static_url":`        +`""`                                      +","  +"\n"+
 				"\t"+  `"visible_in_picker":` +`false`                                   +""   +"\n"+
 				"}"                                                                            +"\n",
 		},
@@ -73,8 +73,8 @@ func TestCustomEmoji_MarshalJSON(t *testing.T) {
 			Expected:
 				"{"                                                                                           +"\n"+
 				"\t"+  `"shortcode":`         +`""`                                                     +","  +"\n"+
-				"\t"+  `"static_url":`        +`"https://static.example.com/img/emoji/cracra.png"`      +","  +"\n"+
 				"\t"+  `"url":`               +`""`                                                     +","  +"\n"+
+				"\t"+  `"static_url":`        +`"https://static.example.com/img/emoji/cracra.png"`      +","  +"\n"+
 				"\t"+  `"visible_in_picker":` +`false`                                                  +""   +"\n"+
 				"}"                                                                                     +"\n",
 		},
@@ -88,8 +88,8 @@ func TestCustomEmoji_MarshalJSON(t *testing.T) {
 			Expected:
 				"{"                                           +"\n"+
 				"\t"+  `"shortcode":`         +`""`     +","  +"\n"+
-				"\t"+  `"static_url":`        +`""`     +","  +"\n"+
 				"\t"+  `"url":`               +`""`     +","  +"\n"+
+				"\t"+  `"static_url":`        +`""`     +","  +"\n"+
 				"\t"+  `"visible_in_picker":` +`true`   +""   +"\n"+
 				"}"                                           +"\n",
 		},

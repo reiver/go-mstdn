@@ -388,7 +388,6 @@ func (receiver Account) MarshalJSON() ([]byte, error) {
 		}
 	}
 
-
 	buffer = append(buffer, "}"...)
 
 	return buffer, nil
