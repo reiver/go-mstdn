@@ -23,7 +23,7 @@ type Account struct {
 	EMail                  opt.Optional[string] `json:"email"`
 	IP                     nul.Nullable[string] `json:"ip"`
 	IPs                  []IP                   `json:"ips"`
-	Locale                 nul.Nullable[string] `json:"locale"`
+	Locale                 opt.Optional[string] `json:"locale"`
 	InviteRequest          nul.Nullable[string] `json:"invite_request"`
 	Role                   ent.Role             `json:"role"`
 	Confirmed              opt.Optional[bool]   `json:"confirmed"`
