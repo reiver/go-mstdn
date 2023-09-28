@@ -6,6 +6,8 @@ import (
 
 // IP represents a Mastodon API "Admin::Ip".
 //
+// Note that "ip" means "ip-address" in this context.
+//
 // See:
 // https://docs.joinmastodon.org/entities/Admin_Ip/
 type IP struct {
