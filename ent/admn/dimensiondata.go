@@ -77,7 +77,7 @@ func (receiver DimensionData) MarshalJSON() ([]byte, error) {
 	{
 		if opt.Nothing[string]() != receiver.HumanValue {
 
-			buffer = append(buffer, `,"unit":`...)
+			buffer = append(buffer, `,"human_value":`...)
 
 			marshaled, err := json.Marshal(receiver.HumanValue)
 			if nil != err {
