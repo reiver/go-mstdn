@@ -7,19 +7,25 @@ import (
 	"sourcecode.social/reiver/go-mstdn/ent"
 )
 
-var _ http.Handler = Handler{}
+var _ http.Handler = internalHandler{}
 
 const Path string = "/api/v1/accounts/lookup"
 
-type Handler struct {
-	LoaderFunc LoaderFunc
+func Handler(fn LoaderFunc) http.Handler {
+	return internalHandler{
+		loaderFunc:fn,
+	}
 }
 
-func (Handler) Path() string {
+type internalHandler struct {
+	loaderFunc LoaderFunc
+}
+
+func (internalHandler) Path() string {
 	return Path
 }
 
-func (receiver Handler) ServeHTTP(resp http.ResponseWriter, req *http.Request) {
+func (receiver internalHandler) ServeHTTP(resp http.ResponseWriter, req *http.Request) {
 	if nil == resp {
 		return
 	}
@@ -34,7 +40,7 @@ func (receiver Handler) ServeHTTP(resp http.ResponseWriter, req *http.Request) {
 		return
 	}
 
-	fn := receiver.LoaderFunc
+	fn := receiver.loaderFunc
 	if nil == fn {
 		mstdn.InternalServerError(resp)
 		return

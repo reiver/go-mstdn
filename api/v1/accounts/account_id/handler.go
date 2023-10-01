@@ -3,23 +3,33 @@ package account_id
 import (
 	"net/http"
 
+	"sourcecode.social/reiver/go-pathmatch"
+
 	"sourcecode.social/reiver/go-mstdn"
 	"sourcecode.social/reiver/go-mstdn/ent"
 )
 
-var _ http.Handler = Handler{}
+var _ http.Handler = internalHandler{}
 
 const Path string = "/api/v1/accounts/{account_id}"
 
-type Handler struct {
-	LoaderFunc LoaderFunc
+var pattern *pathmatch.Pattern = pathmatch.MustCompile(Path)
+
+func Handler(fn LoaderFunc) http.Handler {
+	return internalHandler{
+		loaderFunc:fn,
+	}
 }
 
-func (Handler) Path() string {
+type internalHandler struct {
+	loaderFunc LoaderFunc
+}
+
+func (internalHandler) Path() string {
 	return Path
 }
 
-func (receiver Handler) ServeHTTP(resp http.ResponseWriter, req *http.Request) {
+func (receiver internalHandler) ServeHTTP(resp http.ResponseWriter, req *http.Request) {
 	if nil == resp {
 		return
 	}
@@ -34,7 +44,7 @@ func (receiver Handler) ServeHTTP(resp http.ResponseWriter, req *http.Request) {
 		return
 	}
 
-	fn := receiver.LoaderFunc
+	fn := receiver.loaderFunc
 	if nil == fn {
 		mstdn.InternalServerError(resp)
 		return
@@ -42,26 +52,23 @@ func (receiver Handler) ServeHTTP(resp http.ResponseWriter, req *http.Request) {
 
 	var accountid string
 	{
-		const key string = "accountid"
-
 		url := req.URL
 		if nil == url {
 			mstdn.InternalServerError(resp)
 			return
 		}
 
-		query := url.Query()
-		if nil == query {
-			mstdn.InternalServerError(resp)
-			return
-		}
+		path := url.Path
 
-		if !query.Has(key) {
+		success, err := pattern.Find(path, &accountid)
+		if nil != err {
 			mstdn.BadRequest(resp)
 			return
 		}
-
-		accountid = query.Get("accountid")
+		if !success {
+			mstdn.BadRequest(resp)
+			return
+		}
 	}
 
 	var account ent.Account
