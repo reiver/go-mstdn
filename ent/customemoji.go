@@ -3,7 +3,7 @@ package ent
 import (
 	"encoding/json"
 
-	"sourcecode.social/reiver/go-erorr"
+	"github.com/reiver/go-erorr"
 	"github.com/reiver/go-opt"
 )
 
