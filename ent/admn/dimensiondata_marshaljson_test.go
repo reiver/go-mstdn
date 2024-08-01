@@ -7,7 +7,7 @@ import (
 
 	"sourcecode.social/reiver/go-opt"
 
-	"sourcecode.social/reiver/go-mstdn/ent/admn"
+	"github.com/reiver/go-mstdn/ent/admn"
 )
 
 func TestDimensionData_MarshalJSON(t *testing.T) {

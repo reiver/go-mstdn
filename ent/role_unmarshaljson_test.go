@@ -8,7 +8,7 @@ import (
 	"sourcecode.social/reiver/go-jsonint"
 	"sourcecode.social/reiver/go-opt"
 
-	"sourcecode.social/reiver/go-mstdn/ent"
+	"github.com/reiver/go-mstdn/ent"
 )
 
 func TestRole_MarshalJSON(t *testing.T) {

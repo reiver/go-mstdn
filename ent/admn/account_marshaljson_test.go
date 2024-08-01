@@ -9,8 +9,8 @@ import (
 	"sourcecode.social/reiver/go-nul"
 	"sourcecode.social/reiver/go-opt"
 
-	"sourcecode.social/reiver/go-mstdn/ent"
-	"sourcecode.social/reiver/go-mstdn/ent/admn"
+	"github.com/reiver/go-mstdn/ent"
+	"github.com/reiver/go-mstdn/ent/admn"
 )
 
 func TestAdmin_MarshalJSON(t *testing.T) {

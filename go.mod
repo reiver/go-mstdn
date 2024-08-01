@@ -1,4 +1,4 @@
-module sourcecode.social/reiver/go-mstdn
+module github.com/reiver/go-mstdn
 
 go 1.20
 

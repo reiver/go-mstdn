@@ -3,8 +3,8 @@ package lookup
 import (
 	"net/http"
 
-	"sourcecode.social/reiver/go-mstdn"
-	"sourcecode.social/reiver/go-mstdn/ent"
+	"github.com/reiver/go-mstdn"
+	"github.com/reiver/go-mstdn/ent"
 )
 
 var _ http.Handler = internalHandler{}
