@@ -9,7 +9,7 @@ import (
 	"sourcecode.social/reiver/go-jsonpp"
 	"sourcecode.social/reiver/go-jsonstr"
 	"sourcecode.social/reiver/go-nul"
-	"sourcecode.social/reiver/go-opt"
+	"github.com/reiver/go-opt"
 
 	"github.com/reiver/go-mstdn/ent"
 )

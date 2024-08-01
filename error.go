@@ -6,7 +6,7 @@ import (
 	"io"
 	"net/http"
 
-	"sourcecode.social/reiver/go-opt"
+	"github.com/reiver/go-opt"
 )
 
 func errorJSON(writer io.Writer, statusCode int, msg ...interface{}) {

@@ -1,4 +1,8 @@
 github.com/fatih/structs v1.1.0 h1:Q7juDM0QtcnhCpeyLGQKyg4TOIghuNXrkL32pHAUMxo=
+github.com/reiver/go-erorr v0.0.0-20240704145350-0485e21eaa82 h1:xxt7qL+7ZfRysXWXU2MpULOg/zWe5P+Fmw9VyUFCmZE=
+github.com/reiver/go-erorr v0.0.0-20240704145350-0485e21eaa82/go.mod h1:F0HbBf+Ak2ZlE8YkDW4Y+KxaUmT0KaaIJK6CXY3cJxE=
+github.com/reiver/go-opt v0.0.0-20240704165441-4ce81358adfc h1:9ARo75fNaZDaGy6zzTrCnJWtkDMNigM7uMRRK8sUERM=
+github.com/reiver/go-opt v0.0.0-20240704165441-4ce81358adfc/go.mod h1:Yu6dFKh0IZ0evP9U5QiBlxBa5BhlBzGEn7EZ1kP/pkA=
 sourcecode.social/reiver/go-erorr v0.0.0-20230922202459-231149d185a1 h1:wpnz4JicQBLWrgGphYBls7DysIFCcnWgDz/vce/sY8E=
 sourcecode.social/reiver/go-erorr v0.0.0-20230922202459-231149d185a1/go.mod h1:NFtd7fzEf0r6A6R7JXYZfayRhPaJy0zt/18VWoLzrxA=
 sourcecode.social/reiver/go-jsonint v0.0.0-20230924212905-09e0626e3dd8 h1:Qf3OP8Z89a6t4M6qwF7q4+DYhU93rPFPJ1sl+bxesME=
@@ -9,7 +13,5 @@ sourcecode.social/reiver/go-jsonstr v0.0.0-20230927032837-cca9187c9798 h1:yznt9j
 sourcecode.social/reiver/go-jsonstr v0.0.0-20230927032837-cca9187c9798/go.mod h1:K97qQnuRcjjh2OjhT2BzliIZMm8hLp4qIx8arkV/tnU=
 sourcecode.social/reiver/go-nul v0.0.0-20230927004815-8a8eeb3194fa h1:ws1aQ5mMDvBbKEEk0UulTN4Mmszcs6pn4CgMcTLVkv0=
 sourcecode.social/reiver/go-nul v0.0.0-20230927004815-8a8eeb3194fa/go.mod h1:4WTJneAzve27LLCE8+HRpFUIjuB3hgvZkNtlS43xbKw=
-sourcecode.social/reiver/go-opt v0.0.0-20230927004316-272fd8451811 h1:T3ft05KUJpzkimaJXiNSpBkYJoRmyinvtrq8MbrfrFQ=
-sourcecode.social/reiver/go-opt v0.0.0-20230927004316-272fd8451811/go.mod h1:O6WKM2UcKkheRT/dA6A2b1tW0m+WenSbxdcXE+idxzI=
 sourcecode.social/reiver/go-pathmatch v0.0.0-20231001044920-1772a36eb6bd h1:6MIrZc2s6m4SaHnP2Aza6Cg4kMBiwpi+8mKdO9sjfhw=
 sourcecode.social/reiver/go-pathmatch v0.0.0-20231001044920-1772a36eb6bd/go.mod h1:mw0k5AKQBwJ75SIP6sm9HWCSkEVxqn9UlHDH+MR8pjo=

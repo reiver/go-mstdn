@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 
 	"sourcecode.social/reiver/go-erorr"
-	"sourcecode.social/reiver/go-opt"
+	"github.com/reiver/go-opt"
 )
 
 var _ json.Marshaler = CustomEmoji{}

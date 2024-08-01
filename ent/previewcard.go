@@ -2,7 +2,7 @@ package ent
 
 import (
 	"sourcecode.social/reiver/go-jsonint"
-	"sourcecode.social/reiver/go-opt"
+	"github.com/reiver/go-opt"
 	"sourcecode.social/reiver/go-nul"
 )
 

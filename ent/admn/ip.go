@@ -1,7 +1,7 @@
 package admn
 
 import (
-	"sourcecode.social/reiver/go-opt"
+	"github.com/reiver/go-opt"
 )
 
 // IP represents a Mastodon API "Admin::Ip".

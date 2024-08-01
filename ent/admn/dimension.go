@@ -1,7 +1,7 @@
 package admn
 
 import (
-	"sourcecode.social/reiver/go-opt"
+	"github.com/reiver/go-opt"
 )
 
 // Dimension represents a Mastodon API "Admin::Dimension".

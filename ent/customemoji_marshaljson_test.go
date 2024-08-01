@@ -6,7 +6,7 @@ import (
 	"bytes"
 	"encoding/json"
 
-	"sourcecode.social/reiver/go-opt"
+	"github.com/reiver/go-opt"
 )
 
 func TestCustomEmoji_MarshalJSON(t *testing.T) {

@@ -1,7 +1,7 @@
 package ent
 
 import (
-	"sourcecode.social/reiver/go-opt"
+	"github.com/reiver/go-opt"
 )
 
 // Tag represents a Mastodon API "Tag".

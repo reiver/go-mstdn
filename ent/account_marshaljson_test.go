@@ -7,7 +7,7 @@ import (
 
 	"sourcecode.social/reiver/go-jsonint"
 	"sourcecode.social/reiver/go-nul"
-	"sourcecode.social/reiver/go-opt"
+	"github.com/reiver/go-opt"
 
 	"github.com/reiver/go-mstdn/ent"
 )
