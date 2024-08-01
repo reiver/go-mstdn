@@ -1,8 +1,8 @@
 github.com/fatih/structs v1.1.0 h1:Q7juDM0QtcnhCpeyLGQKyg4TOIghuNXrkL32pHAUMxo=
-github.com/reiver/go-erorr v0.0.0-20240704145350-0485e21eaa82 h1:xxt7qL+7ZfRysXWXU2MpULOg/zWe5P+Fmw9VyUFCmZE=
-github.com/reiver/go-erorr v0.0.0-20240704145350-0485e21eaa82/go.mod h1:F0HbBf+Ak2ZlE8YkDW4Y+KxaUmT0KaaIJK6CXY3cJxE=
-github.com/reiver/go-jsonint v0.0.0-20240801225431-de2a043732b5 h1:kWb8QFum28pHL1D5j96vrLCI+WfNxnJcXf0sirHnfck=
-github.com/reiver/go-jsonint v0.0.0-20240801225431-de2a043732b5/go.mod h1:1lW12ILqOxqtylQBMezy6oRuMQWlzFjeWF/Wbz/9U8g=
+github.com/reiver/go-erorr v0.0.0-20240801233437-8cbde6d1fa3f h1:D1QSxKHm8U73XhjsW3SFLkT0zT5pKJi+1KGboMhY1Rk=
+github.com/reiver/go-erorr v0.0.0-20240801233437-8cbde6d1fa3f/go.mod h1:F0HbBf+Ak2ZlE8YkDW4Y+KxaUmT0KaaIJK6CXY3cJxE=
+github.com/reiver/go-jsonint v0.0.0-20240801233651-21b9c52057ee h1:DfEj/iGAIU8CtTcnttyU6t3lae0jl760fUGjxZhIHNU=
+github.com/reiver/go-jsonint v0.0.0-20240801233651-21b9c52057ee/go.mod h1:1lW12ILqOxqtylQBMezy6oRuMQWlzFjeWF/Wbz/9U8g=
 github.com/reiver/go-opt v0.0.0-20240704165441-4ce81358adfc h1:9ARo75fNaZDaGy6zzTrCnJWtkDMNigM7uMRRK8sUERM=
 github.com/reiver/go-opt v0.0.0-20240704165441-4ce81358adfc/go.mod h1:Yu6dFKh0IZ0evP9U5QiBlxBa5BhlBzGEn7EZ1kP/pkA=
 sourcecode.social/reiver/go-erorr v0.0.0-20230922202459-231149d185a1 h1:wpnz4JicQBLWrgGphYBls7DysIFCcnWgDz/vce/sY8E=
