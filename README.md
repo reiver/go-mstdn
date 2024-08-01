@@ -35,4 +35,4 @@ GOPROXY=direct go get https://github.com/reiver/go-mstdn
 
 ## Author
 
-Package **mstdn** was written by [Charles Iliya Krempeaux](http://changelog.ca)
+Package **mstdn** was written by [Charles Iliya Krempeaux](http://reiver.link)
