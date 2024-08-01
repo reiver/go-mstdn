@@ -5,8 +5,8 @@ import (
 
 	"github.com/reiver/go-erorr"
 	"sourcecode.social/reiver/go-nul"
+	"github.com/reiver/go-jsonint"
 	"github.com/reiver/go-opt"
-	"sourcecode.social/reiver/go-jsonint"
 )
 
 var _ json.Marshaler = Account{}

@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 
 	"github.com/reiver/go-opt"
-	"sourcecode.social/reiver/go-jsonint"
+	"github.com/reiver/go-jsonint"
 )
 
 var _ json.Marshaler = Role{}
