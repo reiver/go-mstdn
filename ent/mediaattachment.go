@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 
 	"github.com/reiver/go-opt"
-	"sourcecode.social/reiver/go-nul"
+	"github.com/reiver/go-nul"
 )
 
 // See:

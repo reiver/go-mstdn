@@ -5,7 +5,7 @@ import (
 
 	"github.com/reiver/go-erorr"
 	"github.com/reiver/go-opt"
-	"sourcecode.social/reiver/go-nul"
+	"github.com/reiver/go-nul"
 
 	"github.com/reiver/go-mstdn/ent"
 )
