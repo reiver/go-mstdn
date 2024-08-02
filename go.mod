@@ -4,7 +4,6 @@ go 1.20
 
 require (
 	github.com/reiver/go-opt v0.0.0-20240704165441-4ce81358adfc
-	sourcecode.social/reiver/go-jsonpp v0.0.0-20230927044614-2bd26d25b35e
 	sourcecode.social/reiver/go-pathmatch v0.0.0-20231001044920-1772a36eb6bd
 )
 
@@ -15,7 +14,6 @@ require (
 
 require github.com/reiver/go-jsonstr v0.0.0-20240802000653-a5a8363975f1
 
-require (
-	github.com/reiver/go-erorr v0.0.0-20240801233437-8cbde6d1fa3f
-	sourcecode.social/reiver/go-erorr v0.0.0-20230922202459-231149d185a1 // indirect
-)
+require github.com/reiver/go-jsonpp v0.0.0-20240802001851-f43937cf4c93
+
+require github.com/reiver/go-erorr v0.0.0-20240801233437-8cbde6d1fa3f

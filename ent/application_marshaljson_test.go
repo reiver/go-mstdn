@@ -5,7 +5,7 @@ import (
 
 	"encoding/json"
 
-	"sourcecode.social/reiver/go-jsonpp"
+	"github.com/reiver/go-jsonpp"
 	"github.com/reiver/go-nul"
 	"github.com/reiver/go-opt"
 
