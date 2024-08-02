@@ -14,6 +14,6 @@ require (
 
 require github.com/reiver/go-jsonstr v0.0.0-20240802000653-a5a8363975f1
 
-require github.com/reiver/go-jsonpp v0.0.0-20240802001851-f43937cf4c93
+require github.com/reiver/go-jsonpp v0.0.0-20240802002345-16cd4c5a34ee
 
 require github.com/reiver/go-erorr v0.0.0-20240801233437-8cbde6d1fa3f
