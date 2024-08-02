@@ -11,5 +11,5 @@ github.com/reiver/go-nul v0.0.0-20240801233226-90d138095e48 h1:+x7mICqo/GBI0B7I5
 github.com/reiver/go-nul v0.0.0-20240801233226-90d138095e48/go.mod h1:hN0edxyC/F7HMB86sn/ljqTJ0CrAeOCGMpCZJ2Nmtc4=
 github.com/reiver/go-opt v0.0.0-20240704165441-4ce81358adfc h1:9ARo75fNaZDaGy6zzTrCnJWtkDMNigM7uMRRK8sUERM=
 github.com/reiver/go-opt v0.0.0-20240704165441-4ce81358adfc/go.mod h1:Yu6dFKh0IZ0evP9U5QiBlxBa5BhlBzGEn7EZ1kP/pkA=
-sourcecode.social/reiver/go-pathmatch v0.0.0-20231001044920-1772a36eb6bd h1:6MIrZc2s6m4SaHnP2Aza6Cg4kMBiwpi+8mKdO9sjfhw=
-sourcecode.social/reiver/go-pathmatch v0.0.0-20231001044920-1772a36eb6bd/go.mod h1:mw0k5AKQBwJ75SIP6sm9HWCSkEVxqn9UlHDH+MR8pjo=
+github.com/reiver/go-pathmatch v1.0.1-0.20240802004530-0dc31d85afa8 h1:3mxWa4FELLc6TbC00ZZTe30tYUZ8HN4IHaH0m7Y3SPc=
+github.com/reiver/go-pathmatch v1.0.1-0.20240802004530-0dc31d85afa8/go.mod h1:SveMAOrJP7XCL3UlazOjQdKNCGG2T/E1zE6gDHfs3cA=

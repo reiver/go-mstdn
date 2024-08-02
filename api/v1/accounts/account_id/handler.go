@@ -3,7 +3,7 @@ package account_id
 import (
 	"net/http"
 
-	"sourcecode.social/reiver/go-pathmatch"
+	"github.com/reiver/go-pathmatch"
 
 	"github.com/reiver/go-mstdn"
 	"github.com/reiver/go-mstdn/ent"
