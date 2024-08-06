@@ -10,7 +10,8 @@ import (
 
 type Status struct {
 	ID                 opt.Optional[string]      `json:"id"`
-	URL                nul.Nullable[string]      `json:"uri"`
+	URI                nul.Nullable[string]      `json:"uri"`
+	URL                nul.Nullable[string]      `json:"url"`
 	CreatedAt          opt.Optional[string]      `json:"created_at"`
 	Account            Account                   `json:"account"`
 	Content            opt.Optional[string]      `json:"content"`
