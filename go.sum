@@ -16,8 +16,8 @@ github.com/reiver/go-jsonstr v0.0.0-20240802000653-a5a8363975f1 h1:32ulBfhFKQIaR
 github.com/reiver/go-jsonstr v0.0.0-20240802000653-a5a8363975f1/go.mod h1:/msMJNY8TjDYgO/h06wEuzTWGs1b37xbUo8FH/2aZqQ=
 github.com/reiver/go-lck v0.0.0-20240805193248-0e30233d682d h1:ZhE9WGB09SR+AIAf+rTl1hWqeHwuBL3VlWl+QjeBcTw=
 github.com/reiver/go-lck v0.0.0-20240805193248-0e30233d682d/go.mod h1:PFseSi8S0CBkc+YB6jYWtogPk83LumclnYJZZBQJJhs=
-github.com/reiver/go-nul v0.0.0-20240801233226-90d138095e48 h1:+x7mICqo/GBI0B7I5obJM51wve8zcIsTW5kdctlO9pw=
-github.com/reiver/go-nul v0.0.0-20240801233226-90d138095e48/go.mod h1:hN0edxyC/F7HMB86sn/ljqTJ0CrAeOCGMpCZJ2Nmtc4=
+github.com/reiver/go-nul v0.0.0-20240807073751-fc545108d9e3 h1:xpe0q4HPPXz9W2R7uChya+654JxpIS/0Uksey6+ktMc=
+github.com/reiver/go-nul v0.0.0-20240807073751-fc545108d9e3/go.mod h1:hN0edxyC/F7HMB86sn/ljqTJ0CrAeOCGMpCZJ2Nmtc4=
 github.com/reiver/go-opt v0.0.0-20240704165441-4ce81358adfc h1:9ARo75fNaZDaGy6zzTrCnJWtkDMNigM7uMRRK8sUERM=
 github.com/reiver/go-opt v0.0.0-20240704165441-4ce81358adfc/go.mod h1:Yu6dFKh0IZ0evP9U5QiBlxBa5BhlBzGEn7EZ1kP/pkA=
 github.com/reiver/go-pathmatch v1.0.1-0.20240802004530-0dc31d85afa8 h1:3mxWa4FELLc6TbC00ZZTe30tYUZ8HN4IHaH0m7Y3SPc=
