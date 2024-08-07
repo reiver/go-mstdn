@@ -14,9 +14,23 @@ func DialHost(host string) (Client, error) {
 		Path:Path,
 	}
 
-	return httpsse.DialURL(urloc.String())
+	sseclient, err := httpsse.DialURL(urloc.String())
+	if nil != err {
+		return nil, err
+	}
+
+	return &internalClient{
+		sseclient:sseclient,
+	}, nil
 }
 
 func Dial(req *http.Request) (Client, error) {
-	return httpsse.Dial(req)
+	sseclient, err :=httpsse.Dial(req)
+	if nil != err {
+		return nil, err
+	}
+
+	return &internalClient{
+		sseclient:sseclient,
+	}, nil
 }
