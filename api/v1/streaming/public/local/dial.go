@@ -25,6 +25,16 @@ func DialHost(host string) (Client, error) {
 }
 
 func Dial(req *http.Request) (Client, error) {
+	if nil == req {
+		return nil, errNilHTTPRequest
+	}
+
+	if nil == req.URL {
+		req.URL = new(url.URL)
+	}
+
+	req.URL.Path = Path
+
 	sseclient, err :=httpsse.Dial(req)
 	if nil != err {
 		return nil, err
