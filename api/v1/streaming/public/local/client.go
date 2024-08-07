@@ -2,7 +2,6 @@ package local
 
 import (
 	"encoding/json"
-	"fmt"
 
 	"github.com/reiver/go-httpsse"
 	"github.com/reiver/go-opt"
