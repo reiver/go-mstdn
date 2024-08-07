@@ -77,7 +77,24 @@ func TestStatus_JSON(t *testing.T) {
 //@TODO: MediaAttachments
 //@TODO: Application
 //@TODO: Mentions
-//@TODO: Tags
+
+		{
+			Status:Status{
+				ID: opt.Something("123"),
+				Tags: []Tag{
+					Tag{
+						Name:opt.Something("akkoma"),
+						URL:opt.Something("https://example.com/tags/akkoma"),
+					},
+					Tag{
+						Name:opt.Something("fediverse"),
+						URL:opt.Something("https://example.com/tags/fediverse"),
+					},
+				},
+			},
+			Expected: `{"id":"123","tags":[{"name":"akkoma","url":"https://example.com/tags/akkoma"},{"name":"fediverse","url":"https://example.com/tags/fediverse"}]}`,
+		},
+
 //@TODO: Emojis
 
 
@@ -173,7 +190,7 @@ func TestStatus_JSON(t *testing.T) {
 			t.Logf("ACTUAL:   %q", actual)
 			t.Logf("EXPECTED:\n%s", expected)
 			t.Logf("ACTUAL:\n%s", actual)
-			t.Logf("STATUS:\n%v", test.Status)
+			t.Logf("STATUS:\n%#v", test.Status)
 			continue
 		}
 	}

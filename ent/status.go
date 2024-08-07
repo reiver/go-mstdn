@@ -183,7 +183,20 @@ func (receiver *Status) MarshalJSON() ([]byte, error) {
 
 //@TODO: Mentions
 
-//@TODO: Tags
+	{
+		vals := receiver.Tags
+		if 0 < len(vals) {
+			const name =     "tags"
+			p  = append(p, `,"tags":`...)
+
+			bytes, err := json.Marshal(vals)
+			if nil != err {
+				return nil, erorr.Errorf("problem marshaling %q: %w", name, err)
+			}
+
+			p = append(p, bytes...)
+		}
+	}
 
 //@TODO: Emojis
 
