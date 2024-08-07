@@ -60,7 +60,6 @@ func (receiver *internalClient) Decode(dst interface{}) error {
 	{
 		datum, receiver.data = receiver.data[0], receiver.data[1:]
 	}
-fmt.Printf("DATUM:\n%s \n", datum)
 
 	if len(datum) <= 0 {
 
