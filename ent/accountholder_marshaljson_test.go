@@ -3,7 +3,7 @@ package ent
 import (
 	"testing"
 
-	"encoding/json"
+	"github.com/reiver/go-json"
 )
 
 func TestAccountHolder_MarshalJSON(t *testing.T) {
