@@ -1,7 +1,6 @@
 package ent
 
 import (
-	"github.com/reiver/go-json"
 	"github.com/reiver/go-jsonint"
 	"github.com/reiver/go-opt"
 	"github.com/reiver/go-nul"
@@ -17,9 +16,5 @@ type Poll struct {
 	Options   []PollOption                `json:"options,omitempty"`
 	Emojis    []CustomEmoji               `json:"emojis,omitempty"`
 	Voted       opt.Optional[bool]        `json:"voted,omitempty"`
-	OwnVotes  []jsonint.Int              `json:"own_votes,omitempty"`
-}
-
-func (receiver *Poll) MarshalJSON() ([]byte, error) {
-	 return json.Marshal(*receiver)
+	OwnVotes  []jsonint.Int               `json:"own_votes,omitempty"`
 }
