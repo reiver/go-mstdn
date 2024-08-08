@@ -3,8 +3,7 @@ package ent_test
 import (
 	"testing"
 
-	"encoding/json"
-
+	"github.com/reiver/go-json"
 	"github.com/reiver/go-jsonint"
 	"github.com/reiver/go-nul"
 	"github.com/reiver/go-opt"
@@ -37,13 +36,15 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				Bot:            opt.Something(false),
 				Group:          opt.Something(false),
 				Discoverable:   nul.Null[bool](),
+				NoIndex:        nul.Null[bool](),
+				Moved:          nul.Null[ent.AccountHolder](),
 				CreatedAt:      opt.Something("2023-09-27T22:06:19Z"),
 				LastStatusAt:   nul.Null[string](),
 				StatusesCount:  opt.Something(jsonint.Int64(123)),
 				FollowersCount: opt.Something(jsonint.Int64(24789)),
 				FollowingCount: opt.Something(jsonint.Int64(355)),
 				//Roles
-				//MuteExpiresAt
+				MuteExpiresAt:  nul.Null[string](),
 			},
 
 			Expected: `{`+
@@ -68,10 +69,10 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				`"header":"https://files.example.com/header/joeblow.png"`+
 				`,`+
 				`"header_static":"https://files.example.com/header-static/joeblow.png"`+
-				`,`+
-				`"fields":[]`+
-				`,`+
-				`"emojis":[]`+
+//				`,`+
+//				`"fields":[]`+
+//				`,`+
+//				`"emojis":[]`+
 				`,`+
 				`"locked":false`+
 				`,`+
@@ -80,6 +81,10 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				`"group":false`+
 				`,`+
 				`"discoverable":null`+
+				`,`+
+				`"noindex":null`+
+				`,`+
+				`"moved":null`+
 				`,`+
 				`"created_at":"2023-09-27T22:06:19Z"`+
 				`,`+
@@ -90,6 +95,8 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				`"followers_count":24789`+
 				`,`+
 				`"following_count":355`+
+				`,`+
+				`"mute_expires_at":null`+
 			`}`,
 		},
 
@@ -120,13 +127,15 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				Bot:            opt.Something(false),
 				Group:          opt.Something(false),
 				Discoverable:   nul.Null[bool](),
+				NoIndex:        nul.Null[bool](),
+				Moved:          nul.Null[ent.AccountHolder](),
 				CreatedAt:      opt.Something("2023-09-27T22:06:19Z"),
 				LastStatusAt:   nul.Null[string](),
 				StatusesCount:  opt.Something(jsonint.Int64(123)),
 				FollowersCount: opt.Something(jsonint.Int64(24789)),
 				FollowingCount: opt.Something(jsonint.Int64(355)),
 				//Roles
-				//MuteExpiresAt
+				MuteExpiresAt:  nul.Null[string](),
 			},
 
 			Expected: `{`+
@@ -151,10 +160,10 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				`"header":"https://files.example.com/header/joeblow.png"`+
 				`,`+
 				`"header_static":"https://files.example.com/header-static/joeblow.png"`+
-				`,`+
-				`"fields":[]`+
-				`,`+
-				`"emojis":[]`+
+//				`,`+
+//				`"fields":[]`+
+//				`,`+
+//				`"emojis":[]`+
 				`,`+
 				`"locked":true`+
 				`,`+
@@ -163,6 +172,10 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				`"group":false`+
 				`,`+
 				`"discoverable":null`+
+				`,`+
+				`"noindex":null`+
+				`,`+
+				`"moved":null`+
 				`,`+
 				`"created_at":"2023-09-27T22:06:19Z"`+
 				`,`+
@@ -173,6 +186,8 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				`"followers_count":24789`+
 				`,`+
 				`"following_count":355`+
+				`,`+
+				`"mute_expires_at":null`+
 			`}`,
 		},
 
@@ -197,13 +212,15 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				Bot:            opt.Something(true),
 				Group:          opt.Something(false),
 				Discoverable:   nul.Null[bool](),
+				NoIndex:        nul.Null[bool](),
+				Moved:          nul.Null[ent.AccountHolder](),
 				CreatedAt:      opt.Something("2023-09-27T22:06:19Z"),
 				LastStatusAt:   nul.Null[string](),
 				StatusesCount:  opt.Something(jsonint.Int64(123)),
 				FollowersCount: opt.Something(jsonint.Int64(24789)),
 				FollowingCount: opt.Something(jsonint.Int64(355)),
 				//Roles
-				//MuteExpiresAt
+				MuteExpiresAt:  nul.Null[string](),
 			},
 
 			Expected: `{`+
@@ -228,10 +245,10 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				`"header":"https://files.example.com/header/joeblow.png"`+
 				`,`+
 				`"header_static":"https://files.example.com/header-static/joeblow.png"`+
-				`,`+
-				`"fields":[]`+
-				`,`+
-				`"emojis":[]`+
+//				`,`+
+//				`"fields":[]`+
+//				`,`+
+//				`"emojis":[]`+
 				`,`+
 				`"locked":false`+
 				`,`+
@@ -240,6 +257,10 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				`"group":false`+
 				`,`+
 				`"discoverable":null`+
+				`,`+
+				`"noindex":null`+
+				`,`+
+				`"moved":null`+
 				`,`+
 				`"created_at":"2023-09-27T22:06:19Z"`+
 				`,`+
@@ -250,6 +271,8 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				`"followers_count":24789`+
 				`,`+
 				`"following_count":355`+
+				`,`+
+				`"mute_expires_at":null`+
 			`}`,
 		},
 
@@ -274,13 +297,15 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				Bot:            opt.Something(false),
 				Group:          opt.Something(true),
 				Discoverable:   nul.Null[bool](),
+				NoIndex:        nul.Null[bool](),
+				Moved:          nul.Null[ent.AccountHolder](),
 				CreatedAt:      opt.Something("2023-09-27T22:06:19Z"),
 				LastStatusAt:   nul.Null[string](),
 				StatusesCount:  opt.Something(jsonint.Int64(123)),
 				FollowersCount: opt.Something(jsonint.Int64(24789)),
 				FollowingCount: opt.Something(jsonint.Int64(355)),
 				//Roles
-				//MuteExpiresAt
+				MuteExpiresAt:  nul.Null[string](),
 			},
 
 			Expected: `{`+
@@ -305,10 +330,10 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				`"header":"https://files.example.com/header/joeblow.png"`+
 				`,`+
 				`"header_static":"https://files.example.com/header-static/joeblow.png"`+
-				`,`+
-				`"fields":[]`+
-				`,`+
-				`"emojis":[]`+
+//				`,`+
+//				`"fields":[]`+
+//				`,`+
+//				`"emojis":[]`+
 				`,`+
 				`"locked":false`+
 				`,`+
@@ -317,6 +342,10 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				`"group":true`+
 				`,`+
 				`"discoverable":null`+
+				`,`+
+				`"noindex":null`+
+				`,`+
+				`"moved":null`+
 				`,`+
 				`"created_at":"2023-09-27T22:06:19Z"`+
 				`,`+
@@ -327,6 +356,8 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				`"followers_count":24789`+
 				`,`+
 				`"following_count":355`+
+				`,`+
+				`"mute_expires_at":null`+
 			`}`,
 		},
 
@@ -356,13 +387,15 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				Bot:            opt.Something(false),
 				Group:          opt.Something(false),
 				Discoverable:   nul.Something(false),
+				NoIndex:        nul.Null[bool](),
+				Moved:          nul.Null[ent.AccountHolder](),
 				CreatedAt:      opt.Something("2023-09-27T22:06:19Z"),
 				LastStatusAt:   nul.Null[string](),
 				StatusesCount:  opt.Something(jsonint.Int64(123)),
 				FollowersCount: opt.Something(jsonint.Int64(24789)),
 				FollowingCount: opt.Something(jsonint.Int64(355)),
 				//Roles
-				//MuteExpiresAt
+				MuteExpiresAt:  nul.Null[string](),
 			},
 
 			Expected: `{`+
@@ -387,10 +420,10 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				`"header":"https://files.example.com/header/janedoe.png"`+
 				`,`+
 				`"header_static":"https://files.example.com/header-static/janedoe.png"`+
-				`,`+
-				`"fields":[]`+
-				`,`+
-				`"emojis":[]`+
+//				`,`+
+//				`"fields":[]`+
+//				`,`+
+//				`"emojis":[]`+
 				`,`+
 				`"locked":false`+
 				`,`+
@@ -399,6 +432,10 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				`"group":false`+
 				`,`+
 				`"discoverable":false`+
+				`,`+
+				`"noindex":null`+
+				`,`+
+				`"moved":null`+
 				`,`+
 				`"created_at":"2023-09-27T22:06:19Z"`+
 				`,`+
@@ -409,6 +446,8 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				`"followers_count":24789`+
 				`,`+
 				`"following_count":355`+
+				`,`+
+				`"mute_expires_at":null`+
 			`}`,
 		},
 
@@ -433,13 +472,15 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				Bot:            opt.Something(false),
 				Group:          opt.Something(false),
 				Discoverable:   nul.Something(true),
+				NoIndex:        nul.Null[bool](),
+				Moved:          nul.Null[ent.AccountHolder](),
 				CreatedAt:      opt.Something("2023-09-27T22:06:19Z"),
 				LastStatusAt:   nul.Null[string](),
 				StatusesCount:  opt.Something(jsonint.Int64(123)),
 				FollowersCount: opt.Something(jsonint.Int64(24789)),
 				FollowingCount: opt.Something(jsonint.Int64(355)),
 				//Roles
-				//MuteExpiresAt
+				MuteExpiresAt:  nul.Null[string](),
 			},
 
 			Expected: `{`+
@@ -464,10 +505,10 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				`"header":"https://files.example.com/header/janedoe.png"`+
 				`,`+
 				`"header_static":"https://files.example.com/header-static/janedoe.png"`+
-				`,`+
-				`"fields":[]`+
-				`,`+
-				`"emojis":[]`+
+//				`,`+
+//				`"fields":[]`+
+//				`,`+
+//				`"emojis":[]`+
 				`,`+
 				`"locked":false`+
 				`,`+
@@ -476,6 +517,10 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				`"group":false`+
 				`,`+
 				`"discoverable":true`+
+				`,`+
+				`"noindex":null`+
+				`,`+
+				`"moved":null`+
 				`,`+
 				`"created_at":"2023-09-27T22:06:19Z"`+
 				`,`+
@@ -486,6 +531,8 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				`"followers_count":24789`+
 				`,`+
 				`"following_count":355`+
+				`,`+
+				`"mute_expires_at":null`+
 			`}`,
 		},
 
@@ -516,13 +563,15 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				Bot:            opt.Something(false),
 				Group:          opt.Something(false),
 				Discoverable:   nul.Null[bool](),
+				NoIndex:        nul.Null[bool](),
+				Moved:          nul.Null[ent.AccountHolder](),
 				CreatedAt:      opt.Something("2022-08-16T11:05:08Z"),
 				LastStatusAt:   nul.Something("2023-09-27T22:06:19Z"),
 				StatusesCount:  opt.Something(jsonint.Int64(123)),
 				FollowersCount: opt.Something(jsonint.Int64(24789)),
 				FollowingCount: opt.Something(jsonint.Int64(355)),
 				//Roles
-				//MuteExpiresAt
+				MuteExpiresAt:  nul.Null[string](),
 			},
 
 			Expected: `{`+
@@ -547,10 +596,10 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				`"header":"https://files.example.com/header/joeblow.png"`+
 				`,`+
 				`"header_static":"https://files.example.com/header-static/joeblow.png"`+
-				`,`+
-				`"fields":[]`+
-				`,`+
-				`"emojis":[]`+
+//				`,`+
+//				`"fields":[]`+
+//				`,`+
+//				`"emojis":[]`+
 				`,`+
 				`"locked":false`+
 				`,`+
@@ -559,6 +608,10 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				`"group":false`+
 				`,`+
 				`"discoverable":null`+
+				`,`+
+				`"noindex":null`+
+				`,`+
+				`"moved":null`+
 				`,`+
 				`"created_at":"2022-08-16T11:05:08Z"`+
 				`,`+
@@ -569,6 +622,8 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				`"followers_count":24789`+
 				`,`+
 				`"following_count":355`+
+				`,`+
+				`"mute_expires_at":null`+
 			`}`,
 		},
 
@@ -599,13 +654,15 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				Bot:            opt.Something(false),
 				Group:          opt.Something(false),
 				Discoverable:   nul.Null[bool](),
+				NoIndex:        nul.Null[bool](),
+				Moved:          nul.Null[ent.AccountHolder](),
 				CreatedAt:      opt.Something("2023-09-27T22:06:19Z"),
 				LastStatusAt:   nul.Null[string](),
 				StatusesCount:  opt.Something(jsonint.Int64(123)),
 				FollowersCount: opt.Something(jsonint.Int64(24789)),
 				FollowingCount: opt.Something(jsonint.Int64(355)),
 				//Roles
-				//MuteExpiresAt
+				MuteExpiresAt:  nul.Null[string](),
 			},
 
 			Expected: `{`+
@@ -630,10 +687,10 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				`"header":"https://files.example.com/header/joeblow.png"`+
 				`,`+
 				`"header_static":"https://files.example.com/header-static/joeblow.png"`+
-				`,`+
-				`"fields":[]`+
-				`,`+
-				`"emojis":[]`+
+//				`,`+
+//				`"fields":[]`+
+//				`,`+
+//				`"emojis":[]`+
 				`,`+
 				`"locked":false`+
 				`,`+
@@ -642,6 +699,10 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				`"group":false`+
 				`,`+
 				`"discoverable":null`+
+				`,`+
+				`"noindex":null`+
+				`,`+
+				`"moved":null`+
 				`,`+
 				`"created_at":"2023-09-27T22:06:19Z"`+
 				`,`+
@@ -652,6 +713,8 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				`"followers_count":24789`+
 				`,`+
 				`"following_count":355`+
+				`,`+
+				`"mute_expires_at":null`+
 			`}`,
 		},
 
@@ -676,13 +739,15 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				Bot:            opt.Something(false),
 				Group:          opt.Something(false),
 				Discoverable:   nul.Null[bool](),
+				NoIndex:        nul.Null[bool](),
+				Moved:          nul.Null[ent.AccountHolder](),
 				CreatedAt:      opt.Something("2023-09-27T22:06:19Z"),
 				LastStatusAt:   nul.Null[string](),
 				StatusesCount:  opt.Something(jsonint.Int64(123)),
 				FollowersCount: opt.Something(jsonint.Int64(24789)),
 				FollowingCount: opt.Something(jsonint.Int64(355)),
 				//Roles
-				//MuteExpiresAt
+				MuteExpiresAt:  nul.Null[string](),
 			},
 
 			Expected: `{`+
@@ -709,8 +774,8 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				`"header_static":"https://files.example.com/header-static/joeblow.png"`+
 				`,`+
 				`"fields":[]`+
-				`,`+
-				`"emojis":[]`+
+//				`,`+
+//				`"emojis":[]`+
 				`,`+
 				`"locked":false`+
 				`,`+
@@ -719,6 +784,10 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				`"group":false`+
 				`,`+
 				`"discoverable":null`+
+				`,`+
+				`"noindex":null`+
+				`,`+
+				`"moved":null`+
 				`,`+
 				`"created_at":"2023-09-27T22:06:19Z"`+
 				`,`+
@@ -729,6 +798,8 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				`"followers_count":24789`+
 				`,`+
 				`"following_count":355`+
+				`,`+
+				`"mute_expires_at":null`+
 			`}`,
 		},
 
@@ -748,23 +819,22 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				Header:        opt.Something("https://files.example.com/header/joeblow.png"),
 				HeaderStatic:  opt.Something("https://files.example.com/header-static/joeblow.png"),
 				Fields:        []ent.Field{
-					ent.Field{
-						Name: opt.Something("alt"),
-						Value: opt.Something("@joeblow@greatape.social"),
-					},
+					ent.FieldNameValue("alt", "@joeblow@greatape.social"),
 				},
 				//Emojis
 				Locked:         opt.Something(false),
 				Bot:            opt.Something(false),
 				Group:          opt.Something(false),
 				Discoverable:   nul.Null[bool](),
+				NoIndex:        nul.Null[bool](),
+				Moved:          nul.Null[ent.AccountHolder](),
 				CreatedAt:      opt.Something("2023-09-27T22:06:19Z"),
 				LastStatusAt:   nul.Null[string](),
 				StatusesCount:  opt.Something(jsonint.Int64(123)),
 				FollowersCount: opt.Something(jsonint.Int64(24789)),
 				FollowingCount: opt.Something(jsonint.Int64(355)),
 				//Roles
-				//MuteExpiresAt
+				MuteExpiresAt:  nul.Null[string](),
 			},
 
 			Expected: `{`+
@@ -800,8 +870,8 @@ func TestAccount_MarshalJSON(t *testing.T) {
 					`}`+
 				`]`+
 				`,`+
-				`"emojis":[]`+
-				`,`+
+//				`"emojis":[]`+
+//				`,`+
 				`"locked":false`+
 				`,`+
 				`"bot":false`+
@@ -809,6 +879,10 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				`"group":false`+
 				`,`+
 				`"discoverable":null`+
+				`,`+
+				`"noindex":null`+
+				`,`+
+				`"moved":null`+
 				`,`+
 				`"created_at":"2023-09-27T22:06:19Z"`+
 				`,`+
@@ -819,6 +893,8 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				`"followers_count":24789`+
 				`,`+
 				`"following_count":355`+
+				`,`+
+				`"mute_expires_at":null`+
 			`}`,
 		},
 
@@ -838,28 +914,23 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				Header:        opt.Something("https://files.example.com/header/joeblow.png"),
 				HeaderStatic:  opt.Something("https://files.example.com/header-static/joeblow.png"),
 				Fields:        []ent.Field{
-					ent.Field{
-						Name: opt.Something("alt"),
-						Value: opt.Something("@joeblow@greatape.social"),
-					},
-					ent.Field{
-						Name: opt.Something("alt (long-form)"),
-						Value: opt.Something("@joeblow@postfreely.social"),
-						VerifiedAt: nul.Something("2022-09-29T08:41:46Z"),
-					},
+					ent.FieldNameValue("alt", "@joeblow@greatape.social"),
+					ent.FieldVerifiedNameValue("2022-09-29T08:41:46Z", "alt (long-form)", "@joeblow@postfreely.social"),
 				},
 				//Emojis
 				Locked:         opt.Something(false),
 				Bot:            opt.Something(false),
 				Group:          opt.Something(false),
 				Discoverable:   nul.Null[bool](),
+				NoIndex:        nul.Null[bool](),
+				Moved:          nul.Null[ent.AccountHolder](),
 				CreatedAt:      opt.Something("2023-09-27T22:06:19Z"),
 				LastStatusAt:   nul.Null[string](),
 				StatusesCount:  opt.Something(jsonint.Int64(123)),
 				FollowersCount: opt.Something(jsonint.Int64(24789)),
 				FollowingCount: opt.Something(jsonint.Int64(355)),
 				//Roles
-				//MuteExpiresAt
+				MuteExpiresAt:  nul.Null[string](),
 			},
 
 			Expected: `{`+
@@ -903,8 +974,8 @@ func TestAccount_MarshalJSON(t *testing.T) {
 					`}`+
 				`]`+
 				`,`+
-				`"emojis":[]`+
-				`,`+
+//				`"emojis":[]`+
+//				`,`+
 				`"locked":false`+
 				`,`+
 				`"bot":false`+
@@ -912,6 +983,10 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				`"group":false`+
 				`,`+
 				`"discoverable":null`+
+				`,`+
+				`"noindex":null`+
+				`,`+
+				`"moved":null`+
 				`,`+
 				`"created_at":"2023-09-27T22:06:19Z"`+
 				`,`+
@@ -922,6 +997,8 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				`"followers_count":24789`+
 				`,`+
 				`"following_count":355`+
+				`,`+
+				`"mute_expires_at":null`+
 			`}`,
 		},
 
@@ -952,13 +1029,15 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				Bot:            opt.Something(false),
 				Group:          opt.Something(false),
 				Discoverable:   nul.Null[bool](),
+				NoIndex:        nul.Null[bool](),
+				Moved:          nul.Null[ent.AccountHolder](),
 				CreatedAt:      opt.Something("2023-09-27T22:06:19Z"),
 				LastStatusAt:   nul.Null[string](),
 				StatusesCount:  opt.Something(jsonint.Int64(123)),
 				FollowersCount: opt.Something(jsonint.Int64(24789)),
 				FollowingCount: opt.Something(jsonint.Int64(355)),
 				//Roles
-				//MuteExpiresAt
+				MuteExpiresAt:  nul.Null[string](),
 			},
 
 			Expected: `{`+
@@ -983,10 +1062,10 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				`"header":"https://files.example.com/header/joeblow.png"`+
 				`,`+
 				`"header_static":"https://files.example.com/header-static/joeblow.png"`+
-				`,`+
-				`"fields":[]`+
-				`,`+
-				`"emojis":[]`+
+//				`,`+
+//				`"fields":[]`+
+//				`,`+
+//				`"emojis":[]`+
 				`,`+
 				`"locked":false`+
 				`,`+
@@ -995,6 +1074,10 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				`"group":false`+
 				`,`+
 				`"discoverable":null`+
+				`,`+
+				`"noindex":null`+
+				`,`+
+				`"moved":null`+
 				`,`+
 				`"created_at":"2023-09-27T22:06:19Z"`+
 				`,`+
@@ -1005,6 +1088,8 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				`"followers_count":24789`+
 				`,`+
 				`"following_count":355`+
+				`,`+
+				`"mute_expires_at":null`+
 			`}`,
 		},
 
@@ -1029,13 +1114,15 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				Bot:            opt.Something(false),
 				Group:          opt.Something(false),
 				Discoverable:   nul.Null[bool](),
+				NoIndex:        nul.Null[bool](),
+				Moved:          nul.Null[ent.AccountHolder](),
 				CreatedAt:      opt.Something("2023-09-27T22:06:19Z"),
 				LastStatusAt:   nul.Null[string](),
 				StatusesCount:  opt.Something(jsonint.Int64(123)),
 				FollowersCount: opt.Something(jsonint.Int64(24789)),
 				FollowingCount: opt.Something(jsonint.Int64(355)),
 				//Roles
-				//MuteExpiresAt
+				MuteExpiresAt:  nul.Null[string](),
 			},
 
 			Expected: `{`+
@@ -1060,8 +1147,8 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				`"header":"https://files.example.com/header/joeblow.png"`+
 				`,`+
 				`"header_static":"https://files.example.com/header-static/joeblow.png"`+
-				`,`+
-				`"fields":[]`+
+//				`,`+
+//				`"fields":[]`+
 				`,`+
 				`"emojis":[]`+
 				`,`+
@@ -1073,6 +1160,10 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				`,`+
 				`"discoverable":null`+
 				`,`+
+				`"noindex":null`+
+				`,`+
+				`"moved":null`+
+				`,`+
 				`"created_at":"2023-09-27T22:06:19Z"`+
 				`,`+
 				`"last_status_at":null`+
@@ -1082,6 +1173,8 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				`"followers_count":24789`+
 				`,`+
 				`"following_count":355`+
+				`,`+
+				`"mute_expires_at":null`+
 			`}`,
 		},
 
@@ -1113,13 +1206,15 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				Bot:            opt.Something(false),
 				Group:          opt.Something(false),
 				Discoverable:   nul.Null[bool](),
+				NoIndex:        nul.Null[bool](),
+				Moved:          nul.Null[ent.AccountHolder](),
 				CreatedAt:      opt.Something("2023-09-27T22:06:19Z"),
 				LastStatusAt:   nul.Null[string](),
 				StatusesCount:  opt.Something(jsonint.Int64(123)),
 				FollowersCount: opt.Something(jsonint.Int64(24789)),
 				FollowingCount: opt.Something(jsonint.Int64(355)),
 				//Roles
-				//MuteExpiresAt
+				MuteExpiresAt:  nul.Null[string](),
 			},
 
 			Expected: `{`+
@@ -1144,8 +1239,8 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				`"header":"https://files.example.com/header/joeblow.png"`+
 				`,`+
 				`"header_static":"https://files.example.com/header-static/joeblow.png"`+
-				`,`+
-				`"fields":[]`+
+//				`,`+
+//				`"fields":[]`+
 				`,`+
 				`"emojis":[`+
 					`{`+
@@ -1167,6 +1262,10 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				`,`+
 				`"discoverable":null`+
 				`,`+
+				`"noindex":null`+
+				`,`+
+				`"moved":null`+
+				`,`+
 				`"created_at":"2023-09-27T22:06:19Z"`+
 				`,`+
 				`"last_status_at":null`+
@@ -1176,6 +1275,8 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				`"followers_count":24789`+
 				`,`+
 				`"following_count":355`+
+				`,`+
+				`"mute_expires_at":null`+
 			`}`,
 		},
 
@@ -1213,13 +1314,15 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				Bot:            opt.Something(false),
 				Group:          opt.Something(false),
 				Discoverable:   nul.Null[bool](),
+				NoIndex:        nul.Null[bool](),
+				Moved:          nul.Null[ent.AccountHolder](),
 				CreatedAt:      opt.Something("2023-09-27T22:06:19Z"),
 				LastStatusAt:   nul.Null[string](),
 				StatusesCount:  opt.Something(jsonint.Int64(123)),
 				FollowersCount: opt.Something(jsonint.Int64(24789)),
 				FollowingCount: opt.Something(jsonint.Int64(355)),
 				//Roles
-				//MuteExpiresAt
+				MuteExpiresAt:  nul.Null[string](),
 			},
 
 			Expected: `{`+
@@ -1244,8 +1347,8 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				`"header":"https://files.example.com/header/joeblow.png"`+
 				`,`+
 				`"header_static":"https://files.example.com/header-static/joeblow.png"`+
-				`,`+
-				`"fields":[]`+
+//				`,`+
+//				`"fields":[]`+
 				`,`+
 				`"emojis":[`+
 					`{`+
@@ -1277,6 +1380,10 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				`,`+
 				`"discoverable":null`+
 				`,`+
+				`"noindex":null`+
+				`,`+
+				`"moved":null`+
+				`,`+
 				`"created_at":"2023-09-27T22:06:19Z"`+
 				`,`+
 				`"last_status_at":null`+
@@ -1286,6 +1393,8 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				`"followers_count":24789`+
 				`,`+
 				`"following_count":355`+
+				`,`+
+				`"mute_expires_at":null`+
 			`}`,
 		},
 
@@ -1330,13 +1439,15 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				Bot:            opt.Something(false),
 				Group:          opt.Something(false),
 				Discoverable:   nul.Null[bool](),
+				NoIndex:        nul.Null[bool](),
+				Moved:          nul.Null[ent.AccountHolder](),
 				CreatedAt:      opt.Something("2023-09-27T22:06:19Z"),
 				LastStatusAt:   nul.Null[string](),
 				StatusesCount:  opt.Something(jsonint.Int64(123)),
 				FollowersCount: opt.Something(jsonint.Int64(24789)),
 				FollowingCount: opt.Something(jsonint.Int64(355)),
 				//Roles
-				//MuteExpiresAt
+				MuteExpiresAt:  nul.Null[string](),
 			},
 
 			Expected: `{`+
@@ -1361,8 +1472,8 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				`"header":"https://files.example.com/header/joeblow.png"`+
 				`,`+
 				`"header_static":"https://files.example.com/header-static/joeblow.png"`+
-				`,`+
-				`"fields":[]`+
+//				`,`+
+//				`"fields":[]`+
 				`,`+
 				`"emojis":[`+
 					`{`+
@@ -1406,6 +1517,10 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				`,`+
 				`"discoverable":null`+
 				`,`+
+				`"noindex":null`+
+				`,`+
+				`"moved":null`+
+				`,`+
 				`"created_at":"2023-09-27T22:06:19Z"`+
 				`,`+
 				`"last_status_at":null`+
@@ -1415,6 +1530,8 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				`"followers_count":24789`+
 				`,`+
 				`"following_count":355`+
+				`,`+
+				`"mute_expires_at":null`+
 			`}`,
 		},
 
@@ -1445,13 +1562,15 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				Bot:            opt.Something(false),
 				Group:          opt.Something(false),
 				Discoverable:   nul.Null[bool](),
+				NoIndex:        nul.Null[bool](),
+				Moved:          nul.Null[ent.AccountHolder](),
 				CreatedAt:      opt.Something("2023-09-27T22:06:19Z"),
 				LastStatusAt:   nul.Null[string](),
 				StatusesCount:  opt.Something(jsonint.Int64(123)),
 				FollowersCount: opt.Something(jsonint.Int64(24789)),
 				FollowingCount: opt.Something(jsonint.Int64(355)),
 				Roles: nil,
-				//MuteExpiresAt
+				MuteExpiresAt:  nul.Null[string](),
 			},
 
 			Expected: `{`+
@@ -1476,10 +1595,10 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				`"header":"https://files.example.com/header/joeblow.png"`+
 				`,`+
 				`"header_static":"https://files.example.com/header-static/joeblow.png"`+
-				`,`+
-				`"fields":[]`+
-				`,`+
-				`"emojis":[]`+
+//				`,`+
+//				`"fields":[]`+
+//				`,`+
+//				`"emojis":[]`+
 				`,`+
 				`"locked":false`+
 				`,`+
@@ -1488,6 +1607,10 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				`"group":false`+
 				`,`+
 				`"discoverable":null`+
+				`,`+
+				`"noindex":null`+
+				`,`+
+				`"moved":null`+
 				`,`+
 				`"created_at":"2023-09-27T22:06:19Z"`+
 				`,`+
@@ -1498,6 +1621,8 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				`"followers_count":24789`+
 				`,`+
 				`"following_count":355`+
+				`,`+
+				`"mute_expires_at":null`+
 			`}`,
 		},
 
@@ -1522,13 +1647,15 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				Bot:            opt.Something(false),
 				Group:          opt.Something(false),
 				Discoverable:   nul.Null[bool](),
+				NoIndex:        nul.Null[bool](),
+				Moved:          nul.Null[ent.AccountHolder](),
 				CreatedAt:      opt.Something("2023-09-27T22:06:19Z"),
 				LastStatusAt:   nul.Null[string](),
 				StatusesCount:  opt.Something(jsonint.Int64(123)),
 				FollowersCount: opt.Something(jsonint.Int64(24789)),
 				FollowingCount: opt.Something(jsonint.Int64(355)),
 				Roles: []ent.Role{},
-				//MuteExpiresAt
+				MuteExpiresAt:  nul.Null[string](),
 			},
 
 			Expected: `{`+
@@ -1553,10 +1680,10 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				`"header":"https://files.example.com/header/joeblow.png"`+
 				`,`+
 				`"header_static":"https://files.example.com/header-static/joeblow.png"`+
-				`,`+
-				`"fields":[]`+
-				`,`+
-				`"emojis":[]`+
+//				`,`+
+//				`"fields":[]`+
+//				`,`+
+//				`"emojis":[]`+
 				`,`+
 				`"locked":false`+
 				`,`+
@@ -1565,6 +1692,10 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				`"group":false`+
 				`,`+
 				`"discoverable":null`+
+				`,`+
+				`"noindex":null`+
+				`,`+
+				`"moved":null`+
 				`,`+
 				`"created_at":"2023-09-27T22:06:19Z"`+
 				`,`+
@@ -1577,6 +1708,8 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				`"following_count":355`+
 				`,`+
 				`"roles":[]`+
+				`,`+
+				`"mute_expires_at":null`+
 			`}`,
 		},
 
@@ -1601,6 +1734,8 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				Bot:            opt.Something(false),
 				Group:          opt.Something(false),
 				Discoverable:   nul.Null[bool](),
+				NoIndex:        nul.Null[bool](),
+				Moved:          nul.Null[ent.AccountHolder](),
 				CreatedAt:      opt.Something("2023-09-27T22:06:19Z"),
 				LastStatusAt:   nul.Null[string](),
 				StatusesCount:  opt.Something(jsonint.Int64(123)),
@@ -1615,7 +1750,7 @@ func TestAccount_MarshalJSON(t *testing.T) {
 						Highlighted:  opt.Something(true),
 					},
 				},
-				//MuteExpiresAt
+				MuteExpiresAt:  nul.Null[string](),
 			},
 
 			Expected: `{`+
@@ -1640,10 +1775,10 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				`"header":"https://files.example.com/header/joeblow.png"`+
 				`,`+
 				`"header_static":"https://files.example.com/header-static/joeblow.png"`+
-				`,`+
-				`"fields":[]`+
-				`,`+
-				`"emojis":[]`+
+//				`,`+
+//				`"fields":[]`+
+//				`,`+
+//				`"emojis":[]`+
 				`,`+
 				`"locked":false`+
 				`,`+
@@ -1652,6 +1787,10 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				`"group":false`+
 				`,`+
 				`"discoverable":null`+
+				`,`+
+				`"noindex":null`+
+				`,`+
+				`"moved":null`+
 				`,`+
 				`"created_at":"2023-09-27T22:06:19Z"`+
 				`,`+
@@ -1676,6 +1815,8 @@ func TestAccount_MarshalJSON(t *testing.T) {
 						`"highlighted":true`+
 					`}`+
 				`]`+
+				`,`+
+				`"mute_expires_at":null`+
 			`}`,
 		},
 
@@ -1700,6 +1841,8 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				Bot:            opt.Something(false),
 				Group:          opt.Something(false),
 				Discoverable:   nul.Null[bool](),
+				NoIndex:        nul.Null[bool](),
+				Moved:          nul.Null[ent.AccountHolder](),
 				CreatedAt:      opt.Something("2023-09-27T22:06:19Z"),
 				LastStatusAt:   nul.Null[string](),
 				StatusesCount:  opt.Something(jsonint.Int64(123)),
@@ -1721,7 +1864,7 @@ func TestAccount_MarshalJSON(t *testing.T) {
 						Highlighted:  opt.Something(false),
 					},
 				},
-				//MuteExpiresAt
+				MuteExpiresAt:  nul.Null[string](),
 			},
 
 			Expected: `{`+
@@ -1746,10 +1889,10 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				`"header":"https://files.example.com/header/joeblow.png"`+
 				`,`+
 				`"header_static":"https://files.example.com/header-static/joeblow.png"`+
-				`,`+
-				`"fields":[]`+
-				`,`+
-				`"emojis":[]`+
+//				`,`+
+//				`"fields":[]`+
+//				`,`+
+//				`"emojis":[]`+
 				`,`+
 				`"locked":false`+
 				`,`+
@@ -1758,6 +1901,10 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				`"group":false`+
 				`,`+
 				`"discoverable":null`+
+				`,`+
+				`"noindex":null`+
+				`,`+
+				`"moved":null`+
 				`,`+
 				`"created_at":"2023-09-27T22:06:19Z"`+
 				`,`+
@@ -1794,6 +1941,8 @@ func TestAccount_MarshalJSON(t *testing.T) {
 						`"highlighted":false`+
 					`}`+
 				`]`+
+				`,`+
+				`"mute_expires_at":null`+
 			`}`,
 		},
 
@@ -1818,6 +1967,8 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				Bot:            opt.Something(false),
 				Group:          opt.Something(false),
 				Discoverable:   nul.Null[bool](),
+				NoIndex:        nul.Null[bool](),
+				Moved:          nul.Null[ent.AccountHolder](),
 				CreatedAt:      opt.Something("2023-09-27T22:06:19Z"),
 				LastStatusAt:   nul.Null[string](),
 				StatusesCount:  opt.Something(jsonint.Int64(123)),
@@ -1845,7 +1996,7 @@ func TestAccount_MarshalJSON(t *testing.T) {
 						Highlighted:  opt.Something(false),
 					},
 				},
-				//MuteExpiresAt
+				MuteExpiresAt:  nul.Null[string](),
 			},
 
 			Expected: `{`+
@@ -1870,10 +2021,10 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				`"header":"https://files.example.com/header/joeblow.png"`+
 				`,`+
 				`"header_static":"https://files.example.com/header-static/joeblow.png"`+
-				`,`+
-				`"fields":[]`+
-				`,`+
-				`"emojis":[]`+
+//				`,`+
+//				`"fields":[]`+
+//				`,`+
+//				`"emojis":[]`+
 				`,`+
 				`"locked":false`+
 				`,`+
@@ -1882,6 +2033,10 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				`"group":false`+
 				`,`+
 				`"discoverable":null`+
+				`,`+
+				`"noindex":null`+
+				`,`+
+				`"moved":null`+
 				`,`+
 				`"created_at":"2023-09-27T22:06:19Z"`+
 				`,`+
@@ -1922,14 +2077,16 @@ func TestAccount_MarshalJSON(t *testing.T) {
 						`"id":1`+
 						`,`+
 						`"name":"admin"`+
-						`,`+
-						`"color":""`+
+//						`,`+
+//						`"color":""`+
 						`,`+
 						`"permissions":4294967295`+
 						`,`+
 						`"highlighted":false`+
 					`}`+
 				`]`+
+				`,`+
+				`"mute_expires_at":null`+
 			`}`,
 		},
 
@@ -1960,6 +2117,8 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				Bot:            opt.Something(false),
 				Group:          opt.Something(false),
 				Discoverable:   nul.Null[bool](),
+				NoIndex:        nul.Null[bool](),
+				Moved:          nul.Null[ent.AccountHolder](),
 				CreatedAt:      opt.Something("2023-09-27T22:06:19Z"),
 				LastStatusAt:   nul.Null[string](),
 				StatusesCount:  opt.Something(jsonint.Int64(123)),
@@ -1991,10 +2150,10 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				`"header":"https://files.example.com/header/joeblow.png"`+
 				`,`+
 				`"header_static":"https://files.example.com/header-static/joeblow.png"`+
-				`,`+
-				`"fields":[]`+
-				`,`+
-				`"emojis":[]`+
+//				`,`+
+//				`"fields":[]`+
+//				`,`+
+//				`"emojis":[]`+
 				`,`+
 				`"locked":false`+
 				`,`+
@@ -2003,6 +2162,10 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				`"group":false`+
 				`,`+
 				`"discoverable":null`+
+				`,`+
+				`"noindex":null`+
+				`,`+
+				`"moved":null`+
 				`,`+
 				`"created_at":"2023-09-27T22:06:19Z"`+
 				`,`+
@@ -2039,6 +2202,8 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				Bot:            opt.Something(false),
 				Group:          opt.Something(false),
 				Discoverable:   nul.Null[bool](),
+				NoIndex:        nul.Null[bool](),
+				Moved:          nul.Null[ent.AccountHolder](),
 				CreatedAt:      opt.Something("2023-09-27T22:06:19Z"),
 				LastStatusAt:   nul.Null[string](),
 				StatusesCount:  opt.Something(jsonint.Int64(123)),
@@ -2070,10 +2235,10 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				`"header":"https://files.example.com/header/joeblow.png"`+
 				`,`+
 				`"header_static":"https://files.example.com/header-static/joeblow.png"`+
-				`,`+
-				`"fields":[]`+
-				`,`+
-				`"emojis":[]`+
+//				`,`+
+//				`"fields":[]`+
+//				`,`+
+//				`"emojis":[]`+
 				`,`+
 				`"locked":false`+
 				`,`+
@@ -2082,6 +2247,10 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				`"group":false`+
 				`,`+
 				`"discoverable":null`+
+				`,`+
+				`"noindex":null`+
+				`,`+
+				`"moved":null`+
 				`,`+
 				`"created_at":"2023-09-27T22:06:19Z"`+
 				`,`+
