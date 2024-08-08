@@ -18,6 +18,13 @@ func TestApplication_MarshalJSON(t *testing.T) {
 		Expected string
 	}{
 		{
+			Application: ent.Application{},
+			Expected: "{}",
+		},
+
+
+
+		{
 			Application: ent.Application{
 				Name:     opt.Something("acme app"),
 				WebSite: nul.Null[string](),
