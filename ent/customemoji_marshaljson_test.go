@@ -4,8 +4,8 @@ import (
 	"testing"
 
 	"bytes"
-	"encoding/json"
 
+	"github.com/reiver/go-json"
 	"github.com/reiver/go-opt"
 )
 
@@ -93,11 +93,31 @@ func TestCustomEmoji_MarshalJSON(t *testing.T) {
 				"\t"+  `"visible_in_picker":` +`true`   +""   +"\n"+
 				"}"                                           +"\n",
 		},
+
+
+
+		{
+			Value: CustomEmoji{
+				ShortCode:       opt.Something[string](""),
+				URL:             opt.Something[string](""),
+				StaticURL:       opt.Something[string](""),
+				VisibleInPicker: opt.Something[bool](false),
+				Category:        opt.Something[string]("super-heroes"),
+			},
+			Expected:
+				"{"                                                  +"\n"+
+				"\t"+  `"shortcode":`         +`""`             +"," +"\n"+
+				"\t"+  `"url":`               +`""`             +"," +"\n"+
+				"\t"+  `"static_url":`        +`""`             +"," +"\n"+
+				"\t"+  `"visible_in_picker":` +`false`          +"," +"\n"+
+				"\t"+  `"category":`          +`"super-heroes"` +""  +"\n"+
+				"}"                                                  +"\n",
+		},
 	}
 
 	for testNumber, test := range tests {
 
-		actualBytes, err := test.Value.MarshalJSON()
+		actualBytes, err := json.Marshal(test.Value)
 		if nil != err {
 			t.Errorf("For test #%d, did not expect to get an error but actually got one.", testNumber)
 			t.Logf("ERROR: (%T) %s", err, err)
