@@ -3,7 +3,6 @@ package ent
 import (
 	gojson "encoding/json"
 
-//	"github.com/reiver/go-erorr"
 	"github.com/reiver/go-json"
 	"github.com/reiver/go-jsonint"
 	"github.com/reiver/go-opt"
