@@ -3,14 +3,13 @@ package ent
 import (
 	gojson "encoding/json"
 
-	"github.com/reiver/go-json"
 	"github.com/reiver/go-jsonint"
 	"github.com/reiver/go-opt"
 	"github.com/reiver/go-nul"
 )
 
 type Status struct {
-	ID                 opt.Optional[string]      `json:"id"`
+	ID                 opt.Optional[string]      `json:"id,omitempty"`
 	URI                nul.Nullable[string]      `json:"uri,omitempty"`
 	URL                nul.Nullable[string]      `json:"url,omitempty"`
 	CreatedAt          opt.Optional[string]      `json:"created_at,omitempty"`
@@ -41,8 +40,4 @@ type Status struct {
 	Bookmarked         opt.Optional[bool]        `json:"bookmarked,omitempty"`
 	Pinned             opt.Optional[bool]        `json:"pinned,omitempty"`
 	Filtered           gojson.RawMessage         `json:"filtered,omitempty"`
-}
-
-func (receiver *Status) MarshalJSON() ([]byte, error) {
-	return json.Marshal(*receiver)
 }

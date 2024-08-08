@@ -3,8 +3,9 @@ package ent
 import (
 	"testing"
 
-	"encoding/json"
+	gojson "encoding/json"
 
+	"github.com/reiver/go-json"
 	"github.com/reiver/go-nul"
 	"github.com/reiver/go-opt"
 )
@@ -164,7 +165,7 @@ func TestStatus_JSON(t *testing.T) {
 		{
 			Status:Status{
 				ID: opt.Something("123"),
-				Filtered: json.RawMessage([]byte(`{"once":1,"twice":2,"thrice":3,"fource":4}`)),
+				Filtered: gojson.RawMessage([]byte(`{"once":1,"twice":2,"thrice":3,"fource":4}`)),
 			},
 			Expected: `{"id":"123","filtered":{"once":1,"twice":2,"thrice":3,"fource":4}}`,
 		},
@@ -172,7 +173,7 @@ func TestStatus_JSON(t *testing.T) {
 
 	for testNumber, test := range tests {
 
-		actualBytes, err := json.Marshal(&test.Status)
+		actualBytes, err := json.Marshal(test.Status)
 
 		if nil != err {
 			t.Errorf("For test #%d, did not expect to get an error but actually did.", testNumber)
