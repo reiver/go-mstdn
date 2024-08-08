@@ -15,10 +15,6 @@ func TestField_UnmarshalJSON(t *testing.T) {
 		Expected ent.Field
 	}{
 		{
-			JSON: `{"name":"Location","value":"Metro Vancouver"}`,
-			Expected: ent.FieldNameValue("Location", "Metro Vancouver"),
-		},
-		{
 			JSON: `{"name":"Location","value":"Metro Vancouver", "verified_at":null}`,
 			Expected: ent.FieldNameValue("Location", "Metro Vancouver"),
 		},

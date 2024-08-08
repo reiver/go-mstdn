@@ -4,8 +4,8 @@ import (
 	"testing"
 
 	"bytes"
-	"encoding/json"
 
+	"github.com/reiver/go-json"
 	"github.com/reiver/go-mstdn/ent"
 )
 
@@ -112,7 +112,7 @@ func TestField_MarshalJSON(t *testing.T) {
 
 	for testNumber, test := range tests {
 
-		actualBytes, err := test.Value.MarshalJSON()
+		actualBytes, err := json.Marshal(test.Value)
 		if nil != err {
 			t.Errorf("For test #%d, did not expect to get an error but actually got one.", testNumber)
 			t.Logf("ERROR: (%T) %s", err, err)
