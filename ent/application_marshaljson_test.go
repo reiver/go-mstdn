@@ -3,8 +3,7 @@ package ent_test
 import (
 	"testing"
 
-	"encoding/json"
-
+	"github.com/reiver/go-json"
 	"github.com/reiver/go-jsonpp"
 	"github.com/reiver/go-nul"
 	"github.com/reiver/go-opt"
@@ -21,6 +20,7 @@ func TestApplication_MarshalJSON(t *testing.T) {
 		{
 			Application: ent.Application{
 				Name:     opt.Something("acme app"),
+				WebSite: nul.Null[string](),
 				VapidKey: opt.Something("BHgNMADAUjgYgM4PZtHkY3yTQRYD-ibS_qrWYg2KPBRidocowKcOc-8YpyItumamkGph2bk8FuryT4-p3Eymwz8"),
 			},
 			Expected:
