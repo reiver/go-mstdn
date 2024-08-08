@@ -66,6 +66,7 @@ func TestRole_MarshalJSON(t *testing.T) {
 			Expected: ent.Role{
 				ID:          opt.Something(jsonint.Int64(87)),
 				Name:        opt.Something("QA Specialist"),
+				Color:       opt.Something(""),
 				Permissions: opt.Something(jsonint.Int64(218)),
 				Highlighted: opt.Something(true),
 			},

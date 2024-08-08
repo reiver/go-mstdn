@@ -1,75 +1,18 @@
 package ent
 
 import (
-	"encoding/json"
-
 	"github.com/reiver/go-opt"
 	"github.com/reiver/go-jsonint"
 )
-
-var _ json.Marshaler = Role{}
-var _ json.Unmarshaler = new(Role)
 
 // Role represents a Mastodon API "Role".
 //
 // See:
 // https://docs.joinmastodon.org/entities/Role/
 type Role struct {
-	ID          opt.Optional[jsonint.Int]
-	Name        opt.Optional[string]
-	Color       opt.Optional[string]
-	Permissions opt.Optional[jsonint.Int]
-	Highlighted opt.Optional[bool]
-}
-
-type role struct {
-	ID          opt.Optional[jsonint.Int] `json:"id"`
-	Name        opt.Optional[string]      `json:"name"`
-	Color       opt.Optional[string]      `json:"color"`
-	Permissions opt.Optional[jsonint.Int] `json:"permissions"`
-	Highlighted opt.Optional[bool]        `json:"highlighted"`
-}
-
-func (receiver Role) MarshalJSON() ([]byte, error) {
-
-	var src role
-
-	src.ID          = receiver.ID
-	src.Name        = receiver.Name
-	src.Permissions = receiver.Permissions
-	src.Highlighted = receiver.Highlighted
-
-	src.Color = receiver.Color
-	src.Color.WhenNothing(func(){
-		src.Color = opt.Something("")
-	})
-
-	return json.Marshal(src)
-}
-
-func (receiver *Role) UnmarshalJSON(data []byte) error {
-	if nil == receiver {
-		return errNilReceiver
-	}
-
-	var dst role
-
-	if err := json.Unmarshal(data, &dst); nil != err {
-		return err
-	}
-
-	receiver.ID          = dst.ID
-	receiver.Name        = dst.Name
-	receiver.Permissions = dst.Permissions
-	receiver.Highlighted = dst.Highlighted
-
-	dst.Color.WhenSomething(func(value string){
-		if "" == value {
-			return
-		}
-
-		receiver.Color = opt.Something(value)
-	})
-
-	return nil
+	ID          opt.Optional[jsonint.Int] `json:"id,omitempty"`
+	Name        opt.Optional[string]      `json:"name,omitempty"`
+	Color       opt.Optional[string]      `json:"color,omitempty"`
+	Permissions opt.Optional[jsonint.Int] `json:"permissions,omitempty"`
+	Highlighted opt.Optional[bool]        `json:"highlighted,omitempty"`
 }
