@@ -2,11 +2,11 @@ module github.com/reiver/go-mstdn
 
 go 1.22.4
 
-require github.com/reiver/go-opt v0.0.0-20240808175813-d4de6ca5ee95
+require github.com/reiver/go-opt v0.0.0-20240809032727-8e60e8ea3e8f
 
 require (
 	github.com/reiver/go-jsonint v0.0.0-20240801233651-21b9c52057ee
-	github.com/reiver/go-nul v0.0.0-20240807073751-fc545108d9e3
+	github.com/reiver/go-nul v0.0.0-20240809033544-506ae7916afa
 )
 
 require github.com/reiver/go-jsonstr v0.0.0-20240802000653-a5a8363975f1

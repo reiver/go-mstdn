@@ -18,10 +18,10 @@ github.com/reiver/go-jsonstr v0.0.0-20240802000653-a5a8363975f1 h1:32ulBfhFKQIaR
 github.com/reiver/go-jsonstr v0.0.0-20240802000653-a5a8363975f1/go.mod h1:/msMJNY8TjDYgO/h06wEuzTWGs1b37xbUo8FH/2aZqQ=
 github.com/reiver/go-lck v0.0.0-20240808133902-b56df221c39f h1:KBVWBoNIM8mHkUR3dP64hm2p2vxoD5xHZ6wUllCjFTc=
 github.com/reiver/go-lck v0.0.0-20240808133902-b56df221c39f/go.mod h1:PFseSi8S0CBkc+YB6jYWtogPk83LumclnYJZZBQJJhs=
-github.com/reiver/go-nul v0.0.0-20240807073751-fc545108d9e3 h1:xpe0q4HPPXz9W2R7uChya+654JxpIS/0Uksey6+ktMc=
-github.com/reiver/go-nul v0.0.0-20240807073751-fc545108d9e3/go.mod h1:hN0edxyC/F7HMB86sn/ljqTJ0CrAeOCGMpCZJ2Nmtc4=
-github.com/reiver/go-opt v0.0.0-20240808175813-d4de6ca5ee95 h1:yMZeTlabM9bvx9ggghLCU4Djfp+FDcgC94+gyl+vzQE=
-github.com/reiver/go-opt v0.0.0-20240808175813-d4de6ca5ee95/go.mod h1:iXlSKwDjhyF10Fdd2J5PYKwBFlWgfq7OTRxCHU+yTUY=
+github.com/reiver/go-nul v0.0.0-20240809033544-506ae7916afa h1:Owi2PuvHrN3KaCyNsXxgN5deGISkVwmmO0tWXZgHtfE=
+github.com/reiver/go-nul v0.0.0-20240809033544-506ae7916afa/go.mod h1:aXT75/yMqcZA2wN/hW52vb5CQjUCEKGoyikjSi02oS8=
+github.com/reiver/go-opt v0.0.0-20240809032727-8e60e8ea3e8f h1:EKHU13RjaUjg67RaIbqNr/4Mb+4qyfQRJAX+DiR05Dw=
+github.com/reiver/go-opt v0.0.0-20240809032727-8e60e8ea3e8f/go.mod h1:iXlSKwDjhyF10Fdd2J5PYKwBFlWgfq7OTRxCHU+yTUY=
 github.com/reiver/go-pathmatch v1.0.1-0.20240802004530-0dc31d85afa8 h1:3mxWa4FELLc6TbC00ZZTe30tYUZ8HN4IHaH0m7Y3SPc=
 github.com/reiver/go-pathmatch v1.0.1-0.20240802004530-0dc31d85afa8/go.mod h1:SveMAOrJP7XCL3UlazOjQdKNCGG2T/E1zE6gDHfs3cA=
 github.com/reiver/go-utf8 v2.0.2-0.20240806185936-5dd7c5557d34+incompatible h1:Ewax9SN/f+OibeHNDBPI2lsf1t17YRBvKDA4X7CU4vA=
