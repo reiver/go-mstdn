@@ -9,8 +9,6 @@ import (
 
 var _ http.Handler = internalHandler{}
 
-const Path string = "/api/v1/accounts/lookup"
-
 func Handler(fn LoaderFunc) http.Handler {
 	return internalHandler{
 		loaderFunc:fn,
