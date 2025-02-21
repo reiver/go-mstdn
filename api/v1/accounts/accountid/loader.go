@@ -1,4 +1,4 @@
-package account_id
+package accountid
 
 import (
 	"github.com/reiver/go-mstdn/api/v1"

@@ -1,4 +1,4 @@
-package account_id
+package accountid
 
 import (
 	"net/http"
