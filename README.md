@@ -30,7 +30,7 @@ import "github.com/reiver/go-mstdn/ent/admn"
 
 To install package **mstdn** do the following:
 ```
-GOPROXY=direct go get https://github.com/reiver/go-mstdn
+GOPROXY=direct go get github.com/reiver/go-mstdn
 ```
 
 ## Author
