@@ -14,8 +14,8 @@ github.com/reiver/go-errhttp v1.1.1-0.20240513035723-daf47d264c9c h1:C/ALE5tUOyw
 github.com/reiver/go-errhttp v1.1.1-0.20240513035723-daf47d264c9c/go.mod h1:J55rONfn+39379roH0KxMCGv6w9ifhZIoSKaVswRUDk=
 github.com/reiver/go-httpsse v0.0.0-20240806223648-6ed5a785f3f8 h1:HOpgKCgKqWYub73sQvWxamDqJ7G8P0tMk5wYBFUDblE=
 github.com/reiver/go-httpsse v0.0.0-20240806223648-6ed5a785f3f8/go.mod h1:hABgQXG6IXrFbcy8C+VKEM3/tDZg3nZ4u82N/QvvH70=
-github.com/reiver/go-json v0.0.0-20240809035039-2f83bc2e8c10 h1:LbFL8s+beVbEfnCymQAbRVtG8ihlL67XKvqM17EqGK0=
-github.com/reiver/go-json v0.0.0-20240809035039-2f83bc2e8c10/go.mod h1:ns4kpzbK+OyMUZYT8UmBxrsYWNmvB/irZGmyIh99cxY=
+github.com/reiver/go-json v0.0.0-20260126113356-12b7c2d78b6a h1:utQtxf8VbYJWKdc5vKJKxofyAhPINWaS23U7egM1dqg=
+github.com/reiver/go-json v0.0.0-20260126113356-12b7c2d78b6a/go.mod h1:W3mWb+di0CJG8fHj00nBnWFRmg42kNheXO3KhHroFKU=
 github.com/reiver/go-jsonint v0.0.0-20240801233651-21b9c52057ee h1:DfEj/iGAIU8CtTcnttyU6t3lae0jl760fUGjxZhIHNU=
 github.com/reiver/go-jsonint v0.0.0-20240801233651-21b9c52057ee/go.mod h1:1lW12ILqOxqtylQBMezy6oRuMQWlzFjeWF/Wbz/9U8g=
 github.com/reiver/go-jsonpp v0.0.0-20240802002345-16cd4c5a34ee h1:KhA+fe6qjEw6ZbN3vjPICGL0NqR+rghYre4SQB0WWVs=
@@ -24,8 +24,8 @@ github.com/reiver/go-jsonstr v0.0.0-20240802000653-a5a8363975f1 h1:32ulBfhFKQIaR
 github.com/reiver/go-jsonstr v0.0.0-20240802000653-a5a8363975f1/go.mod h1:/msMJNY8TjDYgO/h06wEuzTWGs1b37xbUo8FH/2aZqQ=
 github.com/reiver/go-lck v0.0.0-20240808133902-b56df221c39f h1:KBVWBoNIM8mHkUR3dP64hm2p2vxoD5xHZ6wUllCjFTc=
 github.com/reiver/go-lck v0.0.0-20240808133902-b56df221c39f/go.mod h1:PFseSi8S0CBkc+YB6jYWtogPk83LumclnYJZZBQJJhs=
-github.com/reiver/go-nul v0.0.0-20240809035333-493a75a3fb25 h1:MAIeNMmNVT8QIA8+jjPlPFCsunQ4ek8Zu37+UBNzmPI=
-github.com/reiver/go-nul v0.0.0-20240809035333-493a75a3fb25/go.mod h1:ujZNfthiz5To36l6B3GIG7+Ukpc26VmVRFbKbo5npDg=
+github.com/reiver/go-nul v0.0.0-20260218062004-56c831f22e44 h1:J1DE+EOWPJYtiDYW3x2w8njPc94pD/9a1u6ofXUNRsM=
+github.com/reiver/go-nul v0.0.0-20260218062004-56c831f22e44/go.mod h1:w1HAHimV3Fhy+uwoOqrhOqP/MV5z15N5juHlvYYK6jg=
 github.com/reiver/go-opt v0.0.0-20240809035328-1ff08dec9bc4 h1:KQ/PDBRaJb69hmMmOs/jM8q679y9v51lY7tjX2FUkog=
 github.com/reiver/go-opt v0.0.0-20240809035328-1ff08dec9bc4/go.mod h1:3lRqhDIwZ4OaMNN6Z5rmHCX8up18IkLGuw2rxP9GrYo=
 github.com/reiver/go-pathmatch v1.0.1-0.20240802004530-0dc31d85afa8 h1:3mxWa4FELLc6TbC00ZZTe30tYUZ8HN4IHaH0m7Y3SPc=
