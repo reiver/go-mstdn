@@ -2,6 +2,7 @@ package ent
 
 import (
 	gojson "encoding/json"
+	"time"
 
 	"github.com/reiver/go-jsonint"
 	"github.com/reiver/go-opt"
@@ -40,4 +41,18 @@ type Status struct {
 	Bookmarked         opt.Optional[bool]        `json:"bookmarked,omitempty"`
 	Pinned             opt.Optional[bool]        `json:"pinned,omitempty"`
 	Filtered           gojson.RawMessage         `json:"filtered,omitempty"`
+}
+
+func (receiver *Status) ParseCreatedAt() (time.Time, error) {
+	if nil == receiver {
+		panic(ErrNilReceiver)
+	}
+
+	createdAt, found := receiver.CreatedAt.Get()
+	if !found {
+		var nada time.Time
+		return nada, errNothingCreatedAt
+	}
+
+	return time.Parse(time.RFC3339Nano, createdAt)
 }

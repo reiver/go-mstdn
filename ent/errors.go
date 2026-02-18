@@ -9,5 +9,6 @@ const (
 )
 
 const (
-	errNothingID = erorr.Error("mstdn/ent: nothing id")
+	errNothingID        = erorr.Error("mstdn/ent: nothing id")
+	errNothingCreatedAt = erorr.Error("mstdn/ent: nothing created_at")
 )
