@@ -1,7 +1,13 @@
+codeberg.org/reiver/go-erorr v0.0.0-20260103001947-b254c409f0ce h1:w6RVDeJJWh0aGD6eSGNEggX8EgCDQDFiJWdxxtH7h90=
+codeberg.org/reiver/go-erorr v0.0.0-20260103001947-b254c409f0ce/go.mod h1:JK+FexydwPFzMe6od9T7LAM/SjXxjsbxOP0VHUVJ1VM=
+codeberg.org/reiver/go-field v0.0.0-20251210045308-95aa734b2ef0 h1:zGfFryV4SFmCiK3MKZOk5adG7kIb45bsBvz9SeVI01A=
+codeberg.org/reiver/go-field v0.0.0-20251210045308-95aa734b2ef0/go.mod h1:752EzuARz/8LnYzfPcxBFIIKstqok9fyTUmi5qnjn+Q=
 github.com/fatih/structs v1.1.0 h1:Q7juDM0QtcnhCpeyLGQKyg4TOIghuNXrkL32pHAUMxo=
 github.com/fatih/structs v1.1.0/go.mod h1:9NiDSp5zOcgEDl+j00MP/WkGVPOlPRLejGD8Ga6PJ7M=
 github.com/reiver/go-ascii v0.0.0-20240302002050-442843e5ea02 h1:YviUVCHZw6gaxvLznXQTXp7LwaWzly80TXUsWxwPPi4=
 github.com/reiver/go-ascii v0.0.0-20240302002050-442843e5ea02/go.mod h1:f43/Y1zpLvqorZN0BelarPzO2GrotAQrBy3T08NUSTM=
+github.com/reiver/go-calltrace v0.0.0-20251216205616-3931a8c7b154 h1:3w3kacKCTHArAMZenoEO2qssZzJiQ9G8ZJgEvKerbuE=
+github.com/reiver/go-calltrace v0.0.0-20251216205616-3931a8c7b154/go.mod h1:b9j4dbN++ed+soAS/+wSCZ+OsZSm3CWiuzxps8nzkew=
 github.com/reiver/go-erorr v0.0.0-20240801233437-8cbde6d1fa3f h1:D1QSxKHm8U73XhjsW3SFLkT0zT5pKJi+1KGboMhY1Rk=
 github.com/reiver/go-erorr v0.0.0-20240801233437-8cbde6d1fa3f/go.mod h1:F0HbBf+Ak2ZlE8YkDW4Y+KxaUmT0KaaIJK6CXY3cJxE=
 github.com/reiver/go-errhttp v1.1.1-0.20240513035723-daf47d264c9c h1:C/ALE5tUOywYv2tqweTLOjH0BVkN5TTMDKY6qDTD/3Q=
@@ -24,5 +30,7 @@ github.com/reiver/go-opt v0.0.0-20240809035328-1ff08dec9bc4 h1:KQ/PDBRaJb69hmMmO
 github.com/reiver/go-opt v0.0.0-20240809035328-1ff08dec9bc4/go.mod h1:3lRqhDIwZ4OaMNN6Z5rmHCX8up18IkLGuw2rxP9GrYo=
 github.com/reiver/go-pathmatch v1.0.1-0.20240802004530-0dc31d85afa8 h1:3mxWa4FELLc6TbC00ZZTe30tYUZ8HN4IHaH0m7Y3SPc=
 github.com/reiver/go-pathmatch v1.0.1-0.20240802004530-0dc31d85afa8/go.mod h1:SveMAOrJP7XCL3UlazOjQdKNCGG2T/E1zE6gDHfs3cA=
+github.com/reiver/go-rss v0.0.0-20260218035132-fde60d0e1f18 h1:v15ct7lFe3LoMzolG7K4IcO8TJxj5GP3mR0kS7Id4RA=
+github.com/reiver/go-rss v0.0.0-20260218035132-fde60d0e1f18/go.mod h1:j5b0QW5bCVc4/q8Pt47FfiFtEPZntig2EdhuBE7TwOQ=
 github.com/reiver/go-utf8 v2.0.2-0.20240806185936-5dd7c5557d34+incompatible h1:Ewax9SN/f+OibeHNDBPI2lsf1t17YRBvKDA4X7CU4vA=
 github.com/reiver/go-utf8 v2.0.2-0.20240806185936-5dd7c5557d34+incompatible/go.mod h1:tfGntNDUeEZIAsz0mTu0lF7/IlErc+BpQgO6yxYmJig=
