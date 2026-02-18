@@ -1,28 +1,10 @@
-package tags
+package tagname
 
 import (
 	"fmt"
-	gourl "net/url"
 
 	"github.com/reiver/go-rss"
 )
-
-// rssURL returns the URL to the RSS version of the Mastodon page.
-func rssURL(host string, tag string) string {
-	if "" == tag {
-		return ""
-	}
-
-	path := fmt.Sprintf("/tags/%s", tag)
-
-	var url = gourl.URL{
-		Scheme: "https",
-		Host:   host,
-		Path:   path,
-	}
-
-	return url.String()
-}
 
 // RSS2 represents and RSS 2.0 document.
 type RSS2 = rss.RSS2
