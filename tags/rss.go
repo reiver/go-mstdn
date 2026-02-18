@@ -37,6 +37,16 @@ type RSS2 = rss.RSS2
 //	var rss2 tags.RSS2
 //	
 //	err := tags.RSS(&rss2, host, tag)
+//
+// The previous example would make a call to:
+//
+//	https://mastodon.social/tags/fedidev
+//
+// With the value of Accept HTTP request header being:
+//
+//	Accept: application/rss+xml
+//
+// RSS takes can of these details for you.
 func RSS(dst *RSS2, host string, tag string) error {
 	url := rssURL(host, tag)
 	if "" == url {
