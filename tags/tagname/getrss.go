@@ -9,7 +9,7 @@ import (
 // RSS2 represents and RSS 2.0 document.
 type RSS2 = rss.RSS2
 
-// RSS loads the RSS feed for a tag at a Mastodon host.
+// GetRSS loads the RSS feed for a tag at a Mastodon host.
 //
 // Example usage:
 //
@@ -22,14 +22,14 @@ type RSS2 = rss.RSS2
 //
 // The previous example would make a call to:
 //
-//	https://mastodon.social/tags/fedidev
+//	https://mastodon.social/tags/fedidev.rss
 //
 // With the value of Accept HTTP request header being:
 //
 //	Accept: application/rss+xml
 //
-// RSS takes can of these details for you.
-func RSS(dst *RSS2, host string, tag string) error {
+// GetRSS takes can of these details for you.
+func GetRSS(dst *RSS2, host string, tag string) error {
 	url := rssURL(host, tag)
 	if "" == url {
 		return fmt.Errorf("failed to construct URL to Mastodon tags RSS web-feed for host %q and tag %q", host, tag)
