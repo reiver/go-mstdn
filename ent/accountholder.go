@@ -39,7 +39,7 @@ func (receiver AccountHolder) MarshalJSON() ([]byte, error) {
 
 func (receiver *AccountHolder) UnmarshalJSON(data []byte) error {
 	if nil == receiver {
-		return errNilReceiver
+		panic(ErrNilReceiver)
 	}
 
 	if 2 == len(data) && '{' == data[0] && '}' == data[1] {
