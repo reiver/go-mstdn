@@ -39,9 +39,21 @@ func GetRSS(dst *RSS2, host string, tag string) error {
 		return ErrNilURLConstructor
 	}
 
-	url := DefaultURLConstructor.ConstructURL(host, tag)
+	return Client{
+		Host:           host,
+		URLConstructor: DefaultURLConstructor,
+	}.GetRSS(dst, tag)
+}
+
+func (receiver Client) GetRSS(dst *RSS2, tag string) error {
+	var urlConstructor URLConstructor = DefaultURLConstructor
+	if nil != receiver.URLConstructor {
+		urlConstructor = receiver.URLConstructor
+	}
+
+	url := urlConstructor.ConstructURL(receiver.Host, tag)
 	if "" == url {
-		return fmt.Errorf("failed to construct URL to Mastodon tags RSS web-feed for host %q and tag %q", host, tag)
+		return fmt.Errorf("failed to construct URL to Mastodon tags RSS web-feed for host %q and tag %q", receiver.Host, tag)
 	}
 
 	err := rss.HTTPGetAndUnmarshal(url, dst)
