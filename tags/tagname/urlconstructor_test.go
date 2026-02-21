@@ -36,7 +36,7 @@ func TestRSSURL(t *testing.T) {
 
 	for testNumber, test := range tests {
 
-		actual := rssURL(test.Host, test.Tag)
+		actual := DefaultURLConstructorFunc(test.Host, test.Tag)
 
 		expected := test.Expected
 
