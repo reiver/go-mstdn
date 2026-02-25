@@ -2,6 +2,7 @@ package local
 
 import (
 	"encoding/json"
+	"fmt"
 
 	"codeberg.org/reiver/go-httpsse"
 	"github.com/reiver/go-opt"
@@ -47,12 +48,12 @@ func (receiver *internalClient) Decode(dst interface{}) error {
 		var casted bool
 		event, casted = dst.(*Event)
 		if !casted {
-			
+			return fmt.Errorf("mstdn: cannot cxast into %T", dst)
 		}
 	}
 
 	if len(receiver.data) <= 0 {
-		
+		return errEmptyData
 	}
 
 	var datum string
