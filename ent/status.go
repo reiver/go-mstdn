@@ -53,11 +53,6 @@ func (receiver *Status) ActivityNote(note *asns.Note) error {
 		return ErrNilNote
 	}
 
-	if receiver.ID.IsSomething() {
-		note.ID  = receiver.ID
-		note.URL = receiver.ID
-	}
-
 	if receiver.Account.ID.IsSomething() {
 		attributedTo, found := receiver.Account.ID.Get()
 		if found {
@@ -67,6 +62,38 @@ func (receiver *Status) ActivityNote(note *asns.Note) error {
 
 	if receiver.Content.IsSomething() {
 		note.Content = receiver.Content
+	}
+
+	if receiver.CreatedAt.IsSomething() {
+		//@TODO: Do we need to change the time format for this conversion?
+		note.Published = receiver.CreatedAt
+	}
+
+	if receiver.ID.IsSomething() {
+		note.ID  = receiver.ID
+		note.URL = receiver.ID
+	}
+
+	if 0 < len(receiver.MediaAttachments) {
+		
+//@TODO
+		
+	}
+
+	if 0 < len(receiver.Mentions) {
+		
+//@TODO
+		
+	}
+
+	if receiver.SpoilerText.IsSomething() {
+		note.Summary = receiver.SpoilerText
+	}
+
+	if 0 < len(receiver.Tags) {
+		
+//@TODO
+		
 	}
 
 	return nil
