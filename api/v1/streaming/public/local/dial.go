@@ -1,27 +1,28 @@
 package local
 
 import (
+	"fmt"
 	"net/http"
 	"net/url"
 
 	"codeberg.org/reiver/go-httpsse"
 )
 
-func DialHost(host string) (Client, error) {
+func DialHost(bearerToken string, host string) (Client, error) {
 	var urloc = url.URL{
 		Scheme:"https",
 		Host:host,
 		Path:Path,
 	}
 
-	sseclient, err := httpsse.DialURL(urloc.String())
+	httprequest, err := http.NewRequest("GET", urloc.String(), nil)
 	if nil != err {
-		return nil, err
+		return nil, fmt.Errorf("failed to create HTTP request: %w", err)
 	}
 
-	return &internalClient{
-		sseclient:sseclient,
-	}, nil
+	httprequest.Header.Set("Authorization", "Bearer " + bearerToken)
+
+	return Dial(httprequest)
 }
 
 func Dial(req *http.Request) (Client, error) {
