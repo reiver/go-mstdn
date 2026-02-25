@@ -3,7 +3,7 @@ package local
 import (
 	"encoding/json"
 
-	"github.com/reiver/go-httpsse"
+	"codeberg.org/reiver/go-httpsse"
 	"github.com/reiver/go-opt"
 )
 

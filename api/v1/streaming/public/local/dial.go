@@ -4,7 +4,7 @@ import (
 	"net/http"
 	"net/url"
 
-	"github.com/reiver/go-httpsse"
+	"codeberg.org/reiver/go-httpsse"
 )
 
 func DialHost(host string) (Client, error) {
