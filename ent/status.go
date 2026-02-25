@@ -58,8 +58,11 @@ func (receiver *Status) ActivityNote(note *asns.Note) error {
 		note.URL = receiver.ID
 	}
 
-	if receiver.AttributedTo.IsSomething() {
-		note. = receiver.Account.ID
+	if receiver.Account.ID.IsSomething() {
+		attributedTo, found := receiver.Account.ID.Get()
+		if found {
+			note.AttributedTo = asns.SomeString(attributedTo)
+		}
 	}
 
 	return nil
