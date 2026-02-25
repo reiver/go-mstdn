@@ -6,7 +6,7 @@ import (
 	"net/http"
 	gourl "net/url"
 
-	"github.com/reiver/go-erorr"
+	"codeberg.org/reiver/go-erorr"
 
 	"github.com/reiver/go-mstdn/ent"
 )

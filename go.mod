@@ -13,7 +13,7 @@ require github.com/reiver/go-jsonstr v0.0.0-20240802000653-a5a8363975f1
 
 require github.com/reiver/go-jsonpp v0.0.0-20240802002345-16cd4c5a34ee
 
-require github.com/reiver/go-erorr v0.0.0-20240801233437-8cbde6d1fa3f
+require github.com/reiver/go-erorr v0.0.0-20240801233437-8cbde6d1fa3f // indirect
 
 require (
 	codeberg.org/reiver/go-erorr v0.0.0-20260103001947-b254c409f0ce

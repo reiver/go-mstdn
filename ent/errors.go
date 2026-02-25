@@ -1,7 +1,7 @@
 package ent
 
 import (
-	"github.com/reiver/go-erorr"
+	"codeberg.org/reiver/go-erorr"
 )
 
 const (

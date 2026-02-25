@@ -3,7 +3,7 @@ package admn
 import (
 	"encoding/json"
 
-	"github.com/reiver/go-erorr"
+	"codeberg.org/reiver/go-erorr"
 	"github.com/reiver/go-opt"
 )
 
