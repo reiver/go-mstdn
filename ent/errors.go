@@ -5,6 +5,7 @@ import (
 )
 
 const (
+	ErrNilNote     = erorr.Error("mstdn/ent: nil note")
 	ErrNilReceiver = erorr.Error("mstdn/ent: nil receiver")
 )
 

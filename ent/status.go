@@ -4,6 +4,7 @@ import (
 	gojson "encoding/json"
 	"time"
 
+	"codeberg.org/reiver/go-asns"
 	"github.com/reiver/go-jsonint"
 	"github.com/reiver/go-opt"
 	"github.com/reiver/go-nul"
@@ -41,6 +42,27 @@ type Status struct {
 	Bookmarked         opt.Optional[bool]        `json:"bookmarked,omitempty"`
 	Pinned             opt.Optional[bool]        `json:"pinned,omitempty"`
 	Filtered           gojson.RawMessage         `json:"filtered,omitempty"`
+}
+
+func (receiver *Status) ActivityNote(note *asns.Note) error {
+	if nil == receiver {
+		panic(ErrNilReceiver)
+	}
+
+	if nil == note {
+		return ErrNilNote
+	}
+
+	if receiver.ID.IsSomething() {
+		note.ID  = receiver.ID
+		note.URL = receiver.ID
+	}
+
+	if receiver.AttributedTo.IsSomething() {
+		note. = receiver.Account.ID
+	}
+
+	return nil
 }
 
 func (receiver *Status) ParseCreatedAt() (time.Time, error) {
