@@ -51,9 +51,9 @@ func Dial(req *http.Request) (Client, error) {
 
 	req.URL.Path = Path
 
-	sseclient, err :=httpsse.Dial(req)
+	sseclient, err := httpsse.Dial(req)
 	if nil != err {
-		return nil, err
+		return nil, fmt.Errorf("failed to dial HTTP SSE connection: %w", err)
 	}
 
 	return &internalClient{

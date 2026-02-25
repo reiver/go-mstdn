@@ -48,7 +48,7 @@ func (receiver *internalClient) Decode(dst interface{}) error {
 		var casted bool
 		event, casted = dst.(*Event)
 		if !casted {
-			return fmt.Errorf("mstdn: cannot cxast into %T", dst)
+			return fmt.Errorf("mstdn: cannot cast into %T", dst)
 		}
 	}
 
