@@ -65,6 +65,10 @@ func (receiver *Status) ActivityNote(note *asns.Note) error {
 		}
 	}
 
+	if receiver.Content.IsSomething() {
+		note.Content = receiver.Content
+	}
+
 	return nil
 }
 
