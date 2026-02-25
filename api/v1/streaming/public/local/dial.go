@@ -8,7 +8,7 @@ import (
 	"codeberg.org/reiver/go-httpsse"
 )
 
-func DialHost(bearerToken string, host string) (Client, error) {
+func DialHostUsingBearerToken(host string, bearerToken string,) (Client, error) {
 	var urloc = url.URL{
 		Scheme:"https",
 		Host:host,
@@ -21,6 +21,21 @@ func DialHost(bearerToken string, host string) (Client, error) {
 	}
 
 	httprequest.Header.Set("Authorization", "Bearer " + bearerToken)
+
+	return Dial(httprequest)
+}
+
+func DialHost(host string) (Client, error) {
+	var urloc = url.URL{
+		Scheme:"https",
+		Host:host,
+		Path:Path,
+	}
+
+	httprequest, err := http.NewRequest("GET", urloc.String(), nil)
+	if nil != err {
+		return nil, fmt.Errorf("failed to create HTTP request: %w", err)
+	}
 
 	return Dial(httprequest)
 }
