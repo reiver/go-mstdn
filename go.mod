@@ -6,7 +6,7 @@ require github.com/reiver/go-opt v0.0.0-20240809035328-1ff08dec9bc4
 
 require (
 	github.com/reiver/go-jsonint v0.0.0-20240801233651-21b9c52057ee
-	github.com/reiver/go-nul v0.0.0-20260218062004-56c831f22e44
+	github.com/reiver/go-nul v0.0.0-20260226003313-2ce86a1ca59e
 )
 
 require github.com/reiver/go-jsonstr v0.0.0-20240802000653-a5a8363975f1
