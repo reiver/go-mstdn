@@ -16,7 +16,7 @@ require github.com/reiver/go-jsonpp v0.0.0-20240802002345-16cd4c5a34ee
 require github.com/reiver/go-erorr v0.0.0-20240801233437-8cbde6d1fa3f // indirect
 
 require (
-	codeberg.org/reiver/go-asns v0.0.0-20260225063030-586c20860542
+	codeberg.org/reiver/go-asns v0.0.0-20260226013243-993d77be80a1
 	codeberg.org/reiver/go-erorr v0.0.0-20260103001947-b254c409f0ce
 	codeberg.org/reiver/go-httpsse v0.0.0-20250904033245-66e425bb7ac5
 	github.com/reiver/go-json v0.0.0-20260126113356-12b7c2d78b6a
