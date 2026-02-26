@@ -70,8 +70,8 @@ func (receiver *Status) ActivityNote(note *asns.Note) error {
 	}
 
 	if receiver.ID.IsSomething() {
-		note.ID  = receiver.ID
-		note.URL = receiver.ID
+		note.ID  = receiver.URI
+		note.URL = receiver.URI
 	}
 
 	if 0 < len(receiver.MediaAttachments) {
