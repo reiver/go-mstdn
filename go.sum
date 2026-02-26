@@ -1,7 +1,7 @@
 codeberg.org/reiver/go-ascii v0.0.0-20250831011101-29ac37bfb987 h1:8f7cz3PdXP+F2AVqYcWnodS3PPG2gEFvuJ4wPj1kv4s=
 codeberg.org/reiver/go-ascii v0.0.0-20250831011101-29ac37bfb987/go.mod h1:GuoN8yLT3H0D+0rswq8A+6sQF99w/HvueBMU3n4IPk4=
-codeberg.org/reiver/go-asns v0.0.0-20260226013243-993d77be80a1 h1:aA5dybuiRmEbed+J9FFhmkrwnYpC8StXepMlaPuL/v8=
-codeberg.org/reiver/go-asns v0.0.0-20260226013243-993d77be80a1/go.mod h1:8geFOJjoRB41o5H0HWrwu8Y3pERlowbQPKDfhYircrE=
+codeberg.org/reiver/go-asns v0.0.0-20260226014258-b3dc52329eb4 h1:y7Zmx9IwPjFFRlniLZpAh9Nm7nsomkDNh/fU3P0eKyQ=
+codeberg.org/reiver/go-asns v0.0.0-20260226014258-b3dc52329eb4/go.mod h1:8geFOJjoRB41o5H0HWrwu8Y3pERlowbQPKDfhYircrE=
 codeberg.org/reiver/go-erorr v0.0.0-20260103001947-b254c409f0ce h1:w6RVDeJJWh0aGD6eSGNEggX8EgCDQDFiJWdxxtH7h90=
 codeberg.org/reiver/go-erorr v0.0.0-20260103001947-b254c409f0ce/go.mod h1:JK+FexydwPFzMe6od9T7LAM/SjXxjsbxOP0VHUVJ1VM=
 codeberg.org/reiver/go-field v0.0.0-20251210045308-95aa734b2ef0 h1:zGfFryV4SFmCiK3MKZOk5adG7kIb45bsBvz9SeVI01A=

@@ -91,9 +91,14 @@ func (receiver *Status) ActivityNote(note *asns.Note) error {
 	}
 
 	if 0 < len(receiver.Tags) {
-		
-//@TODO
-		
+		for _, tag := range receiver.Tags {
+			hashtag := asns.HashTag{
+				Name: tag.Name,
+				HRef: tag.URL,
+			}
+
+			note.Tags = append(note.Tags, hashtag)
+		}
 	}
 
 	return nil
