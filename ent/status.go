@@ -69,7 +69,7 @@ func (receiver *Status) ActivityNote(note *asns.Note) error {
 		note.Published = receiver.CreatedAt
 	}
 
-	if receiver.ID.IsSomething() {
+	if receiver.URI.IsSomething() {
 		note.ID  = receiver.URI.Optional()
 		note.URL = receiver.URI.Optional()
 	}
