@@ -19,7 +19,9 @@ func TestApplication_MarshalJSON(t *testing.T) {
 	}{
 		{
 			Application: ent.Application{},
-			Expected: "{}",
+			Expected:
+				`{`+
+				`}`,
 		},
 
 
@@ -33,8 +35,6 @@ func TestApplication_MarshalJSON(t *testing.T) {
 			Expected:
 				`{`+
 					`"name":"acme app"`+
-					`,`+
-					`"website":null`+
 					`,`+
 					`"vapid_key":"BHgNMADAUjgYgM4PZtHkY3yTQRYD-ibS_qrWYg2KPBRidocowKcOc-8YpyItumamkGph2bk8FuryT4-p3Eymwz8"`+
 				`}`,
