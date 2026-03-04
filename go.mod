@@ -19,7 +19,7 @@ require (
 	codeberg.org/reiver/go-asns v0.0.0-20260226014258-b3dc52329eb4
 	codeberg.org/reiver/go-erorr v0.0.0-20260103001947-b254c409f0ce
 	codeberg.org/reiver/go-httpsse v0.0.0-20250904033245-66e425bb7ac5
-	github.com/reiver/go-json v0.0.0-20260126113356-12b7c2d78b6a
+	github.com/reiver/go-json v0.0.0-20260304223135-0a7e5ede4c60
 	github.com/reiver/go-pathmatch v1.0.1-0.20240802004530-0dc31d85afa8
 	github.com/reiver/go-rss v0.0.0-20260218035132-fde60d0e1f18
 )
