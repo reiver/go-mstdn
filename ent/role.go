@@ -10,9 +10,9 @@ import (
 // See:
 // https://docs.joinmastodon.org/entities/Role/
 type Role struct {
-	ID          opt.Optional[jsonint.Int] `json:"id,omitempty"`
+	ID          opt.Optional[jsonint.Numeric] `json:"id,omitempty"`
 	Name        opt.Optional[string]      `json:"name,omitempty"`
 	Color       opt.Optional[string]      `json:"color,omitempty"`
-	Permissions opt.Optional[jsonint.Int] `json:"permissions,omitempty"`
+	Permissions opt.Optional[jsonint.Numeric] `json:"permissions,omitempty"`
 	Highlighted opt.Optional[bool]        `json:"highlighted,omitempty"`
 }

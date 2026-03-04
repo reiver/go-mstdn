@@ -8,5 +8,5 @@ import (
 
 type PollOption struct {
 	Title      opt.Optional[string]      `json:"title"`
-	VotesCount nul.Nullable[jsonint.Int] `json:"votes_count"`
+	VotesCount nul.Nullable[jsonint.Numeric] `json:"votes_count"`
 }

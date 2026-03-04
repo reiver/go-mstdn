@@ -34,9 +34,9 @@ type Account struct {
 	Limited        opt.Optional[bool]          `json:"limited,omitempty"`
 	CreatedAt      opt.Optional[string]        `json:"created_at,omitempty"`
 	LastStatusAt   nul.Nullable[string]        `json:"last_status_at,omitempty"`
-	StatusesCount  opt.Optional[jsonint.Int]   `json:"statuses_count,omitempty"`
-	FollowersCount opt.Optional[jsonint.Int]   `json:"followers_count,omitempty"`
-	FollowingCount opt.Optional[jsonint.Int]   `json:"following_count,omitempty"`
+	StatusesCount  opt.Optional[jsonint.Numeric]   `json:"statuses_count,omitempty"`
+	FollowersCount opt.Optional[jsonint.Numeric]   `json:"followers_count,omitempty"`
+	FollowingCount opt.Optional[jsonint.Numeric]   `json:"following_count,omitempty"`
 	Roles        []Role                        `json:"roles,omitempty"`
 	MuteExpiresAt  nul.Nullable[string]        `json:"mute_expires_at,omitempty"`
 }

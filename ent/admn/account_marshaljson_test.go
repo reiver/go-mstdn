@@ -31,10 +31,10 @@ func TestAdmin_MarshalJSON(t *testing.T) {
 				Locale:        opt.Something("fa"),
 				InviteRequest: nul.Null[string](),
 				Role:          ent.Role{
-					ID:          opt.Something(jsonint.Int64(3)),
+					ID:          opt.Something(jsonint.NumericFromInt64(3)),
 					Name:        opt.Something("admin"),
 					Color:       opt.Something("#ff2400"),
-					Permissions: opt.Something(jsonint.Int64(4294967295)),
+					Permissions: opt.Something(jsonint.NumericFromInt64(4294967295)),
 					Highlighted: opt.Something(true),
 				},
 				Confirmed:     opt.Something(false),
@@ -62,9 +62,9 @@ func TestAdmin_MarshalJSON(t *testing.T) {
 					Discoverable:   nul.Null[bool](),
 					CreatedAt:      opt.Something("2023-09-27T22:06:19Z"),
 					LastStatusAt:   nul.Null[string](),
-					StatusesCount:  opt.Something(jsonint.Int64(123)),
-					FollowersCount: opt.Something(jsonint.Int64(24789)),
-					FollowingCount: opt.Something(jsonint.Int64(355)),
+					StatusesCount:  opt.Something(jsonint.NumericFromInt64(123)),
+					FollowersCount: opt.Something(jsonint.NumericFromInt64(24789)),
+					FollowingCount: opt.Something(jsonint.NumericFromInt64(355)),
 					//Roles
 					//MuteExpiresAt
 				},
@@ -178,10 +178,10 @@ func TestAdmin_MarshalJSON(t *testing.T) {
 				Locale:        opt.Something("fa"),
 				InviteRequest: nul.Null[string](),
 				Role:          ent.Role{
-					ID:          opt.Something(jsonint.Int64(3)),
+					ID:          opt.Something(jsonint.NumericFromInt64(3)),
 					Name:        opt.Something("admin"),
 					Color:       opt.Something("#ff2400"),
-					Permissions: opt.Something(jsonint.Int64(4294967295)),
+					Permissions: opt.Something(jsonint.NumericFromInt64(4294967295)),
 					Highlighted: opt.Something(true),
 				},
 				Confirmed:     opt.Something(false),
@@ -209,9 +209,9 @@ func TestAdmin_MarshalJSON(t *testing.T) {
 					Discoverable:   nul.Null[bool](),
 					CreatedAt:      opt.Something("2023-09-27T22:06:19Z"),
 					LastStatusAt:   nul.Null[string](),
-					StatusesCount:  opt.Something(jsonint.Int64(123)),
-					FollowersCount: opt.Something(jsonint.Int64(24789)),
-					FollowingCount: opt.Something(jsonint.Int64(355)),
+					StatusesCount:  opt.Something(jsonint.NumericFromInt64(123)),
+					FollowersCount: opt.Something(jsonint.NumericFromInt64(24789)),
+					FollowingCount: opt.Something(jsonint.NumericFromInt64(355)),
 					//Roles
 					//MuteExpiresAt
 				},
@@ -319,10 +319,10 @@ func TestAdmin_MarshalJSON(t *testing.T) {
 				Locale:        opt.Something("fa"),
 				InviteRequest: nul.Null[string](),
 				Role:          ent.Role{
-					ID:          opt.Something(jsonint.Int64(3)),
+					ID:          opt.Something(jsonint.NumericFromInt64(3)),
 					Name:        opt.Something("admin"),
 					Color:       opt.Something("#ff2400"),
-					Permissions: opt.Something(jsonint.Int64(4294967295)),
+					Permissions: opt.Something(jsonint.NumericFromInt64(4294967295)),
 					Highlighted: opt.Something(true),
 				},
 				Confirmed:     opt.Something(false),
@@ -350,9 +350,9 @@ func TestAdmin_MarshalJSON(t *testing.T) {
 					Discoverable:   nul.Null[bool](),
 					CreatedAt:      opt.Something("2023-09-27T22:06:19Z"),
 					LastStatusAt:   nul.Null[string](),
-					StatusesCount:  opt.Something(jsonint.Int64(123)),
-					FollowersCount: opt.Something(jsonint.Int64(24789)),
-					FollowingCount: opt.Something(jsonint.Int64(355)),
+					StatusesCount:  opt.Something(jsonint.NumericFromInt64(123)),
+					FollowersCount: opt.Something(jsonint.NumericFromInt64(24789)),
+					FollowingCount: opt.Something(jsonint.NumericFromInt64(355)),
 					//Roles
 					//MuteExpiresAt
 				},
@@ -465,10 +465,10 @@ func TestAdmin_MarshalJSON(t *testing.T) {
 				Locale:        opt.Something("fa"),
 				InviteRequest: nul.Null[string](),
 				Role:          ent.Role{
-					ID:          opt.Something(jsonint.Int64(3)),
+					ID:          opt.Something(jsonint.NumericFromInt64(3)),
 					Name:        opt.Something("admin"),
 					Color:       opt.Something("#ff2400"),
-					Permissions: opt.Something(jsonint.Int64(4294967295)),
+					Permissions: opt.Something(jsonint.NumericFromInt64(4294967295)),
 					Highlighted: opt.Something(true),
 				},
 				Confirmed:     opt.Something(false),
@@ -496,9 +496,9 @@ func TestAdmin_MarshalJSON(t *testing.T) {
 					Discoverable:   nul.Null[bool](),
 					CreatedAt:      opt.Something("2023-09-27T22:06:19Z"),
 					LastStatusAt:   nul.Null[string](),
-					StatusesCount:  opt.Something(jsonint.Int64(123)),
-					FollowersCount: opt.Something(jsonint.Int64(24789)),
-					FollowingCount: opt.Something(jsonint.Int64(355)),
+					StatusesCount:  opt.Something(jsonint.NumericFromInt64(123)),
+					FollowersCount: opt.Something(jsonint.NumericFromInt64(24789)),
+					FollowingCount: opt.Something(jsonint.NumericFromInt64(355)),
 					//Roles
 					//MuteExpiresAt
 				},

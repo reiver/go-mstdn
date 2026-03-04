@@ -27,10 +27,10 @@ func TestRole_MarshalJSON(t *testing.T) {
 					`"highlighted":true`+
 				`}`,
 			Expected: ent.Role{
-				ID:          opt.Something(jsonint.Int64(12345)),
+				ID:          opt.Something(jsonint.NumericFromInt64(12345)),
 				Name:        opt.Something("Master"),
 				Color:       opt.Something("#1a2b3c"),
-				Permissions: opt.Something(jsonint.Int64(256)),
+				Permissions: opt.Something(jsonint.NumericFromInt64(256)),
 				Highlighted: opt.Something(true),
 			},
 		},
@@ -44,10 +44,10 @@ func TestRole_MarshalJSON(t *testing.T) {
 					`"highlighted":false`+
 				`}`,
 			Expected: ent.Role{
-				ID:          opt.Something(jsonint.Int64(71727374)),
+				ID:          opt.Something(jsonint.NumericFromInt64(71727374)),
 				Name:        opt.Something("Student"),
 				Color:       opt.Something("#76cd54"),
-				Permissions: opt.Something(jsonint.Int64(664)),
+				Permissions: opt.Something(jsonint.NumericFromInt64(664)),
 				Highlighted: opt.Something(false),
 			},
 		},
@@ -64,10 +64,10 @@ func TestRole_MarshalJSON(t *testing.T) {
 					`"highlighted":true`+
 				`}`,
 			Expected: ent.Role{
-				ID:          opt.Something(jsonint.Int64(87)),
+				ID:          opt.Something(jsonint.NumericFromInt64(87)),
 				Name:        opt.Something("QA Specialist"),
 				Color:       opt.Something(""),
-				Permissions: opt.Something(jsonint.Int64(218)),
+				Permissions: opt.Something(jsonint.NumericFromInt64(218)),
 				Highlighted: opt.Something(true),
 			},
 		},
@@ -80,9 +80,9 @@ func TestRole_MarshalJSON(t *testing.T) {
 					`"highlighted":true`+
 				`}`,
 			Expected: ent.Role{
-				ID:          opt.Something(jsonint.Int64(87)),
+				ID:          opt.Something(jsonint.NumericFromInt64(87)),
 				Name:        opt.Something("QA Specialist"),
-				Permissions: opt.Something(jsonint.Int64(218)),
+				Permissions: opt.Something(jsonint.NumericFromInt64(218)),
 				Highlighted: opt.Something(true),
 			},
 		},

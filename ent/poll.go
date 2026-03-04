@@ -11,10 +11,10 @@ type Poll struct {
 	ExpiresAt   nul.Nullable[string]      `json:"expires_at,omitempty"`
 	Expired     opt.Optional[bool]        `json:"expired,omitempty"`
 	Multiple    opt.Optional[bool]        `json:"multiple,omitempty"`
-	VotesCount  opt.Optional[jsonint.Int] `json:"votes_count,omitempty"`
-	VotersCount opt.Optional[jsonint.Int] `json:"voters_count,omitempty"`
+	VotesCount  opt.Optional[jsonint.Numeric] `json:"votes_count,omitempty"`
+	VotersCount opt.Optional[jsonint.Numeric] `json:"voters_count,omitempty"`
 	Options   []PollOption                `json:"options,omitempty"`
 	Emojis    []CustomEmoji               `json:"emojis,omitempty"`
 	Voted       opt.Optional[bool]        `json:"voted,omitempty"`
-	OwnVotes  []jsonint.Int               `json:"own_votes,omitempty"`
+	OwnVotes  []jsonint.Numeric               `json:"own_votes,omitempty"`
 }

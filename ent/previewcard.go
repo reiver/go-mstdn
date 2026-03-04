@@ -18,8 +18,8 @@ type PreviewCard struct {
 	ProviderName opt.Optional[string]      `json:"provider_name"`
 	ProviderURL  opt.Optional[string]      `json:"provider_url"`
 	HTML         opt.Optional[string]      `json:"html"`
-	Width        opt.Optional[jsonint.Int] `json:"width"`
-	Height       opt.Optional[jsonint.Int] `json:"height"`
+	Width        opt.Optional[jsonint.Numeric] `json:"width"`
+	Height       opt.Optional[jsonint.Numeric] `json:"height"`
 	Image        nul.Nullable[string]      `json:"image"`
 	EmbedURL     opt.Optional[string]      `json:"embed_url"`
 	BlurHash     nul.Nullable[string]      `json:"blurhash"`
