@@ -142,9 +142,17 @@ func TestAdmin_MarshalJSON(t *testing.T) {
 					`,`+
 					`"discoverable":null`+
 					`,`+
+					`"indexable":null`+
+					`,`+
 					`"noindex":null`+
 					`,`+
 					`"moved":null`+
+					`,`+
+					`"memorial":null`+
+					`,`+
+					`"suspended":null`+
+					`,`+
+					`"limited":null`+
 					`,`+
 					`"created_at":"2023-09-27T22:06:19Z"`+
 					`,`+
@@ -155,6 +163,8 @@ func TestAdmin_MarshalJSON(t *testing.T) {
 					`"followers_count":24789`+
 					`,`+
 					`"following_count":355`+
+					`,`+
+					`"hide_collections":null`+
 					`,`+
 					`"mute_expires_at":null`+
 				`}`+
@@ -293,9 +303,17 @@ func TestAdmin_MarshalJSON(t *testing.T) {
 					`,`+
 					`"discoverable":null`+
 					`,`+
+					`"indexable":null`+
+					`,`+
 					`"noindex":null`+
 					`,`+
 					`"moved":null`+
+					`,`+
+					`"memorial":null`+
+					`,`+
+					`"suspended":null`+
+					`,`+
+					`"limited":null`+
 					`,`+
 					`"created_at":"2023-09-27T22:06:19Z"`+
 					`,`+
@@ -306,6 +324,8 @@ func TestAdmin_MarshalJSON(t *testing.T) {
 					`"followers_count":24789`+
 					`,`+
 					`"following_count":355`+
+					`,`+
+					`"hide_collections":null`+
 					`,`+
 					`"mute_expires_at":null`+
 				`}`+
@@ -438,9 +458,17 @@ func TestAdmin_MarshalJSON(t *testing.T) {
 					`,`+
 					`"discoverable":null`+
 					`,`+
+					`"indexable":null`+
+					`,`+
 					`"noindex":null`+
 					`,`+
 					`"moved":null`+
+					`,`+
+					`"memorial":null`+
+					`,`+
+					`"suspended":null`+
+					`,`+
+					`"limited":null`+
 					`,`+
 					`"created_at":"2023-09-27T22:06:19Z"`+
 					`,`+
@@ -451,6 +479,8 @@ func TestAdmin_MarshalJSON(t *testing.T) {
 					`"followers_count":24789`+
 					`,`+
 					`"following_count":355`+
+					`,`+
+					`"hide_collections":null`+
 					`,`+
 					`"mute_expires_at":null`+
 				`}`+
@@ -594,9 +624,17 @@ func TestAdmin_MarshalJSON(t *testing.T) {
 					`,`+
 					`"discoverable":null`+
 					`,`+
+					`"indexable":null`+
+					`,`+
 					`"noindex":null`+
 					`,`+
 					`"moved":null`+
+					`,`+
+					`"memorial":null`+
+					`,`+
+					`"suspended":null`+
+					`,`+
+					`"limited":null`+
 					`,`+
 					`"created_at":"2023-09-27T22:06:19Z"`+
 					`,`+
@@ -607,6 +645,8 @@ func TestAdmin_MarshalJSON(t *testing.T) {
 					`"followers_count":24789`+
 					`,`+
 					`"following_count":355`+
+					`,`+
+					`"hide_collections":null`+
 					`,`+
 					`"mute_expires_at":null`+
 				`}`+

@@ -82,9 +82,17 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				`,`+
 				`"discoverable":null`+
 				`,`+
+				`"indexable":null`+
+				`,`+
 				`"noindex":null`+
 				`,`+
 				`"moved":null`+
+				`,`+
+				`"memorial":null`+
+				`,`+
+				`"suspended":null`+
+				`,`+
+				`"limited":null`+
 				`,`+
 				`"created_at":"2023-09-27T22:06:19Z"`+
 				`,`+
@@ -95,6 +103,8 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				`"followers_count":24789`+
 				`,`+
 				`"following_count":355`+
+				`,`+
+				`"hide_collections":null`+
 				`,`+
 				`"mute_expires_at":null`+
 			`}`,
@@ -173,9 +183,17 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				`,`+
 				`"discoverable":null`+
 				`,`+
+				`"indexable":null`+
+				`,`+
 				`"noindex":null`+
 				`,`+
 				`"moved":null`+
+				`,`+
+				`"memorial":null`+
+				`,`+
+				`"suspended":null`+
+				`,`+
+				`"limited":null`+
 				`,`+
 				`"created_at":"2023-09-27T22:06:19Z"`+
 				`,`+
@@ -186,6 +204,8 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				`"followers_count":24789`+
 				`,`+
 				`"following_count":355`+
+				`,`+
+				`"hide_collections":null`+
 				`,`+
 				`"mute_expires_at":null`+
 			`}`,
@@ -258,9 +278,17 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				`,`+
 				`"discoverable":null`+
 				`,`+
+				`"indexable":null`+
+				`,`+
 				`"noindex":null`+
 				`,`+
 				`"moved":null`+
+				`,`+
+				`"memorial":null`+
+				`,`+
+				`"suspended":null`+
+				`,`+
+				`"limited":null`+
 				`,`+
 				`"created_at":"2023-09-27T22:06:19Z"`+
 				`,`+
@@ -271,6 +299,8 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				`"followers_count":24789`+
 				`,`+
 				`"following_count":355`+
+				`,`+
+				`"hide_collections":null`+
 				`,`+
 				`"mute_expires_at":null`+
 			`}`,
@@ -343,9 +373,17 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				`,`+
 				`"discoverable":null`+
 				`,`+
+				`"indexable":null`+
+				`,`+
 				`"noindex":null`+
 				`,`+
 				`"moved":null`+
+				`,`+
+				`"memorial":null`+
+				`,`+
+				`"suspended":null`+
+				`,`+
+				`"limited":null`+
 				`,`+
 				`"created_at":"2023-09-27T22:06:19Z"`+
 				`,`+
@@ -356,6 +394,8 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				`"followers_count":24789`+
 				`,`+
 				`"following_count":355`+
+				`,`+
+				`"hide_collections":null`+
 				`,`+
 				`"mute_expires_at":null`+
 			`}`,
@@ -433,9 +473,17 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				`,`+
 				`"discoverable":false`+
 				`,`+
+				`"indexable":null`+
+				`,`+
 				`"noindex":null`+
 				`,`+
 				`"moved":null`+
+				`,`+
+				`"memorial":null`+
+				`,`+
+				`"suspended":null`+
+				`,`+
+				`"limited":null`+
 				`,`+
 				`"created_at":"2023-09-27T22:06:19Z"`+
 				`,`+
@@ -446,6 +494,8 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				`"followers_count":24789`+
 				`,`+
 				`"following_count":355`+
+				`,`+
+				`"hide_collections":null`+
 				`,`+
 				`"mute_expires_at":null`+
 			`}`,
@@ -518,9 +568,17 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				`,`+
 				`"discoverable":true`+
 				`,`+
+				`"indexable":null`+
+				`,`+
 				`"noindex":null`+
 				`,`+
 				`"moved":null`+
+				`,`+
+				`"memorial":null`+
+				`,`+
+				`"suspended":null`+
+				`,`+
+				`"limited":null`+
 				`,`+
 				`"created_at":"2023-09-27T22:06:19Z"`+
 				`,`+
@@ -531,6 +589,8 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				`"followers_count":24789`+
 				`,`+
 				`"following_count":355`+
+				`,`+
+				`"hide_collections":null`+
 				`,`+
 				`"mute_expires_at":null`+
 			`}`,
@@ -609,9 +669,17 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				`,`+
 				`"discoverable":null`+
 				`,`+
+				`"indexable":null`+
+				`,`+
 				`"noindex":null`+
 				`,`+
 				`"moved":null`+
+				`,`+
+				`"memorial":null`+
+				`,`+
+				`"suspended":null`+
+				`,`+
+				`"limited":null`+
 				`,`+
 				`"created_at":"2022-08-16T11:05:08Z"`+
 				`,`+
@@ -622,6 +690,8 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				`"followers_count":24789`+
 				`,`+
 				`"following_count":355`+
+				`,`+
+				`"hide_collections":null`+
 				`,`+
 				`"mute_expires_at":null`+
 			`}`,
@@ -700,9 +770,17 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				`,`+
 				`"discoverable":null`+
 				`,`+
+				`"indexable":null`+
+				`,`+
 				`"noindex":null`+
 				`,`+
 				`"moved":null`+
+				`,`+
+				`"memorial":null`+
+				`,`+
+				`"suspended":null`+
+				`,`+
+				`"limited":null`+
 				`,`+
 				`"created_at":"2023-09-27T22:06:19Z"`+
 				`,`+
@@ -713,6 +791,8 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				`"followers_count":24789`+
 				`,`+
 				`"following_count":355`+
+				`,`+
+				`"hide_collections":null`+
 				`,`+
 				`"mute_expires_at":null`+
 			`}`,
@@ -772,8 +852,8 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				`"header":"https://files.example.com/header/joeblow.png"`+
 				`,`+
 				`"header_static":"https://files.example.com/header-static/joeblow.png"`+
-				`,`+
-				`"fields":[]`+
+//				`,`+
+//				`"fields":[]`+
 //				`,`+
 //				`"emojis":[]`+
 				`,`+
@@ -785,9 +865,17 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				`,`+
 				`"discoverable":null`+
 				`,`+
+				`"indexable":null`+
+				`,`+
 				`"noindex":null`+
 				`,`+
 				`"moved":null`+
+				`,`+
+				`"memorial":null`+
+				`,`+
+				`"suspended":null`+
+				`,`+
+				`"limited":null`+
 				`,`+
 				`"created_at":"2023-09-27T22:06:19Z"`+
 				`,`+
@@ -798,6 +886,8 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				`"followers_count":24789`+
 				`,`+
 				`"following_count":355`+
+				`,`+
+				`"hide_collections":null`+
 				`,`+
 				`"mute_expires_at":null`+
 			`}`,
@@ -860,6 +950,8 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				`,`+
 				`"header_static":"https://files.example.com/header-static/joeblow.png"`+
 				`,`+
+				`"locked":false`+
+				`,`+
 				`"fields":[`+
 					`{`+
 						`"name":"alt"`+
@@ -869,10 +961,8 @@ func TestAccount_MarshalJSON(t *testing.T) {
 						`"verified_at":null`+
 					`}`+
 				`]`+
-				`,`+
-//				`"emojis":[]`+
 //				`,`+
-				`"locked":false`+
+//				`"emojis":[]`+
 				`,`+
 				`"bot":false`+
 				`,`+
@@ -880,9 +970,17 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				`,`+
 				`"discoverable":null`+
 				`,`+
+				`"indexable":null`+
+				`,`+
 				`"noindex":null`+
 				`,`+
 				`"moved":null`+
+				`,`+
+				`"memorial":null`+
+				`,`+
+				`"suspended":null`+
+				`,`+
+				`"limited":null`+
 				`,`+
 				`"created_at":"2023-09-27T22:06:19Z"`+
 				`,`+
@@ -893,6 +991,8 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				`"followers_count":24789`+
 				`,`+
 				`"following_count":355`+
+				`,`+
+				`"hide_collections":null`+
 				`,`+
 				`"mute_expires_at":null`+
 			`}`,
@@ -956,6 +1056,8 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				`,`+
 				`"header_static":"https://files.example.com/header-static/joeblow.png"`+
 				`,`+
+				`"locked":false`+
+				`,`+
 				`"fields":[`+
 					`{`+
 						`"name":"alt"`+
@@ -973,10 +1075,8 @@ func TestAccount_MarshalJSON(t *testing.T) {
 						`"verified_at":"2022-09-29T08:41:46Z"`+
 					`}`+
 				`]`+
-				`,`+
-//				`"emojis":[]`+
 //				`,`+
-				`"locked":false`+
+//				`"emojis":[]`+
 				`,`+
 				`"bot":false`+
 				`,`+
@@ -984,9 +1084,17 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				`,`+
 				`"discoverable":null`+
 				`,`+
+				`"indexable":null`+
+				`,`+
 				`"noindex":null`+
 				`,`+
 				`"moved":null`+
+				`,`+
+				`"memorial":null`+
+				`,`+
+				`"suspended":null`+
+				`,`+
+				`"limited":null`+
 				`,`+
 				`"created_at":"2023-09-27T22:06:19Z"`+
 				`,`+
@@ -997,6 +1105,8 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				`"followers_count":24789`+
 				`,`+
 				`"following_count":355`+
+				`,`+
+				`"hide_collections":null`+
 				`,`+
 				`"mute_expires_at":null`+
 			`}`,
@@ -1075,9 +1185,17 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				`,`+
 				`"discoverable":null`+
 				`,`+
+				`"indexable":null`+
+				`,`+
 				`"noindex":null`+
 				`,`+
 				`"moved":null`+
+				`,`+
+				`"memorial":null`+
+				`,`+
+				`"suspended":null`+
+				`,`+
+				`"limited":null`+
 				`,`+
 				`"created_at":"2023-09-27T22:06:19Z"`+
 				`,`+
@@ -1088,6 +1206,8 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				`"followers_count":24789`+
 				`,`+
 				`"following_count":355`+
+				`,`+
+				`"hide_collections":null`+
 				`,`+
 				`"mute_expires_at":null`+
 			`}`,
@@ -1149,8 +1269,8 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				`"header_static":"https://files.example.com/header-static/joeblow.png"`+
 //				`,`+
 //				`"fields":[]`+
-				`,`+
-				`"emojis":[]`+
+//				`,`+
+//				`"emojis":[]`+
 				`,`+
 				`"locked":false`+
 				`,`+
@@ -1160,9 +1280,17 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				`,`+
 				`"discoverable":null`+
 				`,`+
+				`"indexable":null`+
+				`,`+
 				`"noindex":null`+
 				`,`+
 				`"moved":null`+
+				`,`+
+				`"memorial":null`+
+				`,`+
+				`"suspended":null`+
+				`,`+
+				`"limited":null`+
 				`,`+
 				`"created_at":"2023-09-27T22:06:19Z"`+
 				`,`+
@@ -1173,6 +1301,8 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				`"followers_count":24789`+
 				`,`+
 				`"following_count":355`+
+				`,`+
+				`"hide_collections":null`+
 				`,`+
 				`"mute_expires_at":null`+
 			`}`,
@@ -1239,6 +1369,8 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				`"header":"https://files.example.com/header/joeblow.png"`+
 				`,`+
 				`"header_static":"https://files.example.com/header-static/joeblow.png"`+
+				`,`+
+				`"locked":false`+
 //				`,`+
 //				`"fields":[]`+
 				`,`+
@@ -1254,17 +1386,23 @@ func TestAccount_MarshalJSON(t *testing.T) {
 					`}`+
 				`]`+
 				`,`+
-				`"locked":false`+
-				`,`+
 				`"bot":false`+
 				`,`+
 				`"group":false`+
 				`,`+
 				`"discoverable":null`+
 				`,`+
+				`"indexable":null`+
+				`,`+
 				`"noindex":null`+
 				`,`+
 				`"moved":null`+
+				`,`+
+				`"memorial":null`+
+				`,`+
+				`"suspended":null`+
+				`,`+
+				`"limited":null`+
 				`,`+
 				`"created_at":"2023-09-27T22:06:19Z"`+
 				`,`+
@@ -1275,6 +1413,8 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				`"followers_count":24789`+
 				`,`+
 				`"following_count":355`+
+				`,`+
+				`"hide_collections":null`+
 				`,`+
 				`"mute_expires_at":null`+
 			`}`,
@@ -1347,6 +1487,8 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				`"header":"https://files.example.com/header/joeblow.png"`+
 				`,`+
 				`"header_static":"https://files.example.com/header-static/joeblow.png"`+
+				`,`+
+				`"locked":false`+
 //				`,`+
 //				`"fields":[]`+
 				`,`+
@@ -1372,17 +1514,23 @@ func TestAccount_MarshalJSON(t *testing.T) {
 					`}`+
 				`]`+
 				`,`+
-				`"locked":false`+
-				`,`+
 				`"bot":false`+
 				`,`+
 				`"group":false`+
 				`,`+
 				`"discoverable":null`+
 				`,`+
+				`"indexable":null`+
+				`,`+
 				`"noindex":null`+
 				`,`+
 				`"moved":null`+
+				`,`+
+				`"memorial":null`+
+				`,`+
+				`"suspended":null`+
+				`,`+
+				`"limited":null`+
 				`,`+
 				`"created_at":"2023-09-27T22:06:19Z"`+
 				`,`+
@@ -1393,6 +1541,8 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				`"followers_count":24789`+
 				`,`+
 				`"following_count":355`+
+				`,`+
+				`"hide_collections":null`+
 				`,`+
 				`"mute_expires_at":null`+
 			`}`,
@@ -1472,6 +1622,8 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				`"header":"https://files.example.com/header/joeblow.png"`+
 				`,`+
 				`"header_static":"https://files.example.com/header-static/joeblow.png"`+
+				`,`+
+				`"locked":false`+
 //				`,`+
 //				`"fields":[]`+
 				`,`+
@@ -1509,17 +1661,23 @@ func TestAccount_MarshalJSON(t *testing.T) {
 					`}`+
 				`]`+
 				`,`+
-				`"locked":false`+
-				`,`+
 				`"bot":false`+
 				`,`+
 				`"group":false`+
 				`,`+
 				`"discoverable":null`+
 				`,`+
+				`"indexable":null`+
+				`,`+
 				`"noindex":null`+
 				`,`+
 				`"moved":null`+
+				`,`+
+				`"memorial":null`+
+				`,`+
+				`"suspended":null`+
+				`,`+
+				`"limited":null`+
 				`,`+
 				`"created_at":"2023-09-27T22:06:19Z"`+
 				`,`+
@@ -1530,6 +1688,8 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				`"followers_count":24789`+
 				`,`+
 				`"following_count":355`+
+				`,`+
+				`"hide_collections":null`+
 				`,`+
 				`"mute_expires_at":null`+
 			`}`,
@@ -1608,9 +1768,17 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				`,`+
 				`"discoverable":null`+
 				`,`+
+				`"indexable":null`+
+				`,`+
 				`"noindex":null`+
 				`,`+
 				`"moved":null`+
+				`,`+
+				`"memorial":null`+
+				`,`+
+				`"suspended":null`+
+				`,`+
+				`"limited":null`+
 				`,`+
 				`"created_at":"2023-09-27T22:06:19Z"`+
 				`,`+
@@ -1621,6 +1789,8 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				`"followers_count":24789`+
 				`,`+
 				`"following_count":355`+
+				`,`+
+				`"hide_collections":null`+
 				`,`+
 				`"mute_expires_at":null`+
 			`}`,
@@ -1693,9 +1863,17 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				`,`+
 				`"discoverable":null`+
 				`,`+
+				`"indexable":null`+
+				`,`+
 				`"noindex":null`+
 				`,`+
 				`"moved":null`+
+				`,`+
+				`"memorial":null`+
+				`,`+
+				`"suspended":null`+
+				`,`+
+				`"limited":null`+
 				`,`+
 				`"created_at":"2023-09-27T22:06:19Z"`+
 				`,`+
@@ -1707,7 +1885,9 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				`,`+
 				`"following_count":355`+
 				`,`+
-				`"roles":[]`+
+				`"hide_collections":null`+
+//				`,`+
+//				`"roles":[]`+
 				`,`+
 				`"mute_expires_at":null`+
 			`}`,
@@ -1788,9 +1968,17 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				`,`+
 				`"discoverable":null`+
 				`,`+
+				`"indexable":null`+
+				`,`+
 				`"noindex":null`+
 				`,`+
 				`"moved":null`+
+				`,`+
+				`"memorial":null`+
+				`,`+
+				`"suspended":null`+
+				`,`+
+				`"limited":null`+
 				`,`+
 				`"created_at":"2023-09-27T22:06:19Z"`+
 				`,`+
@@ -1801,6 +1989,8 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				`"followers_count":24789`+
 				`,`+
 				`"following_count":355`+
+				`,`+
+				`"hide_collections":null`+
 				`,`+
 				`"roles":[`+
 					`{`+
@@ -1902,9 +2092,17 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				`,`+
 				`"discoverable":null`+
 				`,`+
+				`"indexable":null`+
+				`,`+
 				`"noindex":null`+
 				`,`+
 				`"moved":null`+
+				`,`+
+				`"memorial":null`+
+				`,`+
+				`"suspended":null`+
+				`,`+
+				`"limited":null`+
 				`,`+
 				`"created_at":"2023-09-27T22:06:19Z"`+
 				`,`+
@@ -1915,6 +2113,8 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				`"followers_count":24789`+
 				`,`+
 				`"following_count":355`+
+				`,`+
+				`"hide_collections":null`+
 				`,`+
 				`"roles":[`+
 					`{`+
@@ -2034,9 +2234,17 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				`,`+
 				`"discoverable":null`+
 				`,`+
+				`"indexable":null`+
+				`,`+
 				`"noindex":null`+
 				`,`+
 				`"moved":null`+
+				`,`+
+				`"memorial":null`+
+				`,`+
+				`"suspended":null`+
+				`,`+
+				`"limited":null`+
 				`,`+
 				`"created_at":"2023-09-27T22:06:19Z"`+
 				`,`+
@@ -2047,6 +2255,8 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				`"followers_count":24789`+
 				`,`+
 				`"following_count":355`+
+				`,`+
+				`"hide_collections":null`+
 				`,`+
 				`"roles":[`+
 					`{`+
@@ -2163,9 +2373,17 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				`,`+
 				`"discoverable":null`+
 				`,`+
+				`"indexable":null`+
+				`,`+
 				`"noindex":null`+
 				`,`+
 				`"moved":null`+
+				`,`+
+				`"memorial":null`+
+				`,`+
+				`"suspended":null`+
+				`,`+
+				`"limited":null`+
 				`,`+
 				`"created_at":"2023-09-27T22:06:19Z"`+
 				`,`+
@@ -2176,6 +2394,8 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				`"followers_count":24789`+
 				`,`+
 				`"following_count":355`+
+				`,`+
+				`"hide_collections":null`+
 				`,`+
 				`"mute_expires_at":null`+
 			`}`,
@@ -2248,9 +2468,17 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				`,`+
 				`"discoverable":null`+
 				`,`+
+				`"indexable":null`+
+				`,`+
 				`"noindex":null`+
 				`,`+
 				`"moved":null`+
+				`,`+
+				`"memorial":null`+
+				`,`+
+				`"suspended":null`+
+				`,`+
+				`"limited":null`+
 				`,`+
 				`"created_at":"2023-09-27T22:06:19Z"`+
 				`,`+
@@ -2261,6 +2489,8 @@ func TestAccount_MarshalJSON(t *testing.T) {
 				`"followers_count":24789`+
 				`,`+
 				`"following_count":355`+
+				`,`+
+				`"hide_collections":null`+
 				`,`+
 				`"mute_expires_at":"2025-11-12T09:10:11Z"`+
 			`}`,
