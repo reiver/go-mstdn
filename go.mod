@@ -5,7 +5,7 @@ go 1.25.4
 require github.com/reiver/go-opt v0.0.0-20240809035328-1ff08dec9bc4
 
 require (
-	github.com/reiver/go-jsonint v0.0.0-20240801233651-21b9c52057ee
+	github.com/reiver/go-jsonint v0.0.0-20260304125853-c8d717897e61
 	github.com/reiver/go-nul v0.0.0-20260226004802-f87085371089
 )
 
