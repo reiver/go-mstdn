@@ -92,7 +92,12 @@ func (receiver *Status) ActivityNote(note *asns.Note) error {
 	}
 
 	if receiver.SpoilerText.IsSomething() {
-		note.Summary = receiver.SpoilerText
+		note.Summary = nul.Nothing[string]()
+
+		value, found := receiver.SpoilerText.Get()
+		if found {
+			note.Summary = nul.Something(value)
+		}
 	}
 
 	if 0 < len(receiver.Tags) {
