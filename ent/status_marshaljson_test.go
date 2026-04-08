@@ -42,7 +42,7 @@ func TestStatus_JSON(t *testing.T) {
 		{
 			Status:Status{
 				ID: opt.Something("123"),
-				CreatedAt: opt.Something("yesterday"),
+				CreatedAt: nul.Something("yesterday"),
 			},
 			Expected: `{"id":"123","created_at":"yesterday"}`,
 		},
@@ -57,21 +57,21 @@ func TestStatus_JSON(t *testing.T) {
 		{
 			Status:Status{
 				ID: opt.Something("123"),
-				Visibility: opt.Something("public"),
+				Visibility: nul.Something("public"),
 			},
 			Expected: `{"id":"123","visibility":"public"}`,
 		},
 		{
 			Status:Status{
 				ID: opt.Something("123"),
-				Sensitive: opt.Something(true),
+				Sensitive: nul.Something(true),
 			},
 			Expected: `{"id":"123","sensitive":true}`,
 		},
 		{
 			Status:Status{
 				ID: opt.Something("123"),
-				SpoilerText: opt.Something("the rabbit did it"),
+				SpoilerText: nul.Something("the rabbit did it"),
 			},
 			Expected: `{"id":"123","spoiler_text":"the rabbit did it"}`,
 		},
@@ -130,35 +130,35 @@ func TestStatus_JSON(t *testing.T) {
 		{
 			Status:Status{
 				ID: opt.Something("123"),
-				Favourited: opt.Something(true),
+				Favourited: nul.Something(true),
 			},
 			Expected: `{"id":"123","favourited":true}`,
 		},
 		{
 			Status:Status{
 				ID: opt.Something("123"),
-				Reblogged: opt.Something(true),
+				Reblogged: nul.Something(true),
 			},
 			Expected: `{"id":"123","reblogged":true}`,
 		},
 		{
 			Status:Status{
 				ID: opt.Something("123"),
-				Muted: opt.Something(true),
+				Muted: nul.Something(true),
 			},
 			Expected: `{"id":"123","muted":true}`,
 		},
 		{
 			Status:Status{
 				ID: opt.Something("123"),
-				Bookmarked: opt.Something(true),
+				Bookmarked: nul.Something(true),
 			},
 			Expected: `{"id":"123","bookmarked":true}`,
 		},
 		{
 			Status:Status{
 				ID: opt.Something("123"),
-				Pinned: opt.Something(true),
+				Pinned: nul.Something(true),
 			},
 			Expected: `{"id":"123","pinned":true}`,
 		},
