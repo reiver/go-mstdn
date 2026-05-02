@@ -16,7 +16,7 @@ require github.com/reiver/go-jsonpp v0.0.0-20240802002345-16cd4c5a34ee
 require github.com/reiver/go-erorr v0.0.0-20240801233437-8cbde6d1fa3f // indirect
 
 require (
-	codeberg.org/reiver/go-activitypub v0.0.0-20260502170140-11d7800dfff7
+	codeberg.org/reiver/go-activitypub v0.0.0-20260502180123-94334d4ab962
 	codeberg.org/reiver/go-erorr v0.0.0-20260414214747-7b76f85a93ac
 	codeberg.org/reiver/go-httpsse v0.0.0-20250904033245-66e425bb7ac5
 	github.com/reiver/go-json v0.0.0-20260502054102-0a3481c07116
@@ -30,7 +30,7 @@ require (
 	github.com/reiver/go-calltrace v0.0.0-20251216205616-3931a8c7b154 // indirect
 	github.com/reiver/go-errhttp v1.1.1-0.20240513035723-daf47d264c9c // indirect
 	github.com/reiver/go-etag v0.0.0-20241130123934-1a98d29fda6e // indirect
-	github.com/reiver/go-jsonld v0.0.0-20260502154902-b0f5ce5c30d2 // indirect
+	github.com/reiver/go-jsonld v0.0.0-20260502175956-7e66110fb725 // indirect
 	github.com/reiver/go-lck v0.0.0-20240808133902-b56df221c39f // indirect
 	github.com/reiver/go-pckstr v0.0.0-20260425220659-60660d07c451 // indirect
 	github.com/reiver/go-utf8 v2.0.2-0.20240806185936-5dd7c5557d34+incompatible // indirect

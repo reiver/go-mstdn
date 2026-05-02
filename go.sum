@@ -1,5 +1,5 @@
-codeberg.org/reiver/go-activitypub v0.0.0-20260502170140-11d7800dfff7 h1:sRrAEfB2NhYBIZRUnB2bPcG86luvAsq7njCdENso3nA=
-codeberg.org/reiver/go-activitypub v0.0.0-20260502170140-11d7800dfff7/go.mod h1:1OPCUEnkAXFBOyc4liIa8faALfvOZcTldfL6mNDKqz8=
+codeberg.org/reiver/go-activitypub v0.0.0-20260502180123-94334d4ab962 h1:1v3YjLhKyd6GNmI488QvEHy0j4o8BYR7LtF9n0esha0=
+codeberg.org/reiver/go-activitypub v0.0.0-20260502180123-94334d4ab962/go.mod h1:lwCW2Vdq2a76qZRFVTRA4SZ9yorHA3aEEqhMZAXZi+8=
 codeberg.org/reiver/go-ascii v0.0.0-20250831011101-29ac37bfb987 h1:8f7cz3PdXP+F2AVqYcWnodS3PPG2gEFvuJ4wPj1kv4s=
 codeberg.org/reiver/go-ascii v0.0.0-20250831011101-29ac37bfb987/go.mod h1:GuoN8yLT3H0D+0rswq8A+6sQF99w/HvueBMU3n4IPk4=
 codeberg.org/reiver/go-erorr v0.0.0-20260414214747-7b76f85a93ac h1:Rf1Y1tEmk+jU/ePubSv5KSkb7smImaDH7ZAff2TEy80=
@@ -22,8 +22,8 @@ github.com/reiver/go-json v0.0.0-20260502054102-0a3481c07116 h1:lub7onbgTujYHB9D
 github.com/reiver/go-json v0.0.0-20260502054102-0a3481c07116/go.mod h1:VefFGTBXCXZ7DwID0jXaAJBQoNnmDQitBQ80E73QPAg=
 github.com/reiver/go-jsonint v0.0.0-20260305120820-b845121c98e8 h1:8RGUqZEHpJ2yJT+Lm8FLLE420PywRsU2JCtxGgwyYUU=
 github.com/reiver/go-jsonint v0.0.0-20260305120820-b845121c98e8/go.mod h1:8UQW6dX7Z/WeikMUrBtDWYhRgQOI/0BZrbK8txvli5k=
-github.com/reiver/go-jsonld v0.0.0-20260502154902-b0f5ce5c30d2 h1:vN4zYx5Ra1AaoKmqQS68JG5lnl38fEdmbM9N+Zl6dUY=
-github.com/reiver/go-jsonld v0.0.0-20260502154902-b0f5ce5c30d2/go.mod h1:f2ts5rMHOEDiBMqhfY+cEd82bIDJ5cjmg8eLBbLdULw=
+github.com/reiver/go-jsonld v0.0.0-20260502175956-7e66110fb725 h1:OfHlErbQwlzgPgu+8YA4DPqdrO4lKQgvwGrPmjaPFbc=
+github.com/reiver/go-jsonld v0.0.0-20260502175956-7e66110fb725/go.mod h1:f2ts5rMHOEDiBMqhfY+cEd82bIDJ5cjmg8eLBbLdULw=
 github.com/reiver/go-jsonpp v0.0.0-20240802002345-16cd4c5a34ee h1:KhA+fe6qjEw6ZbN3vjPICGL0NqR+rghYre4SQB0WWVs=
 github.com/reiver/go-jsonpp v0.0.0-20240802002345-16cd4c5a34ee/go.mod h1:iubeYYU+lR1wqKssI6Sz1DK/Aw/N/qmRcam0wf8hYIs=
 github.com/reiver/go-jsonstr v0.0.0-20240802000653-a5a8363975f1 h1:32ulBfhFKQIaRMuwCo2vi7FLOphgyKTZzJIk+LWmMOE=
