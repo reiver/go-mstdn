@@ -4,7 +4,7 @@ import (
 	gojson "encoding/json"
 	"time"
 
-	"codeberg.org/reiver/go-asns"
+	"codeberg.org/reiver/go-activitypub"
 	"github.com/reiver/go-jsonint"
 	"github.com/reiver/go-nul"
 	"github.com/reiver/go-opt"
@@ -44,7 +44,7 @@ type Status struct {
 	Filtered           gojson.RawMessage             `json:"filtered,omitempty"`
 }
 
-func (receiver *Status) ActivityNote(note *asns.Note) error {
+func (receiver *Status) ActivityNote(note *activitypub.Note) error {
 	if nil == receiver {
 		panic(ErrNilReceiver)
 	}
@@ -56,7 +56,7 @@ func (receiver *Status) ActivityNote(note *asns.Note) error {
 	if receiver.Account.ID.IsSomething() {
 		attributedTo, found := receiver.Account.ID.Get()
 		if found {
-			note.AttributedTo = asns.SomeString(attributedTo)
+			note.AttributedTo = append(note.AttributedTo, activitypub.ObjectID(attributedTo))
 		}
 	}
 
@@ -102,10 +102,9 @@ func (receiver *Status) ActivityNote(note *asns.Note) error {
 
 	if 0 < len(receiver.Tags) {
 		for _, tag := range receiver.Tags {
-			hashtag := asns.HashTag{
-				Name: tag.Name,
-				HRef: tag.URL,
-			}
+			var hashtag activitypub.HashTag
+			hashtag.Name = tag.Name
+			hashtag.HRef = tag.URL
 
 			note.Tags = append(note.Tags, hashtag)
 		}
